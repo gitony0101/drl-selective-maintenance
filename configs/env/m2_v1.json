@@ -1,0 +1,15 @@
+{
+  "environment_version": "m2_v1",
+  "split": "rl_validation",
+  "fleet_size": 5,
+  "maintenance_capacity": 2,
+  "delta_cycles": 5,
+  "episode_horizon": 100,
+  "age_scale_cycles": 341,
+  "rul_scale": 125.0,
+  "cost_regime_id": "failure-light-no-waste",
+  "scenario_bank_path": "configs/scenarios/m2_validation.json",
+  "prediction_cache_path": "data/processed/fd001/v2/06_PREDICTIONS/",
+  "info_mode": "normal",
+  "seed": 6521
+}

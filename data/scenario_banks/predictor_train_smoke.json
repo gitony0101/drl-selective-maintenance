@@ -1,0 +1,121 @@
+{
+  "bank_id": "predictor_train_smoke_bank",
+  "scenarios": [
+    {
+      "cost_regime_id": "failure-light-no-waste",
+      "environment_seed": 6521,
+      "episode_horizon": 100,
+      "initial_cycles": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "initial_unit_ids": [
+        1,
+        4,
+        11,
+        13,
+        14
+      ],
+      "maintenance_capacity": 2,
+      "replacement_seed": 6521,
+      "scenario_id": "predictor_train_smoke_000",
+      "split": "predictor_train"
+    },
+    {
+      "cost_regime_id": "failure-light-no-waste",
+      "environment_seed": 6522,
+      "episode_horizon": 100,
+      "initial_cycles": [
+        11,
+        11,
+        11,
+        11,
+        11
+      ],
+      "initial_unit_ids": [
+        15,
+        16,
+        17,
+        19,
+        20
+      ],
+      "maintenance_capacity": 2,
+      "replacement_seed": 6522,
+      "scenario_id": "predictor_train_smoke_001",
+      "split": "predictor_train"
+    },
+    {
+      "cost_regime_id": "failure-light-no-waste",
+      "environment_seed": 6523,
+      "episode_horizon": 100,
+      "initial_cycles": [
+        21,
+        21,
+        21,
+        21,
+        21
+      ],
+      "initial_unit_ids": [
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "maintenance_capacity": 2,
+      "replacement_seed": 6523,
+      "scenario_id": "predictor_train_smoke_002",
+      "split": "predictor_train"
+    },
+    {
+      "cost_regime_id": "failure-light-no-waste",
+      "environment_seed": 6524,
+      "episode_horizon": 100,
+      "initial_cycles": [
+        31,
+        31,
+        31,
+        31,
+        31
+      ],
+      "initial_unit_ids": [
+        28,
+        29,
+        30,
+        31,
+        35
+      ],
+      "maintenance_capacity": 2,
+      "replacement_seed": 6524,
+      "scenario_id": "predictor_train_smoke_003",
+      "split": "predictor_train"
+    },
+    {
+      "cost_regime_id": "failure-light-no-waste",
+      "environment_seed": 6525,
+      "episode_horizon": 100,
+      "initial_cycles": [
+        41,
+        41,
+        41,
+        41,
+        41
+      ],
+      "initial_unit_ids": [
+        36,
+        37,
+        38,
+        39,
+        40
+      ],
+      "maintenance_capacity": 2,
+      "replacement_seed": 6525,
+      "scenario_id": "predictor_train_smoke_004",
+      "split": "predictor_train"
+    }
+  ],
+  "split": "predictor_train"
+}

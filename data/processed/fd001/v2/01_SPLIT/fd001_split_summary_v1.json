@@ -1,0 +1,18 @@
+{
+  "protocol_version": "fd001_data_v1",
+  "split_seed": 6521,
+  "total_units": 100,
+  "split_counts": {
+    "predictor_train": 60,
+    "predictor_validation": 15,
+    "rl_validation": 10,
+    "rl_test": 15
+  },
+  "quintile_allocation": {
+    "predictor_train": 12,
+    "predictor_validation": 3,
+    "rl_validation": 2,
+    "rl_test": 3
+  },
+  "units_per_quintile": 20
+}

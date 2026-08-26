@@ -1,0 +1,30 @@
+{
+  "schema_version": "artifact_exception_registry_v1",
+  "description": "Known canonical-run artifact exceptions for the Milestone 1 V2 training run.",
+  "training_git_commit": "2899f8b89e4c3eebf9b44e0c4ea04df58963ec10",
+  "predictor_id": "fd001_mse_baseline_v2_20260718_104238",
+  "exceptions": [
+    {
+      "exception_id": "canonical_last_checkpoint_non_authoritative",
+      "schema_version": "artifact_exception_v1",
+      "training_git_commit": "2899f8b89e4c3eebf9b44e0c4ea04df58963ec10",
+      "predictor_id": "fd001_mse_baseline_v2_20260718_104238",
+      "authoritative_best_checkpoint_sha256": "ade3688496de7672367fcb58bbcba384f6835f81fe2c89d7ce9f88eeebe5b2b7",
+      "affected_artifact_path": "results/predictor/mse_baseline_v2/checkpoints/last_checkpoint.pt",
+      "affected_artifact_sha256": "c365e2535b23d960104f1bbb897654896ab3243eea0ebcc07f019bbe585f5645",
+      "authoritative": false,
+      "resumable": false,
+      "allowed_for_gate": true,
+      "defect_type": "last_checkpoint_contains_best_weights",
+      "defect_description": "last_checkpoint.pt reports epoch 42 but contains epoch-22 best weights; the model state dict matches best_checkpoint.pt (SHA256=734247cb1e843b51c3049fe3e9525ff7046bce07ce0f9587fe0104f8d12c9209)",
+      "approved_usage": {
+        "retain_for_audit": true,
+        "prohibit_model_loading": true,
+        "prohibit_resume": true,
+        "prohibit_cache_generation": true
+      },
+      "replacement_authoritative_artifact": "results/predictor/mse_baseline_v2/checkpoints/best_checkpoint.pt",
+      "rationale": "Training script bug in commit 2899f8b saved last_checkpoint.pt after reloading best weights for final evaluation. The last checkpoint file contains the best-epoch (22) weights instead of the final-epoch (42) weights. Fixed in tooling commit 8f91979. This exception is registered to allow Gate PASS for the canonical run only."
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+split,window_count,unique_units,avg_left_pad,min_rul,max_rul
+predictor_train,12360,60,5.946601941747573,0,125
+predictor_validation,3146,15,5.840750158931977,0,125
+rl_test,3105,15,5.917874396135265,0,125
+rl_validation,2020,10,6.064356435643564,0,125

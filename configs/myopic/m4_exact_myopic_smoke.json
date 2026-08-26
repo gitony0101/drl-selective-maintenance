@@ -1,0 +1,26 @@
+{
+  "schema_version": "m4_v1",
+  "policy_id": "exact_myopic_smoke",
+  "risk_model_id": "hard_window_v1",
+  "risk_temperature": 10.0,
+  "tie_tolerance": 1e-9,
+  "environment_version": "m2_v1",
+  "delta_cycles": 5,
+  "rul_scale": 125.0,
+  "age_scale_cycles": 341,
+  "supported_capacities": [1, 2],
+  "supported_cost_regimes": [
+    "failure-light-no-waste"
+  ],
+  "validation_split": "rl_validation",
+  "forbidden_splits": ["rl_test", "predictor_validation"],
+  "artifact_schema_version": "m4_v1",
+  "prediction_cache_path": "data/processed/fd001/v2/06_PREDICTIONS/",
+  "scenario_bank_base_path": "data/scenario_banks/",
+  "output_base_path": "results/milestone4/",
+  "default_seeds": [6521],
+  "episode_horizon": 10,
+  "fleet_size": 5,
+  "smoke_mode": true,
+  "smoke_episodes_per_config": 2
+}

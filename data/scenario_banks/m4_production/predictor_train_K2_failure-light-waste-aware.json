@@ -1,0 +1,121 @@
+{
+  "bank_id": "predictor_train_K2_failure-light-waste-aware_bank",
+  "scenarios": [
+    {
+      "cost_regime_id": "failure-light-waste-aware",
+      "environment_seed": 6521,
+      "episode_horizon": 100,
+      "initial_cycles": [
+        179,
+        152,
+        231,
+        200,
+        167
+      ],
+      "initial_unit_ids": [
+        14,
+        19,
+        20,
+        22,
+        23
+      ],
+      "maintenance_capacity": 2,
+      "replacement_seed": 6521,
+      "scenario_id": "predictor_train_K2_failure-light-waste-aware_000",
+      "split": "predictor_train"
+    },
+    {
+      "cost_regime_id": "failure-light-waste-aware",
+      "environment_seed": 6522,
+      "episode_horizon": 100,
+      "initial_cycles": [
+        175,
+        157,
+        222,
+        197,
+        166
+      ],
+      "initial_unit_ids": [
+        14,
+        19,
+        20,
+        22,
+        23
+      ],
+      "maintenance_capacity": 2,
+      "replacement_seed": 6522,
+      "scenario_id": "predictor_train_K2_failure-light-waste-aware_001",
+      "split": "predictor_train"
+    },
+    {
+      "cost_regime_id": "failure-light-waste-aware",
+      "environment_seed": 6523,
+      "episode_horizon": 100,
+      "initial_cycles": [
+        178,
+        156,
+        232,
+        196,
+        165
+      ],
+      "initial_unit_ids": [
+        14,
+        19,
+        20,
+        22,
+        23
+      ],
+      "maintenance_capacity": 2,
+      "replacement_seed": 6523,
+      "scenario_id": "predictor_train_K2_failure-light-waste-aware_002",
+      "split": "predictor_train"
+    },
+    {
+      "cost_regime_id": "failure-light-waste-aware",
+      "environment_seed": 6524,
+      "episode_horizon": 100,
+      "initial_cycles": [
+        176,
+        154,
+        219,
+        192,
+        158
+      ],
+      "initial_unit_ids": [
+        14,
+        19,
+        20,
+        22,
+        23
+      ],
+      "maintenance_capacity": 2,
+      "replacement_seed": 6524,
+      "scenario_id": "predictor_train_K2_failure-light-waste-aware_003",
+      "split": "predictor_train"
+    },
+    {
+      "cost_regime_id": "failure-light-waste-aware",
+      "environment_seed": 6525,
+      "episode_horizon": 100,
+      "initial_cycles": [
+        171,
+        151,
+        227,
+        198,
+        163
+      ],
+      "initial_unit_ids": [
+        14,
+        19,
+        20,
+        22,
+        23
+      ],
+      "maintenance_capacity": 2,
+      "replacement_seed": 6525,
+      "scenario_id": "predictor_train_K2_failure-light-waste-aware_004",
+      "split": "predictor_train"
+    }
+  ],
+  "split": "predictor_train"
+}

@@ -1,0 +1,36 @@
+# Project-scoped ignore rules for drl-selective-maintenance
+# Narrow rules only – frozen inputs, manifests, source, tests, configs, docs are NOT ignored
+#
+# Categories:
+#   - runtime caches
+#   - generated experiment outputs
+#   - external checkpoints
+#   - temporary files
+
+# Runtime outputs
+/results/
+*.log
+
+# Cache directories
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Prediction cache (generated post-training – explicitly excluded from pre-training gate)
+/data/processed/fd001/v2/06_PREDICTIONS/
+
+# M9 point-estimate generated-result roots (external git-ignored storage).
+# These live OUTSIDE this worktree (sibling of the worktree dir), so the rule
+# is defensive: it documents intent and guards any accidental in-worktree copy.
+/m9_point_caches/
+/m9_point_runs/
+/m9_point_*/
+
+# M10 E3 (n-step) generated-result roots (external git-ignored storage).
+# New E3-specific output namespace; never overwrites M9 artifacts.
+/m10_e3_outputs/
+/m10_e3_*/
+
+# macOS Finder metadata (project-wide)
+.DS_Store

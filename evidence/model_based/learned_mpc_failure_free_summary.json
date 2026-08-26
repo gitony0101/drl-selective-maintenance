@@ -1,0 +1,33 @@
+{
+  "experiment": "Learned-MPC E4 (failure-free training mixture)",
+  "split": "rl_validation",
+  "metrics": {
+    "next_observation_rmse": {
+      "value": 0.02,
+      "source_artifact_sha256": "d928b077c4fdd69a543fa824bdf5c89d5533e65ffdcad0f9861b49fc0a2b4506",
+      "source_key": "per_seed.[seed].e4a.state_rmse"
+    },
+    "persistence_baseline_rmse": {
+      "value": 0.095,
+      "source_artifact_sha256": "c7c60de3571d4560f0142521eb2c123706766222d0615595c3d6bd5ccc1b3ef1",
+      "source_key": "baselines.persistence_next_obs_rmse (from diagnostics_summary.json)"
+    },
+    "mean_cost": {
+      "value": 54.0,
+      "source_artifact_sha256": "c0871dd228e54debe599e20280cbad95a1e84b3c8030c44f2baf34162e0b4a43",
+      "source_key": "lmpc_per_seed (all seeds 54.0)"
+    },
+    "total_failures": {
+      "value": 54,
+      "source_artifact_sha256": "d928b077c4fdd69a543fa824bdf5c89d5533e65ffdcad0f9861b49fc0a2b4506",
+      "source_key": "per_seed.[seed].e4a.failure_count (summed across seeds)"
+    },
+    "action_selected": {
+      "value": "no-maintenance at every decision",
+      "source_artifact_sha256": "d928b077c4fdd69a543fa824bdf5c89d5533e65ffdcad0f9861b49fc0a2b4506",
+      "source_key": "per_seed.[seed].e4a.mpc_action_histogram (100% action 0)"
+    }
+  },
+  "interpretation": "Low prediction RMSE did not translate to effective control; the model selected no maintenance and accumulated failures.",
+  "validation_only": true
+}

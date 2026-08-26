@@ -1,0 +1,121 @@
+{
+  "bank_id": "rl_test_smoke_bank",
+  "scenarios": [
+    {
+      "cost_regime_id": "failure-light-no-waste",
+      "environment_seed": 6521,
+      "episode_horizon": 100,
+      "initial_cycles": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "initial_unit_ids": [
+        5,
+        6,
+        7,
+        8,
+        10
+      ],
+      "maintenance_capacity": 2,
+      "replacement_seed": 6521,
+      "scenario_id": "rl_test_smoke_000",
+      "split": "rl_test"
+    },
+    {
+      "cost_regime_id": "failure-light-no-waste",
+      "environment_seed": 6522,
+      "episode_horizon": 100,
+      "initial_cycles": [
+        11,
+        11,
+        11,
+        11,
+        11
+      ],
+      "initial_unit_ids": [
+        18,
+        21,
+        27,
+        34,
+        57
+      ],
+      "maintenance_capacity": 2,
+      "replacement_seed": 6522,
+      "scenario_id": "rl_test_smoke_001",
+      "split": "rl_test"
+    },
+    {
+      "cost_regime_id": "failure-light-no-waste",
+      "environment_seed": 6523,
+      "episode_horizon": 100,
+      "initial_cycles": [
+        21,
+        21,
+        21,
+        21,
+        21
+      ],
+      "initial_unit_ids": [
+        60,
+        69,
+        72,
+        82,
+        87
+      ],
+      "maintenance_capacity": 2,
+      "replacement_seed": 6523,
+      "scenario_id": "rl_test_smoke_002",
+      "split": "rl_test"
+    },
+    {
+      "cost_regime_id": "failure-light-no-waste",
+      "environment_seed": 6524,
+      "episode_horizon": 100,
+      "initial_cycles": [
+        31,
+        31,
+        31,
+        31,
+        31
+      ],
+      "initial_unit_ids": [
+        5,
+        6,
+        7,
+        8,
+        10
+      ],
+      "maintenance_capacity": 2,
+      "replacement_seed": 6524,
+      "scenario_id": "rl_test_smoke_003",
+      "split": "rl_test"
+    },
+    {
+      "cost_regime_id": "failure-light-no-waste",
+      "environment_seed": 6525,
+      "episode_horizon": 100,
+      "initial_cycles": [
+        41,
+        41,
+        41,
+        41,
+        41
+      ],
+      "initial_unit_ids": [
+        18,
+        21,
+        27,
+        34,
+        57
+      ],
+      "maintenance_capacity": 2,
+      "replacement_seed": 6525,
+      "scenario_id": "rl_test_smoke_004",
+      "split": "rl_test"
+    }
+  ],
+  "split": "rl_test"
+}

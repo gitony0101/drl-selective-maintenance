@@ -1,0 +1,32 @@
+{
+  "m3_version": "m3_v1",
+  "description": "Milestone 3 Rule Baselines Configuration",
+  "scenario_banks": {
+    "predictor_train": "data/scenario_banks/predictor_train_smoke.json",
+    "rl_validation": "data/scenario_banks/rl_validation_smoke.json"
+  },
+  "threshold_grids": {
+    "age_threshold": [25, 50, 75, 100, 125, 150, 175, 200, 225, 250, 275, 300],
+    "predicted_rul_threshold": [5, 10, 15, 20, 25, 30, 40, 50, 60, 75, 100],
+    "greedy_predicted_rul": [5, 10, 15, 20, 25, 30, 40, 50, 60, 75, 100],
+    "oracle_threshold": [1, 2, 3, 5, 10, 15, 20, 25, 30, 40, 50]
+  },
+  "tuning_split": "rl_validation",
+  "evaluation_splits": ["predictor_train", "rl_validation"],
+  "k_values": [1, 2],
+  "cost_regimes": [
+    "failure-light-no-waste",
+    "failure-heavy-no-waste",
+    "failure-light-waste-aware",
+    "failure-heavy-waste-aware"
+  ],
+  "reset_seeds": [6521, 6522, 6523, 6524, 6525],
+  "episode_horizon": 100,
+  "policy_seeds": {
+    "random_feasible": 42,
+    "threshold_tuning": 42
+  },
+  "forbidden_splits": ["rl_test"],
+  "allow_oracle": false,
+  "diagnostic_mode": false
+}

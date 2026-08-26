@@ -1,0 +1,466 @@
+{
+  "bank_id": "rl_validation_K1_failure-heavy-no-waste_bank",
+  "scenarios": [
+    {
+      "cost_regime_id": "failure-heavy-no-waste",
+      "environment_seed": 6601,
+      "episode_horizon": 100,
+      "initial_cycles": [
+        206,
+        58,
+        7,
+        102,
+        42
+      ],
+      "initial_unit_ids": [
+        46,
+        49,
+        56,
+        74,
+        89
+      ],
+      "maintenance_capacity": 1,
+      "replacement_seed": 6601,
+      "scenario_id": "rl_validation_K1_failure-heavy-no-waste_000",
+      "split": "rl_validation"
+    },
+    {
+      "cost_regime_id": "failure-heavy-no-waste",
+      "environment_seed": 6602,
+      "episode_horizon": 100,
+      "initial_cycles": [
+        205,
+        96,
+        5,
+        116,
+        35
+      ],
+      "initial_unit_ids": [
+        46,
+        49,
+        56,
+        74,
+        89
+      ],
+      "maintenance_capacity": 1,
+      "replacement_seed": 6602,
+      "scenario_id": "rl_validation_K1_failure-heavy-no-waste_001",
+      "split": "rl_validation"
+    },
+    {
+      "cost_regime_id": "failure-heavy-no-waste",
+      "environment_seed": 6603,
+      "episode_horizon": 100,
+      "initial_cycles": [
+        192,
+        18,
+        62,
+        169,
+        13
+      ],
+      "initial_unit_ids": [
+        46,
+        49,
+        56,
+        63,
+        74
+      ],
+      "maintenance_capacity": 1,
+      "replacement_seed": 6603,
+      "scenario_id": "rl_validation_K1_failure-heavy-no-waste_002",
+      "split": "rl_validation"
+    },
+    {
+      "cost_regime_id": "failure-heavy-no-waste",
+      "environment_seed": 6604,
+      "episode_horizon": 100,
+      "initial_cycles": [
+        191,
+        27,
+        4,
+        163,
+        21
+      ],
+      "initial_unit_ids": [
+        46,
+        49,
+        56,
+        63,
+        74
+      ],
+      "maintenance_capacity": 1,
+      "replacement_seed": 6604,
+      "scenario_id": "rl_validation_K1_failure-heavy-no-waste_003",
+      "split": "rl_validation"
+    },
+    {
+      "cost_regime_id": "failure-heavy-no-waste",
+      "environment_seed": 6605,
+      "episode_horizon": 100,
+      "initial_cycles": [
+        182,
+        101,
+        68,
+        157,
+        105
+      ],
+      "initial_unit_ids": [
+        46,
+        49,
+        56,
+        63,
+        74
+      ],
+      "maintenance_capacity": 1,
+      "replacement_seed": 6605,
+      "scenario_id": "rl_validation_K1_failure-heavy-no-waste_004",
+      "split": "rl_validation"
+    },
+    {
+      "cost_regime_id": "failure-heavy-no-waste",
+      "environment_seed": 6606,
+      "episode_horizon": 100,
+      "initial_cycles": [
+        179,
+        100,
+        60,
+        155,
+        24
+      ],
+      "initial_unit_ids": [
+        46,
+        49,
+        56,
+        63,
+        74
+      ],
+      "maintenance_capacity": 1,
+      "replacement_seed": 6606,
+      "scenario_id": "rl_validation_K1_failure-heavy-no-waste_005",
+      "split": "rl_validation"
+    },
+    {
+      "cost_regime_id": "failure-heavy-no-waste",
+      "environment_seed": 6607,
+      "episode_horizon": 100,
+      "initial_cycles": [
+        173,
+        86,
+        64,
+        146,
+        68
+      ],
+      "initial_unit_ids": [
+        46,
+        49,
+        56,
+        63,
+        74
+      ],
+      "maintenance_capacity": 1,
+      "replacement_seed": 6607,
+      "scenario_id": "rl_validation_K1_failure-heavy-no-waste_006",
+      "split": "rl_validation"
+    },
+    {
+      "cost_regime_id": "failure-heavy-no-waste",
+      "environment_seed": 6608,
+      "episode_horizon": 100,
+      "initial_cycles": [
+        167,
+        166,
+        57,
+        139,
+        33
+      ],
+      "initial_unit_ids": [
+        12,
+        46,
+        49,
+        63,
+        74
+      ],
+      "maintenance_capacity": 1,
+      "replacement_seed": 6608,
+      "scenario_id": "rl_validation_K1_failure-heavy-no-waste_007",
+      "split": "rl_validation"
+    },
+    {
+      "cost_regime_id": "failure-heavy-no-waste",
+      "environment_seed": 6609,
+      "episode_horizon": 100,
+      "initial_cycles": [
+        166,
+        168,
+        41,
+        135,
+        93
+      ],
+      "initial_unit_ids": [
+        12,
+        46,
+        49,
+        63,
+        74
+      ],
+      "maintenance_capacity": 1,
+      "replacement_seed": 6609,
+      "scenario_id": "rl_validation_K1_failure-heavy-no-waste_008",
+      "split": "rl_validation"
+    },
+    {
+      "cost_regime_id": "failure-heavy-no-waste",
+      "environment_seed": 6610,
+      "episode_horizon": 100,
+      "initial_cycles": [
+        148,
+        130,
+        64,
+        122,
+        89
+      ],
+      "initial_unit_ids": [
+        12,
+        46,
+        49,
+        63,
+        74
+      ],
+      "maintenance_capacity": 1,
+      "replacement_seed": 6610,
+      "scenario_id": "rl_validation_K1_failure-heavy-no-waste_009",
+      "split": "rl_validation"
+    },
+    {
+      "cost_regime_id": "failure-heavy-no-waste",
+      "environment_seed": 6611,
+      "episode_horizon": 100,
+      "initial_cycles": [
+        152,
+        160,
+        50,
+        120,
+        31
+      ],
+      "initial_unit_ids": [
+        12,
+        46,
+        49,
+        63,
+        74
+      ],
+      "maintenance_capacity": 1,
+      "replacement_seed": 6611,
+      "scenario_id": "rl_validation_K1_failure-heavy-no-waste_010",
+      "split": "rl_validation"
+    },
+    {
+      "cost_regime_id": "failure-heavy-no-waste",
+      "environment_seed": 6612,
+      "episode_horizon": 100,
+      "initial_cycles": [
+        143,
+        157,
+        109,
+        115,
+        95
+      ],
+      "initial_unit_ids": [
+        12,
+        46,
+        49,
+        63,
+        74
+      ],
+      "maintenance_capacity": 1,
+      "replacement_seed": 6612,
+      "scenario_id": "rl_validation_K1_failure-heavy-no-waste_011",
+      "split": "rl_validation"
+    },
+    {
+      "cost_regime_id": "failure-heavy-no-waste",
+      "environment_seed": 6613,
+      "episode_horizon": 100,
+      "initial_cycles": [
+        138,
+        120,
+        78,
+        105,
+        8
+      ],
+      "initial_unit_ids": [
+        12,
+        46,
+        49,
+        63,
+        74
+      ],
+      "maintenance_capacity": 1,
+      "replacement_seed": 6613,
+      "scenario_id": "rl_validation_K1_failure-heavy-no-waste_012",
+      "split": "rl_validation"
+    },
+    {
+      "cost_regime_id": "failure-heavy-no-waste",
+      "environment_seed": 6614,
+      "episode_horizon": 100,
+      "initial_cycles": [
+        132,
+        144,
+        44,
+        100,
+        60
+      ],
+      "initial_unit_ids": [
+        12,
+        46,
+        49,
+        63,
+        74
+      ],
+      "maintenance_capacity": 1,
+      "replacement_seed": 6614,
+      "scenario_id": "rl_validation_K1_failure-heavy-no-waste_013",
+      "split": "rl_validation"
+    },
+    {
+      "cost_regime_id": "failure-heavy-no-waste",
+      "environment_seed": 6615,
+      "episode_horizon": 100,
+      "initial_cycles": [
+        125,
+        136,
+        37,
+        99,
+        64
+      ],
+      "initial_unit_ids": [
+        12,
+        46,
+        49,
+        63,
+        74
+      ],
+      "maintenance_capacity": 1,
+      "replacement_seed": 6615,
+      "scenario_id": "rl_validation_K1_failure-heavy-no-waste_014",
+      "split": "rl_validation"
+    },
+    {
+      "cost_regime_id": "failure-heavy-no-waste",
+      "environment_seed": 6616,
+      "episode_horizon": 100,
+      "initial_cycles": [
+        119,
+        111,
+        70,
+        98,
+        61
+      ],
+      "initial_unit_ids": [
+        12,
+        46,
+        49,
+        63,
+        74
+      ],
+      "maintenance_capacity": 1,
+      "replacement_seed": 6616,
+      "scenario_id": "rl_validation_K1_failure-heavy-no-waste_015",
+      "split": "rl_validation"
+    },
+    {
+      "cost_regime_id": "failure-heavy-no-waste",
+      "environment_seed": 6617,
+      "episode_horizon": 100,
+      "initial_cycles": [
+        116,
+        109,
+        142,
+        42,
+        5
+      ],
+      "initial_unit_ids": [
+        12,
+        46,
+        58,
+        63,
+        74
+      ],
+      "maintenance_capacity": 1,
+      "replacement_seed": 6617,
+      "scenario_id": "rl_validation_K1_failure-heavy-no-waste_016",
+      "split": "rl_validation"
+    },
+    {
+      "cost_regime_id": "failure-heavy-no-waste",
+      "environment_seed": 6618,
+      "episode_horizon": 100,
+      "initial_cycles": [
+        111,
+        107,
+        136,
+        28,
+        51
+      ],
+      "initial_unit_ids": [
+        12,
+        46,
+        58,
+        63,
+        74
+      ],
+      "maintenance_capacity": 1,
+      "replacement_seed": 6618,
+      "scenario_id": "rl_validation_K1_failure-heavy-no-waste_017",
+      "split": "rl_validation"
+    },
+    {
+      "cost_regime_id": "failure-heavy-no-waste",
+      "environment_seed": 6619,
+      "episode_horizon": 100,
+      "initial_cycles": [
+        94,
+        10,
+        129,
+        84,
+        3
+      ],
+      "initial_unit_ids": [
+        12,
+        46,
+        58,
+        63,
+        74
+      ],
+      "maintenance_capacity": 1,
+      "replacement_seed": 6619,
+      "scenario_id": "rl_validation_K1_failure-heavy-no-waste_018",
+      "split": "rl_validation"
+    },
+    {
+      "cost_regime_id": "failure-heavy-no-waste",
+      "environment_seed": 6620,
+      "episode_horizon": 100,
+      "initial_cycles": [
+        92,
+        2,
+        124,
+        41,
+        198
+      ],
+      "initial_unit_ids": [
+        12,
+        46,
+        58,
+        63,
+        100
+      ],
+      "maintenance_capacity": 1,
+      "replacement_seed": 6620,
+      "scenario_id": "rl_validation_K1_failure-heavy-no-waste_019",
+      "split": "rl_validation"
+    }
+  ],
+  "split": "rl_validation"
+}

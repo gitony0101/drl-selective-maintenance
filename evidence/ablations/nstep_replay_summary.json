@@ -1,0 +1,31 @@
+{
+  "experiment": "n-step DDQN ablation",
+  "split": "rl_validation",
+  "comparisons": [
+    {
+      "label": "n=3 under standard replay (B vs A)",
+      "mean_difference": 3.68,
+      "ci95": [1.81, 5.55],
+      "interpretation": "n=3 increased cost relative to n=1; interval excludes zero.",
+      "source_artifact_sha256": "7b4622239037537a327505aaa61e74ae0dafe04cbf7631618e20470e7ebe6daa",
+      "source_key": "n_step_under_standard"
+    },
+    {
+      "label": "n=3 under planner-seeded replay (D vs C)",
+      "mean_difference": 3.00,
+      "ci95": [0.56, 5.44],
+      "interpretation": "n=3 increased cost relative to n=1 under seeded replay; interval excludes zero.",
+      "source_artifact_sha256": "7b4622239037537a327505aaa61e74ae0dafe04cbf7631618e20470e7ebe6daa",
+      "source_key": "n_step_under_seeded"
+    },
+    {
+      "label": "planner-seeded replay effect (C vs A, both n=1)",
+      "mean_difference": -0.76,
+      "ci95": [-1.55, 0.03],
+      "interpretation": "Inconclusive; interval includes zero.",
+      "source_artifact_sha256": "7b4622239037537a327505aaa61e74ae0dafe04cbf7631618e20470e7ebe6daa",
+      "source_key": "seeded_under_1step"
+    }
+  ],
+  "validation_only": true
+}

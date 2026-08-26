@@ -1,0 +1,121 @@
+{
+  "bank_id": "m5_pilot_k2__heavy_waste",
+  "scenarios": [
+    {
+      "cost_regime_id": "failure-heavy-waste-aware",
+      "environment_seed": 6521,
+      "episode_horizon": 100,
+      "initial_cycles": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "initial_unit_ids": [
+        70,
+        28,
+        13,
+        24,
+        36
+      ],
+      "maintenance_capacity": 2,
+      "replacement_seed": 6521,
+      "scenario_id": "m5_pilot_k2_s001__heavy_waste",
+      "split": "predictor_train"
+    },
+    {
+      "cost_regime_id": "failure-heavy-waste-aware",
+      "environment_seed": 6522,
+      "episode_horizon": 100,
+      "initial_cycles": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "initial_unit_ids": [
+        29,
+        90,
+        39,
+        45,
+        77
+      ],
+      "maintenance_capacity": 2,
+      "replacement_seed": 6522,
+      "scenario_id": "m5_pilot_k2_s002__heavy_waste",
+      "split": "predictor_train"
+    },
+    {
+      "cost_regime_id": "failure-heavy-waste-aware",
+      "environment_seed": 6523,
+      "episode_horizon": 100,
+      "initial_cycles": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "initial_unit_ids": [
+        19,
+        93,
+        85,
+        4,
+        23
+      ],
+      "maintenance_capacity": 2,
+      "replacement_seed": 6523,
+      "scenario_id": "m5_pilot_k2_s003__heavy_waste",
+      "split": "predictor_train"
+    },
+    {
+      "cost_regime_id": "failure-heavy-waste-aware",
+      "environment_seed": 6524,
+      "episode_horizon": 100,
+      "initial_cycles": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "initial_unit_ids": [
+        37,
+        99,
+        14,
+        62,
+        40
+      ],
+      "maintenance_capacity": 2,
+      "replacement_seed": 6524,
+      "scenario_id": "m5_pilot_k2_s004__heavy_waste",
+      "split": "predictor_train"
+    },
+    {
+      "cost_regime_id": "failure-heavy-waste-aware",
+      "environment_seed": 6525,
+      "episode_horizon": 100,
+      "initial_cycles": [
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "initial_unit_ids": [
+        1,
+        80,
+        35,
+        44,
+        22
+      ],
+      "maintenance_capacity": 2,
+      "replacement_seed": 6525,
+      "scenario_id": "m5_pilot_k2_s005__heavy_waste",
+      "split": "predictor_train"
+    }
+  ],
+  "split": "predictor_train"
+}

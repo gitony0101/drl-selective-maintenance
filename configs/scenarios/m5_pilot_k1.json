@@ -1,0 +1,61 @@
+{
+  "bank_id": "m5_pilot_k1",
+  "split": "predictor_train",
+  "scenarios": [
+    {
+      "scenario_id": "m5_pilot_k1_s001",
+      "split": "predictor_train",
+      "initial_unit_ids": [70, 28, 13, 24, 36],
+      "initial_cycles": [1, 1, 1, 1, 1],
+      "replacement_seed": 6521,
+      "environment_seed": 6521,
+      "episode_horizon": 100,
+      "maintenance_capacity": 1,
+      "cost_regime_id": "failure-light-no-waste"
+    },
+    {
+      "scenario_id": "m5_pilot_k1_s002",
+      "split": "predictor_train",
+      "initial_unit_ids": [29, 90, 39, 45, 77],
+      "initial_cycles": [1, 1, 1, 1, 1],
+      "replacement_seed": 6522,
+      "environment_seed": 6522,
+      "episode_horizon": 100,
+      "maintenance_capacity": 1,
+      "cost_regime_id": "failure-light-no-waste"
+    },
+    {
+      "scenario_id": "m5_pilot_k1_s003",
+      "split": "predictor_train",
+      "initial_unit_ids": [19, 93, 85, 4, 23],
+      "initial_cycles": [1, 1, 1, 1, 1],
+      "replacement_seed": 6523,
+      "environment_seed": 6523,
+      "episode_horizon": 100,
+      "maintenance_capacity": 1,
+      "cost_regime_id": "failure-light-no-waste"
+    },
+    {
+      "scenario_id": "m5_pilot_k1_s004",
+      "split": "predictor_train",
+      "initial_unit_ids": [37, 99, 14, 62, 40],
+      "initial_cycles": [1, 1, 1, 1, 1],
+      "replacement_seed": 6524,
+      "environment_seed": 6524,
+      "episode_horizon": 100,
+      "maintenance_capacity": 1,
+      "cost_regime_id": "failure-light-no-waste"
+    },
+    {
+      "scenario_id": "m5_pilot_k1_s005",
+      "split": "predictor_train",
+      "initial_unit_ids": [1, 80, 35, 44, 22],
+      "initial_cycles": [1, 1, 1, 1, 1],
+      "replacement_seed": 6525,
+      "environment_seed": 6525,
+      "episode_horizon": 100,
+      "maintenance_capacity": 1,
+      "cost_regime_id": "failure-light-no-waste"
+    }
+  ]
+}

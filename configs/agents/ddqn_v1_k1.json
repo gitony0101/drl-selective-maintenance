@@ -1,0 +1,54 @@
+{
+  "_comment": "Milestone 5 Point-Estimate DDQN Configuration v1 (K=1)",
+  "_version": "ddqn_v1",
+  "_milestone": "M5",
+  "_description": "Bounded pilot config for K=1",
+
+  "environment": {
+    "split": "predictor_train",
+    "validation_split": "rl_validation",
+    "maintenance_capacity": 1,
+    "cost_regime_id": "failure-light-no-waste",
+    "episode_horizon": 100,
+    "training_scenario_bank_path": "configs/scenarios/m5_pilot_k1.json",
+    "validation_scenario_bank_path": "configs/scenarios/m5_validation_k1.json",
+    "prediction_cache_path": "data/processed/fd001/v2/06_PREDICTIONS/",
+    "prediction_cache_manifest_path": "data/processed/fd001/v2/06_PREDICTIONS/prediction_cache_manifest_v2.json"
+  },
+
+  "agent": {
+    "observation_dim": 10,
+    "hidden_dim": 128,
+    "num_hidden_layers": 2,
+    "learning_rate": 1e-4,
+    "gamma": 0.95,
+    "epsilon_start": 1.0,
+    "epsilon_end": 0.05,
+    "epsilon_decay_steps": 50000,
+    "gradient_clip": 10.0,
+    "target_update_interval": 1000,
+    "use_huber_loss": true,
+    "huber_delta": 1.0
+  },
+
+  "training": {
+    "max_steps": 100000,
+    "batch_size": 128,
+    "warmup_transitions": 5000,
+    "update_frequency": 1,
+    "validation_interval": 5000,
+    "checkpoint_interval": 5000,
+    "replay_capacity": 100000,
+    "training_seed": 6521,
+    "validation_seed": 6521
+  },
+
+  "output": {
+    "output_dir": "results/milestone5",
+    "run_id": null
+  },
+
+  "device": {
+    "explicit_device": null
+  }
+}

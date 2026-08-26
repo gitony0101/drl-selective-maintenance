@@ -1,0 +1,23 @@
+{
+  "experiment": "Learned-MPC E5 (failure-enriched training mixture)",
+  "split": "rl_validation",
+  "metrics": {
+    "mean_cost": {
+      "value": 34.6,
+      "source_artifact_sha256": "748db49e614dca610e127cf463ee2ba6a15e9cbe78f9064e095c841752577bd5",
+      "source_key": "e5b_per_seed (mean across seeds)"
+    },
+    "difference_vs_E4": {
+      "value": -19.40,
+      "source_artifact_sha256": "748db49e614dca610e127cf463ee2ba6a15e9cbe78f9064e095c841752577bd5",
+      "source_key": "primary_contrast.mean"
+    },
+    "ci95": {
+      "value": [-28.28, -10.52],
+      "source_artifact_sha256": "748db49e614dca610e127cf463ee2ba6a15e9cbe78f9064e095c841752577bd5",
+      "source_key": "primary_contrast.ci_lo / ci_hi"
+    }
+  },
+  "interpretation": "Failure-enriched training improved control, reducing cost and restoring preventive behavior. However, the intervention changes visitation, behavior-policy composition, and reward support simultaneously, so the improvement is not solely attributable to failure coverage.",
+  "validation_only": true
+}

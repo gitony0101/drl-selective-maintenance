@@ -1,0 +1,11 @@
+{
+  "status": "COMPLETE_M6_SECONDARIES_NOT_TESTED",
+  "split": "rl_test",
+  "results_valid_for_scientific_interpretation": true,
+  "reason": "M6 complete after audited minimal infrastructure correction; E3, M10, and E4/E5 not tested because no direct frozen final-test evaluator was available.",
+  "preserved_partial_outputs": [
+    "final_test_evaluation/worker_core_k1_light_h2",
+    "final_test_evaluation/worker_core_k1_heavy_h2",
+    "final_test_evaluation/worker_core_k1_lightw_h2"
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "m3_version": "m3_v1_mini",
+  "description": "Mini M3 config for CLI execution tests",
+  "scenario_banks": {
+    "predictor_train": "data/scenario_banks/predictor_train_smoke.json",
+    "rl_validation": "data/scenario_banks/rl_validation_smoke.json"
+  },
+  "threshold_grids": {
+    "age_threshold": [50, 100],
+    "predicted_rul_threshold": [10, 25],
+    "greedy_predicted_rul": [10, 25],
+    "oracle_threshold": [5, 15]
+  },
+  "tuning_split": "rl_validation",
+  "evaluation_splits": ["predictor_train"],
+  "k_values": [1],
+  "cost_regimes": ["failure-light-no-waste"],
+  "reset_seeds": [6521, 6522],
+  "episode_horizon": 100,
+  "policy_seeds": {
+    "random_feasible": 42,
+    "threshold_tuning": 42
+  },
+  "forbidden_splits": ["rl_test"],
+  "allow_oracle": false,
+  "diagnostic_mode": false
+}

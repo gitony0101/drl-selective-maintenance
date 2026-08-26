@@ -1,0 +1,4110 @@
+{
+  "analysis_plan": "docs/milestone6/M6_STATISTICAL_ANALYSIS_PLAN.md",
+  "best_seed_selection": false,
+  "bootstrap_resamples": 10000,
+  "bootstrap_seed": 652106,
+  "cells": [
+    {
+      "K": 1,
+      "cost_regime": "failure-heavy-no-waste",
+      "descriptive_means": {
+        "h2": {
+          "capacity_saturated_step_count": 12.9,
+          "empty_action_count": 87.1,
+          "failure_cost": 0.0,
+          "failure_count": 0.0,
+          "preventive_cost": 12.9,
+          "preventive_count": 12.9,
+          "total_cost": 12.9,
+          "wasted_life_cost": 0.0
+        },
+        "m3": {
+          "capacity_saturated_step_count": 11.6,
+          "empty_action_count": 88.4,
+          "failure_cost": 0.0,
+          "failure_count": 0.0,
+          "preventive_cost": 11.6,
+          "preventive_count": 11.6,
+          "total_cost": 11.6,
+          "wasted_life_cost": 0.0
+        },
+        "m4": {
+          "capacity_saturated_step_count": 12.3,
+          "empty_action_count": 87.7,
+          "failure_cost": 0.0,
+          "failure_count": 0.0,
+          "preventive_cost": 12.3,
+          "preventive_count": 12.3,
+          "total_cost": 12.3,
+          "wasted_life_cost": 0.0
+        },
+        "m5_seed_means": {
+          "6521": {
+            "capacity_saturated_step_count": 13.25,
+            "empty_action_count": 86.75,
+            "failure_cost": 1.0,
+            "failure_count": 0.1,
+            "preventive_cost": 13.25,
+            "preventive_count": 13.25,
+            "total_cost": 14.25,
+            "wasted_life_cost": 0.0
+          },
+          "6522": {
+            "capacity_saturated_step_count": 13.15,
+            "empty_action_count": 86.85,
+            "failure_cost": 3.5,
+            "failure_count": 0.35,
+            "preventive_cost": 13.15,
+            "preventive_count": 13.15,
+            "total_cost": 16.65,
+            "wasted_life_cost": 0.0
+          },
+          "6523": {
+            "capacity_saturated_step_count": 13.4,
+            "empty_action_count": 86.6,
+            "failure_cost": 0.5,
+            "failure_count": 0.05,
+            "preventive_cost": 13.4,
+            "preventive_count": 13.4,
+            "total_cost": 13.9,
+            "wasted_life_cost": 0.0
+          },
+          "6524": {
+            "capacity_saturated_step_count": 10.95,
+            "empty_action_count": 89.05,
+            "failure_cost": 16.0,
+            "failure_count": 1.6,
+            "preventive_cost": 10.95,
+            "preventive_count": 10.95,
+            "total_cost": 26.95,
+            "wasted_life_cost": 0.0
+          },
+          "6525": {
+            "capacity_saturated_step_count": 11.75,
+            "empty_action_count": 88.25,
+            "failure_cost": 12.5,
+            "failure_count": 1.25,
+            "preventive_cost": 11.75,
+            "preventive_count": 11.75,
+            "total_cost": 24.25,
+            "wasted_life_cost": 0.0
+          }
+        }
+      },
+      "h2_vs_m4": {
+        "failure_cost": {
+          "ci95_percentile": [
+            0.0,
+            0.0
+          ],
+          "difference_definition": "H2 failure_cost minus M4 failure_cost",
+          "direction_counts": {
+            "negative": 0,
+            "positive": 0,
+            "zero": 20
+          },
+          "mean_difference": 0.0,
+          "paired_cohens_d": 0.0
+        },
+        "preventive_cost": {
+          "ci95_percentile": [
+            0.35,
+            0.9
+          ],
+          "difference_definition": "H2 preventive_cost minus M4 preventive_cost",
+          "direction_counts": {
+            "negative": 0,
+            "positive": 10,
+            "zero": 10
+          },
+          "mean_difference": 0.6,
+          "paired_cohens_d": 0.881630720467888
+        },
+        "total_cost": {
+          "ci95_percentile": [
+            0.3,
+            0.9
+          ],
+          "difference_definition": "H2 total_cost minus M4 total_cost",
+          "direction_counts": {
+            "negative": 0,
+            "positive": 10,
+            "zero": 10
+          },
+          "mean_difference": 0.6,
+          "paired_cohens_d": 0.881630720467888
+        },
+        "wasted_life_cost": {
+          "ci95_percentile": [
+            0.0,
+            0.0
+          ],
+          "difference_definition": "H2 wasted_life_cost minus M4 wasted_life_cost",
+          "direction_counts": {
+            "negative": 0,
+            "positive": 0,
+            "zero": 20
+          },
+          "mean_difference": 0.0,
+          "paired_cohens_d": 0.0
+        }
+      },
+      "h2_vs_m4_behavior": {
+        "capacity_saturated_step_count": {
+          "difference_definition": "H2 capacity_saturated_step_count minus M4 capacity_saturated_step_count",
+          "direction_counts": {
+            "negative": 0,
+            "positive": 10,
+            "zero": 10
+          },
+          "mean_difference": 0.6
+        },
+        "empty_action_count": {
+          "difference_definition": "H2 empty_action_count minus M4 empty_action_count",
+          "direction_counts": {
+            "negative": 10,
+            "positive": 0,
+            "zero": 10
+          },
+          "mean_difference": -0.6
+        },
+        "failure_count": {
+          "difference_definition": "H2 failure_count minus M4 failure_count",
+          "direction_counts": {
+            "negative": 0,
+            "positive": 0,
+            "zero": 20
+          },
+          "mean_difference": 0.0
+        },
+        "preventive_count": {
+          "difference_definition": "H2 preventive_count minus M4 preventive_count",
+          "direction_counts": {
+            "negative": 0,
+            "positive": 10,
+            "zero": 10
+          },
+          "mean_difference": 0.6
+        }
+      },
+      "m5_training_seed_count": 5,
+      "m5_vs_h2": {
+        "failure_cost": {
+          "mean_difference": 6.7,
+          "scenario_mean_direction_counts": {
+            "negative": 0,
+            "positive": 20,
+            "zero": 0
+          },
+          "seed_means": {
+            "6521": 1.0,
+            "6522": 3.5,
+            "6523": 0.5,
+            "6524": 16.0,
+            "6525": 12.5
+          }
+        },
+        "preventive_cost": {
+          "mean_difference": -0.4,
+          "scenario_mean_direction_counts": {
+            "negative": 14,
+            "positive": 4,
+            "zero": 2
+          },
+          "seed_means": {
+            "6521": 0.35,
+            "6522": 0.25,
+            "6523": 0.5,
+            "6524": -1.95,
+            "6525": -1.15
+          }
+        },
+        "total_cost": {
+          "bootstrap_resampling": "resample 20 scenarios with replacement; independently resample 5 training seeds within each selected scenario",
+          "difference_definition": "M5 total cost minus H2 total cost",
+          "effect_size_on_scenario_averaged_differences": 1.732774757781291,
+          "hierarchical_ci95_percentile": [
+            4.21,
+            8.67
+          ],
+          "mean_difference": 6.3,
+          "per_policy_paired_summaries": {
+            "6521": {
+              "bootstrap_seed": 652118,
+              "ci95_percentile": [
+                0.4,
+                2.6
+              ],
+              "direction_counts": {
+                "negative": 0,
+                "positive": 9,
+                "zero": 11
+              },
+              "mean_difference": 1.35,
+              "paired_cohens_d": 0.5230937056506676
+            },
+            "6522": {
+              "bootstrap_seed": 652119,
+              "ci95_percentile": [
+                1.75,
+                6.1
+              ],
+              "direction_counts": {
+                "negative": 1,
+                "positive": 14,
+                "zero": 5
+              },
+              "mean_difference": 3.75,
+              "paired_cohens_d": 0.7142430945348314
+            },
+            "6523": {
+              "bootstrap_seed": 652120,
+              "ci95_percentile": [
+                0.35,
+                1.95
+              ],
+              "direction_counts": {
+                "negative": 0,
+                "positive": 10,
+                "zero": 10
+              },
+              "mean_difference": 1.0,
+              "paired_cohens_d": 0.5
+            },
+            "6524": {
+              "bootstrap_seed": 652121,
+              "ci95_percentile": [
+                10.3,
+                17.9
+              ],
+              "direction_counts": {
+                "negative": 2,
+                "positive": 18,
+                "zero": 0
+              },
+              "mean_difference": 14.05,
+              "paired_cohens_d": 1.571380594543829
+            },
+            "6525": {
+              "bootstrap_seed": 652122,
+              "ci95_percentile": [
+                6.55,
+                16.6
+              ],
+              "direction_counts": {
+                "negative": 0,
+                "positive": 15,
+                "zero": 5
+              },
+              "mean_difference": 11.35,
+              "paired_cohens_d": 0.9587906185143714
+            }
+          },
+          "per_seed_per_scenario_paired_differences": {
+            "6521": {
+              "m6v2_k1_trajectory_000": 1.0,
+              "m6v2_k1_trajectory_001": 0.0,
+              "m6v2_k1_trajectory_002": 9.0,
+              "m6v2_k1_trajectory_003": 0.0,
+              "m6v2_k1_trajectory_004": 0.0,
+              "m6v2_k1_trajectory_005": 1.0,
+              "m6v2_k1_trajectory_006": 1.0,
+              "m6v2_k1_trajectory_007": 3.0,
+              "m6v2_k1_trajectory_008": 0.0,
+              "m6v2_k1_trajectory_009": 0.0,
+              "m6v2_k1_trajectory_010": 0.0,
+              "m6v2_k1_trajectory_011": 0.0,
+              "m6v2_k1_trajectory_012": 8.0,
+              "m6v2_k1_trajectory_013": 2.0,
+              "m6v2_k1_trajectory_014": 0.0,
+              "m6v2_k1_trajectory_015": 0.0,
+              "m6v2_k1_trajectory_016": 1.0,
+              "m6v2_k1_trajectory_017": 0.0,
+              "m6v2_k1_trajectory_018": 0.0,
+              "m6v2_k1_trajectory_019": 1.0
+            },
+            "6522": {
+              "m6v2_k1_trajectory_000": 9.0,
+              "m6v2_k1_trajectory_001": 10.0,
+              "m6v2_k1_trajectory_002": 0.0,
+              "m6v2_k1_trajectory_003": 1.0,
+              "m6v2_k1_trajectory_004": 0.0,
+              "m6v2_k1_trajectory_005": 1.0,
+              "m6v2_k1_trajectory_006": 2.0,
+              "m6v2_k1_trajectory_007": 1.0,
+              "m6v2_k1_trajectory_008": 9.0,
+              "m6v2_k1_trajectory_009": 19.0,
+              "m6v2_k1_trajectory_010": 0.0,
+              "m6v2_k1_trajectory_011": 1.0,
+              "m6v2_k1_trajectory_012": 8.0,
+              "m6v2_k1_trajectory_013": 2.0,
+              "m6v2_k1_trajectory_014": 1.0,
+              "m6v2_k1_trajectory_015": 0.0,
+              "m6v2_k1_trajectory_016": 2.0,
+              "m6v2_k1_trajectory_017": 0.0,
+              "m6v2_k1_trajectory_018": -1.0,
+              "m6v2_k1_trajectory_019": 10.0
+            },
+            "6523": {
+              "m6v2_k1_trajectory_000": 1.0,
+              "m6v2_k1_trajectory_001": 0.0,
+              "m6v2_k1_trajectory_002": 0.0,
+              "m6v2_k1_trajectory_003": 0.0,
+              "m6v2_k1_trajectory_004": 1.0,
+              "m6v2_k1_trajectory_005": 1.0,
+              "m6v2_k1_trajectory_006": 2.0,
+              "m6v2_k1_trajectory_007": 2.0,
+              "m6v2_k1_trajectory_008": 1.0,
+              "m6v2_k1_trajectory_009": 0.0,
+              "m6v2_k1_trajectory_010": 1.0,
+              "m6v2_k1_trajectory_011": 0.0,
+              "m6v2_k1_trajectory_012": 9.0,
+              "m6v2_k1_trajectory_013": 1.0,
+              "m6v2_k1_trajectory_014": 0.0,
+              "m6v2_k1_trajectory_015": 0.0,
+              "m6v2_k1_trajectory_016": 0.0,
+              "m6v2_k1_trajectory_017": 0.0,
+              "m6v2_k1_trajectory_018": 0.0,
+              "m6v2_k1_trajectory_019": 1.0
+            },
+            "6524": {
+              "m6v2_k1_trajectory_000": 9.0,
+              "m6v2_k1_trajectory_001": 18.0,
+              "m6v2_k1_trajectory_002": 36.0,
+              "m6v2_k1_trajectory_003": 25.0,
+              "m6v2_k1_trajectory_004": 9.0,
+              "m6v2_k1_trajectory_005": 9.0,
+              "m6v2_k1_trajectory_006": -1.0,
+              "m6v2_k1_trajectory_007": 9.0,
+              "m6v2_k1_trajectory_008": 18.0,
+              "m6v2_k1_trajectory_009": 17.0,
+              "m6v2_k1_trajectory_010": -1.0,
+              "m6v2_k1_trajectory_011": 8.0,
+              "m6v2_k1_trajectory_012": 9.0,
+              "m6v2_k1_trajectory_013": 16.0,
+              "m6v2_k1_trajectory_014": 9.0,
+              "m6v2_k1_trajectory_015": 27.0,
+              "m6v2_k1_trajectory_016": 10.0,
+              "m6v2_k1_trajectory_017": 18.0,
+              "m6v2_k1_trajectory_018": 18.0,
+              "m6v2_k1_trajectory_019": 18.0
+            },
+            "6525": {
+              "m6v2_k1_trajectory_000": 19.0,
+              "m6v2_k1_trajectory_001": 0.0,
+              "m6v2_k1_trajectory_002": 9.0,
+              "m6v2_k1_trajectory_003": 26.0,
+              "m6v2_k1_trajectory_004": 0.0,
+              "m6v2_k1_trajectory_005": 36.0,
+              "m6v2_k1_trajectory_006": 8.0,
+              "m6v2_k1_trajectory_007": 1.0,
+              "m6v2_k1_trajectory_008": 10.0,
+              "m6v2_k1_trajectory_009": 9.0,
+              "m6v2_k1_trajectory_010": 9.0,
+              "m6v2_k1_trajectory_011": 0.0,
+              "m6v2_k1_trajectory_012": 36.0,
+              "m6v2_k1_trajectory_013": 26.0,
+              "m6v2_k1_trajectory_014": 0.0,
+              "m6v2_k1_trajectory_015": 19.0,
+              "m6v2_k1_trajectory_016": 10.0,
+              "m6v2_k1_trajectory_017": 0.0,
+              "m6v2_k1_trajectory_018": 8.0,
+              "m6v2_k1_trajectory_019": 1.0
+            }
+          },
+          "scenario_mean_direction_counts": {
+            "negative": 0,
+            "positive": 20,
+            "zero": 0
+          },
+          "scenario_variation_sd_of_scenario_means": 3.6357870356253064,
+          "seed_direction_counts": {
+            "negative": 0,
+            "positive": 5,
+            "zero": 0
+          },
+          "seed_means": {
+            "6521": 1.35,
+            "6522": 3.75,
+            "6523": 1.0,
+            "6524": 14.05,
+            "6525": 11.35
+          },
+          "seed_variation_sd_of_seed_means": 6.013734280794256
+        },
+        "wasted_life_cost": {
+          "mean_difference": 0.0,
+          "scenario_mean_direction_counts": {
+            "negative": 0,
+            "positive": 0,
+            "zero": 20
+          },
+          "seed_means": {
+            "6521": 0.0,
+            "6522": 0.0,
+            "6523": 0.0,
+            "6524": 0.0,
+            "6525": 0.0
+          }
+        }
+      },
+      "m5_vs_h2_behavior": {
+        "capacity_saturated_step_count": {
+          "difference_definition": "M5 capacity_saturated_step_count minus H2 capacity_saturated_step_count",
+          "mean_difference": -0.4,
+          "scenario_mean_direction_counts": {
+            "negative": 14,
+            "positive": 4,
+            "zero": 2
+          },
+          "seed_means": {
+            "6521": 0.35,
+            "6522": 0.25,
+            "6523": 0.5,
+            "6524": -1.95,
+            "6525": -1.15
+          }
+        },
+        "empty_action_count": {
+          "difference_definition": "M5 empty_action_count minus H2 empty_action_count",
+          "mean_difference": 0.4,
+          "scenario_mean_direction_counts": {
+            "negative": 4,
+            "positive": 14,
+            "zero": 2
+          },
+          "seed_means": {
+            "6521": -0.35,
+            "6522": -0.25,
+            "6523": -0.5,
+            "6524": 1.95,
+            "6525": 1.15
+          }
+        },
+        "failure_count": {
+          "difference_definition": "M5 failure_count minus H2 failure_count",
+          "mean_difference": 0.67,
+          "scenario_mean_direction_counts": {
+            "negative": 0,
+            "positive": 20,
+            "zero": 0
+          },
+          "seed_means": {
+            "6521": 0.1,
+            "6522": 0.35,
+            "6523": 0.05,
+            "6524": 1.6,
+            "6525": 1.25
+          }
+        },
+        "preventive_count": {
+          "difference_definition": "M5 preventive_count minus H2 preventive_count",
+          "mean_difference": -0.4,
+          "scenario_mean_direction_counts": {
+            "negative": 14,
+            "positive": 4,
+            "zero": 2
+          },
+          "seed_means": {
+            "6521": 0.35,
+            "6522": 0.25,
+            "6523": 0.5,
+            "6524": -1.95,
+            "6525": -1.15
+          }
+        }
+      },
+      "scenario_count": 20
+    },
+    {
+      "K": 1,
+      "cost_regime": "failure-heavy-waste-aware",
+      "descriptive_means": {
+        "h2": {
+          "capacity_saturated_step_count": 12.9,
+          "empty_action_count": 87.1,
+          "failure_cost": 0.0,
+          "failure_count": 0.0,
+          "preventive_cost": 12.9,
+          "preventive_count": 12.9,
+          "total_cost": 13.5121,
+          "wasted_life_cost": 0.6121000000000001
+        },
+        "m3": {
+          "capacity_saturated_step_count": 11.6,
+          "empty_action_count": 88.4,
+          "failure_cost": 0.0,
+          "failure_count": 0.0,
+          "preventive_cost": 11.6,
+          "preventive_count": 11.6,
+          "total_cost": 11.8983,
+          "wasted_life_cost": 0.2983
+        },
+        "m4": {
+          "capacity_saturated_step_count": 12.25,
+          "empty_action_count": 87.75,
+          "failure_cost": 0.0,
+          "failure_count": 0.0,
+          "preventive_cost": 12.25,
+          "preventive_count": 12.25,
+          "total_cost": 12.6757,
+          "wasted_life_cost": 0.42569999999999997
+        },
+        "m5_seed_means": {
+          "6521": {
+            "capacity_saturated_step_count": 11.3,
+            "empty_action_count": 88.7,
+            "failure_cost": 8.5,
+            "failure_count": 0.85,
+            "preventive_cost": 11.3,
+            "preventive_count": 11.3,
+            "total_cost": 20.2827,
+            "wasted_life_cost": 0.4827
+          },
+          "6522": {
+            "capacity_saturated_step_count": 11.75,
+            "empty_action_count": 88.25,
+            "failure_cost": 7.0,
+            "failure_count": 0.7,
+            "preventive_cost": 11.75,
+            "preventive_count": 11.75,
+            "total_cost": 19.267599999999998,
+            "wasted_life_cost": 0.5176
+          },
+          "6523": {
+            "capacity_saturated_step_count": 12.75,
+            "empty_action_count": 87.25,
+            "failure_cost": 1.5,
+            "failure_count": 0.15,
+            "preventive_cost": 12.75,
+            "preventive_count": 12.75,
+            "total_cost": 14.9278,
+            "wasted_life_cost": 0.6778000000000001
+          },
+          "6524": {
+            "capacity_saturated_step_count": 11.6,
+            "empty_action_count": 88.4,
+            "failure_cost": 9.0,
+            "failure_count": 0.9,
+            "preventive_cost": 11.6,
+            "preventive_count": 11.6,
+            "total_cost": 21.125,
+            "wasted_life_cost": 0.5250000000000001
+          },
+          "6525": {
+            "capacity_saturated_step_count": 12.3,
+            "empty_action_count": 87.7,
+            "failure_cost": 4.0,
+            "failure_count": 0.4,
+            "preventive_cost": 12.3,
+            "preventive_count": 12.3,
+            "total_cost": 16.840200000000003,
+            "wasted_life_cost": 0.5402000000000001
+          }
+        }
+      },
+      "h2_vs_m4": {
+        "failure_cost": {
+          "ci95_percentile": [
+            0.0,
+            0.0
+          ],
+          "difference_definition": "H2 failure_cost minus M4 failure_cost",
+          "direction_counts": {
+            "negative": 0,
+            "positive": 0,
+            "zero": 20
+          },
+          "mean_difference": 0.0,
+          "paired_cohens_d": 0.0
+        },
+        "preventive_cost": {
+          "ci95_percentile": [
+            0.35,
+            0.95
+          ],
+          "difference_definition": "H2 preventive_cost minus M4 preventive_cost",
+          "direction_counts": {
+            "negative": 0,
+            "positive": 11,
+            "zero": 9
+          },
+          "mean_difference": 0.65,
+          "paired_cohens_d": 0.9689627902499088
+        },
+        "total_cost": {
+          "ci95_percentile": [
+            0.5674974999999984,
+            1.1474999999999977
+          ],
+          "difference_definition": "H2 total_cost minus M4 total_cost",
+          "direction_counts": {
+            "negative": 0,
+            "positive": 20,
+            "zero": 0
+          },
+          "mean_difference": 0.8363999999999981,
+          "paired_cohens_d": 1.1984345639066107
+        },
+        "wasted_life_cost": {
+          "ci95_percentile": [
+            0.1702000000000001,
+            0.20230000000000006
+          ],
+          "difference_definition": "H2 wasted_life_cost minus M4 wasted_life_cost",
+          "direction_counts": {
+            "negative": 0,
+            "positive": 20,
+            "zero": 0
+          },
+          "mean_difference": 0.18640000000000007,
+          "paired_cohens_d": 4.953818728060564
+        }
+      },
+      "h2_vs_m4_behavior": {
+        "capacity_saturated_step_count": {
+          "difference_definition": "H2 capacity_saturated_step_count minus M4 capacity_saturated_step_count",
+          "direction_counts": {
+            "negative": 0,
+            "positive": 11,
+            "zero": 9
+          },
+          "mean_difference": 0.65
+        },
+        "empty_action_count": {
+          "difference_definition": "H2 empty_action_count minus M4 empty_action_count",
+          "direction_counts": {
+            "negative": 11,
+            "positive": 0,
+            "zero": 9
+          },
+          "mean_difference": -0.65
+        },
+        "failure_count": {
+          "difference_definition": "H2 failure_count minus M4 failure_count",
+          "direction_counts": {
+            "negative": 0,
+            "positive": 0,
+            "zero": 20
+          },
+          "mean_difference": 0.0
+        },
+        "preventive_count": {
+          "difference_definition": "H2 preventive_count minus M4 preventive_count",
+          "direction_counts": {
+            "negative": 0,
+            "positive": 11,
+            "zero": 9
+          },
+          "mean_difference": 0.65
+        }
+      },
+      "m5_training_seed_count": 5,
+      "m5_vs_h2": {
+        "failure_cost": {
+          "mean_difference": 6.0,
+          "scenario_mean_direction_counts": {
+            "negative": 0,
+            "positive": 15,
+            "zero": 5
+          },
+          "seed_means": {
+            "6521": 8.5,
+            "6522": 7.0,
+            "6523": 1.5,
+            "6524": 9.0,
+            "6525": 4.0
+          }
+        },
+        "preventive_cost": {
+          "mean_difference": -0.96,
+          "scenario_mean_direction_counts": {
+            "negative": 18,
+            "positive": 1,
+            "zero": 1
+          },
+          "seed_means": {
+            "6521": -1.6,
+            "6522": -1.15,
+            "6523": -0.15,
+            "6524": -1.3,
+            "6525": -0.6
+          }
+        },
+        "total_cost": {
+          "bootstrap_resampling": "resample 20 scenarios with replacement; independently resample 5 training seeds within each selected scenario",
+          "difference_definition": "M5 total cost minus H2 total cost",
+          "effect_size_on_scenario_averaged_differences": 1.013538063127961,
+          "hierarchical_ci95_percentile": [
+            2.656273500000001,
+            7.551178999999999
+          ],
+          "mean_difference": 4.976560000000001,
+          "per_policy_paired_summaries": {
+            "6521": {
+              "bootstrap_seed": 652128,
+              "ci95_percentile": [
+                3.1373175000000004,
+                10.837632499999996
+              ],
+              "direction_counts": {
+                "negative": 8,
+                "positive": 12,
+                "zero": 0
+              },
+              "mean_difference": 6.7706,
+              "paired_cohens_d": 0.756823653417514
+            },
+            "6522": {
+              "bootstrap_seed": 652129,
+              "ci95_percentile": [
+                2.433175000000001,
+                9.5349125
+              ],
+              "direction_counts": {
+                "negative": 9,
+                "positive": 11,
+                "zero": 0
+              },
+              "mean_difference": 5.7555,
+              "paired_cohens_d": 0.678670157787718
+            },
+            "6523": {
+              "bootstrap_seed": 652130,
+              "ci95_percentile": [
+                0.18218750000000053,
+                2.8513999999999995
+              ],
+              "direction_counts": {
+                "negative": 3,
+                "positive": 17,
+                "zero": 0
+              },
+              "mean_difference": 1.4157000000000002,
+              "paired_cohens_d": 0.4484778242184616
+            },
+            "6524": {
+              "bootstrap_seed": 652131,
+              "ci95_percentile": [
+                3.3621250000000003,
+                12.502947499999996
+              ],
+              "direction_counts": {
+                "negative": 6,
+                "positive": 12,
+                "zero": 2
+              },
+              "mean_difference": 7.612899999999999,
+              "paired_cohens_d": 0.6988489812203696
+            },
+            "6525": {
+              "bootstrap_seed": 652132,
+              "ci95_percentile": [
+                0.9609375000000007,
+                6.064407500000001
+              ],
+              "direction_counts": {
+                "negative": 12,
+                "positive": 8,
+                "zero": 0
+              },
+              "mean_difference": 3.3281000000000005,
+              "paired_cohens_d": 0.5440404611178707
+            }
+          },
+          "per_seed_per_scenario_paired_differences": {
+            "6521": {
+              "m6v2_k1_trajectory_000": 7.827999999999999,
+              "m6v2_k1_trajectory_001": 9.019999999999998,
+              "m6v2_k1_trajectory_002": 17.791999999999994,
+              "m6v2_k1_trajectory_003": -2.169999999999998,
+              "m6v2_k1_trajectory_004": -0.049999999999998934,
+              "m6v2_k1_trajectory_005": -2.225999999999999,
+              "m6v2_k1_trajectory_006": -0.00999999999999801,
+              "m6v2_k1_trajectory_007": 0.018000000000000682,
+              "m6v2_k1_trajectory_008": 7.8679999999999986,
+              "m6v2_k1_trajectory_009": -3.171999999999999,
+              "m6v2_k1_trajectory_010": 26.789999999999996,
+              "m6v2_k1_trajectory_011": 8.014,
+              "m6v2_k1_trajectory_012": 25.826000000000008,
+              "m6v2_k1_trajectory_013": 15.749999999999996,
+              "m6v2_k1_trajectory_014": -0.11999999999999744,
+              "m6v2_k1_trajectory_015": 7.843999999999998,
+              "m6v2_k1_trajectory_016": -0.0799999999999983,
+              "m6v2_k1_trajectory_017": -0.08999999999999808,
+              "m6v2_k1_trajectory_018": 8.85,
+              "m6v2_k1_trajectory_019": 7.73
+            },
+            "6522": {
+              "m6v2_k1_trajectory_000": 8.850000000000001,
+              "m6v2_k1_trajectory_001": -0.009999999999999787,
+              "m6v2_k1_trajectory_002": -0.11999999999999744,
+              "m6v2_k1_trajectory_003": -2.139999999999999,
+              "m6v2_k1_trajectory_004": 17.944000000000003,
+              "m6v2_k1_trajectory_005": 7.882,
+              "m6v2_k1_trajectory_006": -0.008000000000000895,
+              "m6v2_k1_trajectory_007": 0.02999999999999936,
+              "m6v2_k1_trajectory_008": 7.838000000000001,
+              "m6v2_k1_trajectory_009": -0.10999999999999943,
+              "m6v2_k1_trajectory_010": -1.1659999999999986,
+              "m6v2_k1_trajectory_011": 0.02999999999999936,
+              "m6v2_k1_trajectory_012": 26.708,
+              "m6v2_k1_trajectory_013": -1.0619999999999976,
+              "m6v2_k1_trajectory_014": 17.894000000000005,
+              "m6v2_k1_trajectory_015": 17.883999999999993,
+              "m6v2_k1_trajectory_016": -1.065999999999999,
+              "m6v2_k1_trajectory_017": -1.1079999999999988,
+              "m6v2_k1_trajectory_018": 7.909999999999998,
+              "m6v2_k1_trajectory_019": 8.930000000000003
+            },
+            "6523": {
+              "m6v2_k1_trajectory_000": 0.09999999999999964,
+              "m6v2_k1_trajectory_001": 0.09000000000000163,
+              "m6v2_k1_trajectory_002": 7.954000000000001,
+              "m6v2_k1_trajectory_003": -1.0079999999999991,
+              "m6v2_k1_trajectory_004": 0.10000000000000142,
+              "m6v2_k1_trajectory_005": 0.08000000000000007,
+              "m6v2_k1_trajectory_006": 0.12400000000000055,
+              "m6v2_k1_trajectory_007": 1.1560000000000006,
+              "m6v2_k1_trajectory_008": 1.118000000000002,
+              "m6v2_k1_trajectory_009": 8.998000000000001,
+              "m6v2_k1_trajectory_010": 0.09999999999999787,
+              "m6v2_k1_trajectory_011": 0.120000000000001,
+              "m6v2_k1_trajectory_012": 9.025999999999996,
+              "m6v2_k1_trajectory_013": 0.06999999999999851,
+              "m6v2_k1_trajectory_014": 0.030000000000001137,
+              "m6v2_k1_trajectory_015": 0.0799999999999983,
+              "m6v2_k1_trajectory_016": 0.14600000000000257,
+              "m6v2_k1_trajectory_017": -0.019999999999999574,
+              "m6v2_k1_trajectory_018": -1.7763568394002505e-15,
+              "m6v2_k1_trajectory_019": 0.05000000000000071
+            },
+            "6524": {
+              "m6v2_k1_trajectory_000": -0.06799999999999962,
+              "m6v2_k1_trajectory_001": -0.019999999999997797,
+              "m6v2_k1_trajectory_002": 8.823999999999995,
+              "m6v2_k1_trajectory_003": -1.0679999999999996,
+              "m6v2_k1_trajectory_004": 0.0,
+              "m6v2_k1_trajectory_005": 17.901999999999994,
+              "m6v2_k1_trajectory_006": -0.08999999999999986,
+              "m6v2_k1_trajectory_007": 1.096,
+              "m6v2_k1_trajectory_008": 26.842000000000002,
+              "m6v2_k1_trajectory_009": 5.894000000000002,
+              "m6v2_k1_trajectory_010": 6.808000000000003,
+              "m6v2_k1_trajectory_011": 0.02999999999999936,
+              "m6v2_k1_trajectory_012": 17.786,
+              "m6v2_k1_trajectory_013": -2.194000000000001,
+              "m6v2_k1_trajectory_014": 0.0,
+              "m6v2_k1_trajectory_015": 16.823999999999995,
+              "m6v2_k1_trajectory_016": 1.0200000000000014,
+              "m6v2_k1_trajectory_017": -1.0779999999999994,
+              "m6v2_k1_trajectory_018": 35.836,
+              "m6v2_k1_trajectory_019": 17.913999999999998
+            },
+            "6525": {
+              "m6v2_k1_trajectory_000": 0.942000000000002,
+              "m6v2_k1_trajectory_001": 17.881999999999998,
+              "m6v2_k1_trajectory_002": -0.08999999999999986,
+              "m6v2_k1_trajectory_003": -2.1599999999999984,
+              "m6v2_k1_trajectory_004": 0.010000000000001563,
+              "m6v2_k1_trajectory_005": 8.950000000000005,
+              "m6v2_k1_trajectory_006": -0.06799999999999962,
+              "m6v2_k1_trajectory_007": -0.002000000000000668,
+              "m6v2_k1_trajectory_008": -0.06999999999999851,
+              "m6v2_k1_trajectory_009": -0.17999999999999794,
+              "m6v2_k1_trajectory_010": -0.010000000000001563,
+              "m6v2_k1_trajectory_011": 8.96,
+              "m6v2_k1_trajectory_012": 8.948,
+              "m6v2_k1_trajectory_013": -1.112,
+              "m6v2_k1_trajectory_014": -0.03999999999999915,
+              "m6v2_k1_trajectory_015": 16.865999999999993,
+              "m6v2_k1_trajectory_016": -1.025999999999998,
+              "m6v2_k1_trajectory_017": -0.08000000000000007,
+              "m6v2_k1_trajectory_018": 8.942000000000002,
+              "m6v2_k1_trajectory_019": -0.09999999999999964
+            }
+          },
+          "scenario_mean_direction_counts": {
+            "negative": 4,
+            "positive": 16,
+            "zero": 0
+          },
+          "scenario_variation_sd_of_scenario_means": 4.910086933135437,
+          "seed_direction_counts": {
+            "negative": 0,
+            "positive": 5,
+            "zero": 0
+          },
+          "seed_means": {
+            "6521": 6.7706,
+            "6522": 5.7555,
+            "6523": 1.4157000000000002,
+            "6524": 7.612899999999999,
+            "6525": 3.3281000000000005
+          },
+          "seed_variation_sd_of_seed_means": 2.557965986482228
+        },
+        "wasted_life_cost": {
+          "mean_difference": -0.06344000000000007,
+          "scenario_mean_direction_counts": {
+            "negative": 17,
+            "positive": 3,
+            "zero": 0
+          },
+          "seed_means": {
+            "6521": -0.12940000000000007,
+            "6522": -0.09450000000000008,
+            "6523": 0.06570000000000001,
+            "6524": -0.08710000000000004,
+            "6525": -0.07190000000000006
+          }
+        }
+      },
+      "m5_vs_h2_behavior": {
+        "capacity_saturated_step_count": {
+          "difference_definition": "M5 capacity_saturated_step_count minus H2 capacity_saturated_step_count",
+          "mean_difference": -0.96,
+          "scenario_mean_direction_counts": {
+            "negative": 18,
+            "positive": 1,
+            "zero": 1
+          },
+          "seed_means": {
+            "6521": -1.6,
+            "6522": -1.15,
+            "6523": -0.15,
+            "6524": -1.3,
+            "6525": -0.6
+          }
+        },
+        "empty_action_count": {
+          "difference_definition": "M5 empty_action_count minus H2 empty_action_count",
+          "mean_difference": 0.96,
+          "scenario_mean_direction_counts": {
+            "negative": 1,
+            "positive": 18,
+            "zero": 1
+          },
+          "seed_means": {
+            "6521": 1.6,
+            "6522": 1.15,
+            "6523": 0.15,
+            "6524": 1.3,
+            "6525": 0.6
+          }
+        },
+        "failure_count": {
+          "difference_definition": "M5 failure_count minus H2 failure_count",
+          "mean_difference": 0.6,
+          "scenario_mean_direction_counts": {
+            "negative": 0,
+            "positive": 15,
+            "zero": 5
+          },
+          "seed_means": {
+            "6521": 0.85,
+            "6522": 0.7,
+            "6523": 0.15,
+            "6524": 0.9,
+            "6525": 0.4
+          }
+        },
+        "preventive_count": {
+          "difference_definition": "M5 preventive_count minus H2 preventive_count",
+          "mean_difference": -0.96,
+          "scenario_mean_direction_counts": {
+            "negative": 18,
+            "positive": 1,
+            "zero": 1
+          },
+          "seed_means": {
+            "6521": -1.6,
+            "6522": -1.15,
+            "6523": -0.15,
+            "6524": -1.3,
+            "6525": -0.6
+          }
+        }
+      },
+      "scenario_count": 20
+    },
+    {
+      "K": 1,
+      "cost_regime": "failure-light-no-waste",
+      "descriptive_means": {
+        "h2": {
+          "capacity_saturated_step_count": 12.55,
+          "empty_action_count": 87.45,
+          "failure_cost": 0.0,
+          "failure_count": 0.0,
+          "preventive_cost": 12.55,
+          "preventive_count": 12.55,
+          "total_cost": 12.55,
+          "wasted_life_cost": 0.0
+        },
+        "m3": {
+          "capacity_saturated_step_count": 11.6,
+          "empty_action_count": 88.4,
+          "failure_cost": 0.0,
+          "failure_count": 0.0,
+          "preventive_cost": 11.6,
+          "preventive_count": 11.6,
+          "total_cost": 11.6,
+          "wasted_life_cost": 0.0
+        },
+        "m4": {
+          "capacity_saturated_step_count": 11.85,
+          "empty_action_count": 88.15,
+          "failure_cost": 0.25,
+          "failure_count": 0.05,
+          "preventive_cost": 11.85,
+          "preventive_count": 11.85,
+          "total_cost": 12.1,
+          "wasted_life_cost": 0.0
+        },
+        "m5_seed_means": {
+          "6521": {
+            "capacity_saturated_step_count": 13.25,
+            "empty_action_count": 86.75,
+            "failure_cost": 0.5,
+            "failure_count": 0.1,
+            "preventive_cost": 13.25,
+            "preventive_count": 13.25,
+            "total_cost": 13.75,
+            "wasted_life_cost": 0.0
+          },
+          "6522": {
+            "capacity_saturated_step_count": 13.15,
+            "empty_action_count": 86.85,
+            "failure_cost": 1.75,
+            "failure_count": 0.35,
+            "preventive_cost": 13.15,
+            "preventive_count": 13.15,
+            "total_cost": 14.9,
+            "wasted_life_cost": 0.0
+          },
+          "6523": {
+            "capacity_saturated_step_count": 13.4,
+            "empty_action_count": 86.6,
+            "failure_cost": 0.25,
+            "failure_count": 0.05,
+            "preventive_cost": 13.4,
+            "preventive_count": 13.4,
+            "total_cost": 13.65,
+            "wasted_life_cost": 0.0
+          },
+          "6524": {
+            "capacity_saturated_step_count": 10.95,
+            "empty_action_count": 89.05,
+            "failure_cost": 8.0,
+            "failure_count": 1.6,
+            "preventive_cost": 10.95,
+            "preventive_count": 10.95,
+            "total_cost": 18.95,
+            "wasted_life_cost": 0.0
+          },
+          "6525": {
+            "capacity_saturated_step_count": 11.75,
+            "empty_action_count": 88.25,
+            "failure_cost": 6.25,
+            "failure_count": 1.25,
+            "preventive_cost": 11.75,
+            "preventive_count": 11.75,
+            "total_cost": 18.0,
+            "wasted_life_cost": 0.0
+          }
+        }
+      },
+      "h2_vs_m4": {
+        "failure_cost": {
+          "ci95_percentile": [
+            -0.75,
+            0.0
+          ],
+          "difference_definition": "H2 failure_cost minus M4 failure_cost",
+          "direction_counts": {
+            "negative": 1,
+            "positive": 0,
+            "zero": 19
+          },
+          "mean_difference": -0.25,
+          "paired_cohens_d": -0.22360679774997896
+        },
+        "preventive_cost": {
+          "ci95_percentile": [
+            0.35,
+            1.05
+          ],
+          "difference_definition": "H2 preventive_cost minus M4 preventive_cost",
+          "direction_counts": {
+            "negative": 1,
+            "positive": 11,
+            "zero": 8
+          },
+          "mean_difference": 0.7,
+          "paired_cohens_d": 0.8097121728224798
+        },
+        "total_cost": {
+          "ci95_percentile": [
+            -0.1,
+            0.9
+          ],
+          "difference_definition": "H2 total_cost minus M4 total_cost",
+          "direction_counts": {
+            "negative": 2,
+            "positive": 10,
+            "zero": 8
+          },
+          "mean_difference": 0.45,
+          "paired_cohens_d": 0.39269379525740833
+        },
+        "wasted_life_cost": {
+          "ci95_percentile": [
+            0.0,
+            0.0
+          ],
+          "difference_definition": "H2 wasted_life_cost minus M4 wasted_life_cost",
+          "direction_counts": {
+            "negative": 0,
+            "positive": 0,
+            "zero": 20
+          },
+          "mean_difference": 0.0,
+          "paired_cohens_d": 0.0
+        }
+      },
+      "h2_vs_m4_behavior": {
+        "capacity_saturated_step_count": {
+          "difference_definition": "H2 capacity_saturated_step_count minus M4 capacity_saturated_step_count",
+          "direction_counts": {
+            "negative": 1,
+            "positive": 11,
+            "zero": 8
+          },
+          "mean_difference": 0.7
+        },
+        "empty_action_count": {
+          "difference_definition": "H2 empty_action_count minus M4 empty_action_count",
+          "direction_counts": {
+            "negative": 11,
+            "positive": 1,
+            "zero": 8
+          },
+          "mean_difference": -0.7
+        },
+        "failure_count": {
+          "difference_definition": "H2 failure_count minus M4 failure_count",
+          "direction_counts": {
+            "negative": 1,
+            "positive": 0,
+            "zero": 19
+          },
+          "mean_difference": -0.05
+        },
+        "preventive_count": {
+          "difference_definition": "H2 preventive_count minus M4 preventive_count",
+          "direction_counts": {
+            "negative": 1,
+            "positive": 11,
+            "zero": 8
+          },
+          "mean_difference": 0.7
+        }
+      },
+      "m5_training_seed_count": 5,
+      "m5_vs_h2": {
+        "failure_cost": {
+          "mean_difference": 3.35,
+          "scenario_mean_direction_counts": {
+            "negative": 0,
+            "positive": 20,
+            "zero": 0
+          },
+          "seed_means": {
+            "6521": 0.5,
+            "6522": 1.75,
+            "6523": 0.25,
+            "6524": 8.0,
+            "6525": 6.25
+          }
+        },
+        "preventive_cost": {
+          "mean_difference": -0.05,
+          "scenario_mean_direction_counts": {
+            "negative": 10,
+            "positive": 8,
+            "zero": 2
+          },
+          "seed_means": {
+            "6521": 0.7,
+            "6522": 0.6,
+            "6523": 0.85,
+            "6524": -1.6,
+            "6525": -0.8
+          }
+        },
+        "total_cost": {
+          "bootstrap_resampling": "resample 20 scenarios with replacement; independently resample 5 training seeds within each selected scenario",
+          "difference_definition": "M5 total cost minus H2 total cost",
+          "effect_size_on_scenario_averaged_differences": 1.7657838958170797,
+          "hierarchical_ci95_percentile": [
+            2.28,
+            4.39
+          ],
+          "mean_difference": 3.3,
+          "per_policy_paired_summaries": {
+            "6521": {
+              "bootstrap_seed": 652138,
+              "ci95_percentile": [
+                0.65,
+                1.8
+              ],
+              "direction_counts": {
+                "negative": 0,
+                "positive": 11,
+                "zero": 9
+              },
+              "mean_difference": 1.2,
+              "paired_cohens_d": 0.8576035628236055
+            },
+            "6522": {
+              "bootstrap_seed": 652139,
+              "ci95_percentile": [
+                1.35,
+                3.45
+              ],
+              "direction_counts": {
+                "negative": 1,
+                "positive": 14,
+                "zero": 5
+              },
+              "mean_difference": 2.35,
+              "paired_cohens_d": 0.9253115963758354
+            },
+            "6523": {
+              "bootstrap_seed": 652140,
+              "ci95_percentile": [
+                0.6,
+                1.65
+              ],
+              "direction_counts": {
+                "negative": 0,
+                "positive": 11,
+                "zero": 9
+              },
+              "mean_difference": 1.1,
+              "paired_cohens_d": 0.8783373555002167
+            },
+            "6524": {
+              "bootstrap_seed": 652141,
+              "ci95_percentile": [
+                4.7,
+                8.2
+              ],
+              "direction_counts": {
+                "negative": 1,
+                "positive": 18,
+                "zero": 1
+              },
+              "mean_difference": 6.4,
+              "paired_cohens_d": 1.5723144749483635
+            },
+            "6525": {
+              "bootstrap_seed": 652142,
+              "ci95_percentile": [
+                3.2,
+                7.9
+              ],
+              "direction_counts": {
+                "negative": 0,
+                "positive": 15,
+                "zero": 5
+              },
+              "mean_difference": 5.45,
+              "paired_cohens_d": 0.9924644078443162
+            }
+          },
+          "per_seed_per_scenario_paired_differences": {
+            "6521": {
+              "m6v2_k1_trajectory_000": 2.0,
+              "m6v2_k1_trajectory_001": 0.0,
+              "m6v2_k1_trajectory_002": 4.0,
+              "m6v2_k1_trajectory_003": 2.0,
+              "m6v2_k1_trajectory_004": 0.0,
+              "m6v2_k1_trajectory_005": 1.0,
+              "m6v2_k1_trajectory_006": 2.0,
+              "m6v2_k1_trajectory_007": 3.0,
+              "m6v2_k1_trajectory_008": 1.0,
+              "m6v2_k1_trajectory_009": 0.0,
+              "m6v2_k1_trajectory_010": 0.0,
+              "m6v2_k1_trajectory_011": 0.0,
+              "m6v2_k1_trajectory_012": 3.0,
+              "m6v2_k1_trajectory_013": 4.0,
+              "m6v2_k1_trajectory_014": 0.0,
+              "m6v2_k1_trajectory_015": 0.0,
+              "m6v2_k1_trajectory_016": 1.0,
+              "m6v2_k1_trajectory_017": 0.0,
+              "m6v2_k1_trajectory_018": 0.0,
+              "m6v2_k1_trajectory_019": 1.0
+            },
+            "6522": {
+              "m6v2_k1_trajectory_000": 5.0,
+              "m6v2_k1_trajectory_001": 5.0,
+              "m6v2_k1_trajectory_002": 0.0,
+              "m6v2_k1_trajectory_003": 3.0,
+              "m6v2_k1_trajectory_004": 0.0,
+              "m6v2_k1_trajectory_005": 1.0,
+              "m6v2_k1_trajectory_006": 3.0,
+              "m6v2_k1_trajectory_007": 1.0,
+              "m6v2_k1_trajectory_008": 5.0,
+              "m6v2_k1_trajectory_009": 9.0,
+              "m6v2_k1_trajectory_010": 0.0,
+              "m6v2_k1_trajectory_011": 1.0,
+              "m6v2_k1_trajectory_012": 3.0,
+              "m6v2_k1_trajectory_013": 4.0,
+              "m6v2_k1_trajectory_014": 1.0,
+              "m6v2_k1_trajectory_015": 0.0,
+              "m6v2_k1_trajectory_016": 2.0,
+              "m6v2_k1_trajectory_017": 0.0,
+              "m6v2_k1_trajectory_018": -1.0,
+              "m6v2_k1_trajectory_019": 5.0
+            },
+            "6523": {
+              "m6v2_k1_trajectory_000": 2.0,
+              "m6v2_k1_trajectory_001": 0.0,
+              "m6v2_k1_trajectory_002": 0.0,
+              "m6v2_k1_trajectory_003": 2.0,
+              "m6v2_k1_trajectory_004": 1.0,
+              "m6v2_k1_trajectory_005": 1.0,
+              "m6v2_k1_trajectory_006": 3.0,
+              "m6v2_k1_trajectory_007": 2.0,
+              "m6v2_k1_trajectory_008": 2.0,
+              "m6v2_k1_trajectory_009": 0.0,
+              "m6v2_k1_trajectory_010": 1.0,
+              "m6v2_k1_trajectory_011": 0.0,
+              "m6v2_k1_trajectory_012": 4.0,
+              "m6v2_k1_trajectory_013": 3.0,
+              "m6v2_k1_trajectory_014": 0.0,
+              "m6v2_k1_trajectory_015": 0.0,
+              "m6v2_k1_trajectory_016": 0.0,
+              "m6v2_k1_trajectory_017": 0.0,
+              "m6v2_k1_trajectory_018": 0.0,
+              "m6v2_k1_trajectory_019": 1.0
+            },
+            "6524": {
+              "m6v2_k1_trajectory_000": 5.0,
+              "m6v2_k1_trajectory_001": 8.0,
+              "m6v2_k1_trajectory_002": 16.0,
+              "m6v2_k1_trajectory_003": 12.0,
+              "m6v2_k1_trajectory_004": 4.0,
+              "m6v2_k1_trajectory_005": 4.0,
+              "m6v2_k1_trajectory_006": 0.0,
+              "m6v2_k1_trajectory_007": 4.0,
+              "m6v2_k1_trajectory_008": 9.0,
+              "m6v2_k1_trajectory_009": 7.0,
+              "m6v2_k1_trajectory_010": -1.0,
+              "m6v2_k1_trajectory_011": 3.0,
+              "m6v2_k1_trajectory_012": 4.0,
+              "m6v2_k1_trajectory_013": 8.0,
+              "m6v2_k1_trajectory_014": 4.0,
+              "m6v2_k1_trajectory_015": 12.0,
+              "m6v2_k1_trajectory_016": 5.0,
+              "m6v2_k1_trajectory_017": 8.0,
+              "m6v2_k1_trajectory_018": 8.0,
+              "m6v2_k1_trajectory_019": 8.0
+            },
+            "6525": {
+              "m6v2_k1_trajectory_000": 10.0,
+              "m6v2_k1_trajectory_001": 0.0,
+              "m6v2_k1_trajectory_002": 4.0,
+              "m6v2_k1_trajectory_003": 13.0,
+              "m6v2_k1_trajectory_004": 0.0,
+              "m6v2_k1_trajectory_005": 16.0,
+              "m6v2_k1_trajectory_006": 4.0,
+              "m6v2_k1_trajectory_007": 1.0,
+              "m6v2_k1_trajectory_008": 6.0,
+              "m6v2_k1_trajectory_009": 4.0,
+              "m6v2_k1_trajectory_010": 4.0,
+              "m6v2_k1_trajectory_011": 0.0,
+              "m6v2_k1_trajectory_012": 16.0,
+              "m6v2_k1_trajectory_013": 13.0,
+              "m6v2_k1_trajectory_014": 0.0,
+              "m6v2_k1_trajectory_015": 9.0,
+              "m6v2_k1_trajectory_016": 5.0,
+              "m6v2_k1_trajectory_017": 0.0,
+              "m6v2_k1_trajectory_018": 3.0,
+              "m6v2_k1_trajectory_019": 1.0
+            }
+          },
+          "scenario_mean_direction_counts": {
+            "negative": 0,
+            "positive": 20,
+            "zero": 0
+          },
+          "scenario_variation_sd_of_scenario_means": 1.8688583624628616,
+          "seed_direction_counts": {
+            "negative": 0,
+            "positive": 5,
+            "zero": 0
+          },
+          "seed_means": {
+            "6521": 1.2,
+            "6522": 2.35,
+            "6523": 1.1,
+            "6524": 6.4,
+            "6525": 5.45
+          },
+          "seed_variation_sd_of_seed_means": 2.469058525025278
+        },
+        "wasted_life_cost": {
+          "mean_difference": 0.0,
+          "scenario_mean_direction_counts": {
+            "negative": 0,
+            "positive": 0,
+            "zero": 20
+          },
+          "seed_means": {
+            "6521": 0.0,
+            "6522": 0.0,
+            "6523": 0.0,
+            "6524": 0.0,
+            "6525": 0.0
+          }
+        }
+      },
+      "m5_vs_h2_behavior": {
+        "capacity_saturated_step_count": {
+          "difference_definition": "M5 capacity_saturated_step_count minus H2 capacity_saturated_step_count",
+          "mean_difference": -0.05,
+          "scenario_mean_direction_counts": {
+            "negative": 10,
+            "positive": 8,
+            "zero": 2
+          },
+          "seed_means": {
+            "6521": 0.7,
+            "6522": 0.6,
+            "6523": 0.85,
+            "6524": -1.6,
+            "6525": -0.8
+          }
+        },
+        "empty_action_count": {
+          "difference_definition": "M5 empty_action_count minus H2 empty_action_count",
+          "mean_difference": 0.05,
+          "scenario_mean_direction_counts": {
+            "negative": 8,
+            "positive": 10,
+            "zero": 2
+          },
+          "seed_means": {
+            "6521": -0.7,
+            "6522": -0.6,
+            "6523": -0.85,
+            "6524": 1.6,
+            "6525": 0.8
+          }
+        },
+        "failure_count": {
+          "difference_definition": "M5 failure_count minus H2 failure_count",
+          "mean_difference": 0.67,
+          "scenario_mean_direction_counts": {
+            "negative": 0,
+            "positive": 20,
+            "zero": 0
+          },
+          "seed_means": {
+            "6521": 0.1,
+            "6522": 0.35,
+            "6523": 0.05,
+            "6524": 1.6,
+            "6525": 1.25
+          }
+        },
+        "preventive_count": {
+          "difference_definition": "M5 preventive_count minus H2 preventive_count",
+          "mean_difference": -0.05,
+          "scenario_mean_direction_counts": {
+            "negative": 10,
+            "positive": 8,
+            "zero": 2
+          },
+          "seed_means": {
+            "6521": 0.7,
+            "6522": 0.6,
+            "6523": 0.85,
+            "6524": -1.6,
+            "6525": -0.8
+          }
+        }
+      },
+      "scenario_count": 20
+    },
+    {
+      "K": 1,
+      "cost_regime": "failure-light-waste-aware",
+      "descriptive_means": {
+        "h2": {
+          "capacity_saturated_step_count": 12.45,
+          "empty_action_count": 87.55,
+          "failure_cost": 0.0,
+          "failure_count": 0.0,
+          "preventive_cost": 12.45,
+          "preventive_count": 12.45,
+          "total_cost": 12.9234,
+          "wasted_life_cost": 0.4734
+        },
+        "m3": {
+          "capacity_saturated_step_count": 11.6,
+          "empty_action_count": 88.4,
+          "failure_cost": 0.0,
+          "failure_count": 0.0,
+          "preventive_cost": 11.6,
+          "preventive_count": 11.6,
+          "total_cost": 11.8983,
+          "wasted_life_cost": 0.2983
+        },
+        "m4": {
+          "capacity_saturated_step_count": 11.7,
+          "empty_action_count": 88.3,
+          "failure_cost": 0.25,
+          "failure_count": 0.05,
+          "preventive_cost": 11.7,
+          "preventive_count": 11.7,
+          "total_cost": 12.283200000000003,
+          "wasted_life_cost": 0.3332
+        },
+        "m5_seed_means": {
+          "6521": {
+            "capacity_saturated_step_count": 11.3,
+            "empty_action_count": 88.7,
+            "failure_cost": 4.25,
+            "failure_count": 0.85,
+            "preventive_cost": 11.3,
+            "preventive_count": 11.3,
+            "total_cost": 16.032699999999995,
+            "wasted_life_cost": 0.4827
+          },
+          "6522": {
+            "capacity_saturated_step_count": 11.75,
+            "empty_action_count": 88.25,
+            "failure_cost": 3.5,
+            "failure_count": 0.7,
+            "preventive_cost": 11.75,
+            "preventive_count": 11.75,
+            "total_cost": 15.767599999999998,
+            "wasted_life_cost": 0.5176
+          },
+          "6523": {
+            "capacity_saturated_step_count": 12.75,
+            "empty_action_count": 87.25,
+            "failure_cost": 0.75,
+            "failure_count": 0.15,
+            "preventive_cost": 12.75,
+            "preventive_count": 12.75,
+            "total_cost": 14.1778,
+            "wasted_life_cost": 0.6778000000000001
+          },
+          "6524": {
+            "capacity_saturated_step_count": 11.6,
+            "empty_action_count": 88.4,
+            "failure_cost": 4.5,
+            "failure_count": 0.9,
+            "preventive_cost": 11.6,
+            "preventive_count": 11.6,
+            "total_cost": 16.625,
+            "wasted_life_cost": 0.5250000000000001
+          },
+          "6525": {
+            "capacity_saturated_step_count": 12.3,
+            "empty_action_count": 87.7,
+            "failure_cost": 2.0,
+            "failure_count": 0.4,
+            "preventive_cost": 12.3,
+            "preventive_count": 12.3,
+            "total_cost": 14.840200000000001,
+            "wasted_life_cost": 0.5402000000000001
+          }
+        }
+      },
+      "h2_vs_m4": {
+        "failure_cost": {
+          "ci95_percentile": [
+            -0.75,
+            0.0
+          ],
+          "difference_definition": "H2 failure_cost minus M4 failure_cost",
+          "direction_counts": {
+            "negative": 1,
+            "positive": 0,
+            "zero": 19
+          },
+          "mean_difference": -0.25,
+          "paired_cohens_d": -0.22360679774997896
+        },
+        "preventive_cost": {
+          "ci95_percentile": [
+            0.5,
+            1.05
+          ],
+          "difference_definition": "H2 preventive_cost minus M4 preventive_cost",
+          "direction_counts": {
+            "negative": 0,
+            "positive": 13,
+            "zero": 7
+          },
+          "mean_difference": 0.75,
+          "paired_cohens_d": 1.174322041888219
+        },
+        "total_cost": {
+          "ci95_percentile": [
+            0.1456999999999998,
+            1.000519999999999
+          ],
+          "difference_definition": "H2 total_cost minus M4 total_cost",
+          "direction_counts": {
+            "negative": 1,
+            "positive": 19,
+            "zero": 0
+          },
+          "mean_difference": 0.6401999999999995,
+          "paired_cohens_d": 0.6377137487073381
+        },
+        "wasted_life_cost": {
+          "ci95_percentile": [
+            0.1278,
+            0.15249999999999994
+          ],
+          "difference_definition": "H2 wasted_life_cost minus M4 wasted_life_cost",
+          "direction_counts": {
+            "negative": 0,
+            "positive": 20,
+            "zero": 0
+          },
+          "mean_difference": 0.14019999999999996,
+          "paired_cohens_d": 4.766334025825752
+        }
+      },
+      "h2_vs_m4_behavior": {
+        "capacity_saturated_step_count": {
+          "difference_definition": "H2 capacity_saturated_step_count minus M4 capacity_saturated_step_count",
+          "direction_counts": {
+            "negative": 0,
+            "positive": 13,
+            "zero": 7
+          },
+          "mean_difference": 0.75
+        },
+        "empty_action_count": {
+          "difference_definition": "H2 empty_action_count minus M4 empty_action_count",
+          "direction_counts": {
+            "negative": 13,
+            "positive": 0,
+            "zero": 7
+          },
+          "mean_difference": -0.75
+        },
+        "failure_count": {
+          "difference_definition": "H2 failure_count minus M4 failure_count",
+          "direction_counts": {
+            "negative": 1,
+            "positive": 0,
+            "zero": 19
+          },
+          "mean_difference": -0.05
+        },
+        "preventive_count": {
+          "difference_definition": "H2 preventive_count minus M4 preventive_count",
+          "direction_counts": {
+            "negative": 0,
+            "positive": 13,
+            "zero": 7
+          },
+          "mean_difference": 0.75
+        }
+      },
+      "m5_training_seed_count": 5,
+      "m5_vs_h2": {
+        "failure_cost": {
+          "mean_difference": 3.0,
+          "scenario_mean_direction_counts": {
+            "negative": 0,
+            "positive": 15,
+            "zero": 5
+          },
+          "seed_means": {
+            "6521": 4.25,
+            "6522": 3.5,
+            "6523": 0.75,
+            "6524": 4.5,
+            "6525": 2.0
+          }
+        },
+        "preventive_cost": {
+          "mean_difference": -0.51,
+          "scenario_mean_direction_counts": {
+            "negative": 13,
+            "positive": 7,
+            "zero": 0
+          },
+          "seed_means": {
+            "6521": -1.15,
+            "6522": -0.7,
+            "6523": 0.3,
+            "6524": -0.85,
+            "6525": -0.15
+          }
+        },
+        "total_cost": {
+          "bootstrap_resampling": "resample 20 scenarios with replacement; independently resample 5 training seeds within each selected scenario",
+          "difference_definition": "M5 total cost minus H2 total cost",
+          "effect_size_on_scenario_averaged_differences": 1.297623674686368,
+          "hierarchical_ci95_percentile": [
+            1.6061379999999996,
+            3.652289499999999
+          ],
+          "mean_difference": 2.5652599999999994,
+          "per_policy_paired_summaries": {
+            "6521": {
+              "bootstrap_seed": 652148,
+              "ci95_percentile": [
+                1.474177499999999,
+                4.890439999999998
+              ],
+              "direction_counts": {
+                "negative": 3,
+                "positive": 17,
+                "zero": 0
+              },
+              "mean_difference": 3.1093,
+              "paired_cohens_d": 0.769185904562172
+            },
+            "6522": {
+              "bootstrap_seed": 652149,
+              "ci95_percentile": [
+                1.3853250000000004,
+                4.4642025
+              ],
+              "direction_counts": {
+                "negative": 2,
+                "positive": 18,
+                "zero": 0
+              },
+              "mean_difference": 2.8442,
+              "paired_cohens_d": 0.7793870355638638
+            },
+            "6523": {
+              "bootstrap_seed": 652150,
+              "ci95_percentile": [
+                0.7463949999999996,
+                1.840824999999999
+              ],
+              "direction_counts": {
+                "negative": 0,
+                "positive": 20,
+                "zero": 0
+              },
+              "mean_difference": 1.2544,
+              "paired_cohens_d": 0.9553504573405793
+            },
+            "6524": {
+              "bootstrap_seed": 652151,
+              "ci95_percentile": [
+                1.866292499999999,
+                5.878747499999998
+              ],
+              "direction_counts": {
+                "negative": 0,
+                "positive": 20,
+                "zero": 0
+              },
+              "mean_difference": 3.701599999999999,
+              "paired_cohens_d": 0.789903163594923
+            },
+            "6525": {
+              "bootstrap_seed": 652152,
+              "ci95_percentile": [
+                0.8898399999999994,
+                3.0623049999999985
+              ],
+              "direction_counts": {
+                "negative": 2,
+                "positive": 18,
+                "zero": 0
+              },
+              "mean_difference": 1.9167999999999992,
+              "paired_cohens_d": 0.7473992963325075
+            }
+          },
+          "per_seed_per_scenario_paired_differences": {
+            "6521": {
+              "m6v2_k1_trajectory_000": 3.9960000000000004,
+              "m6v2_k1_trajectory_001": 4.119999999999997,
+              "m6v2_k1_trajectory_002": 7.921999999999997,
+              "m6v2_k1_trajectory_003": 0.040000000000000924,
+              "m6v2_k1_trajectory_004": 0.040000000000000924,
+              "m6v2_k1_trajectory_005": -2.106,
+              "m6v2_k1_trajectory_006": 1.1400000000000006,
+              "m6v2_k1_trajectory_007": 0.1280000000000019,
+              "m6v2_k1_trajectory_008": 3.9999999999999982,
+              "m6v2_k1_trajectory_009": -3.0020000000000007,
+              "m6v2_k1_trajectory_010": 11.93,
+              "m6v2_k1_trajectory_011": 4.139999999999999,
+              "m6v2_k1_trajectory_012": 10.992,
+              "m6v2_k1_trajectory_013": 7.953999999999995,
+              "m6v2_k1_trajectory_014": -0.02999999999999936,
+              "m6v2_k1_trajectory_015": 2.9739999999999984,
+              "m6v2_k1_trajectory_016": 0.05000000000000071,
+              "m6v2_k1_trajectory_017": 1.0980000000000008,
+              "m6v2_k1_trajectory_018": 3.959999999999999,
+              "m6v2_k1_trajectory_019": 2.8400000000000016
+            },
+            "6522": {
+              "m6v2_k1_trajectory_000": 5.0180000000000025,
+              "m6v2_k1_trajectory_001": 0.08999999999999986,
+              "m6v2_k1_trajectory_002": 0.010000000000001563,
+              "m6v2_k1_trajectory_003": 0.07000000000000028,
+              "m6v2_k1_trajectory_004": 8.034,
+              "m6v2_k1_trajectory_005": 3.001999999999999,
+              "m6v2_k1_trajectory_006": 1.1419999999999977,
+              "m6v2_k1_trajectory_007": 0.14000000000000057,
+              "m6v2_k1_trajectory_008": 3.969999999999999,
+              "m6v2_k1_trajectory_009": 0.05999999999999872,
+              "m6v2_k1_trajectory_010": -1.025999999999998,
+              "m6v2_k1_trajectory_011": 1.1559999999999988,
+              "m6v2_k1_trajectory_012": 11.873999999999995,
+              "m6v2_k1_trajectory_013": 1.1420000000000012,
+              "m6v2_k1_trajectory_014": 7.9840000000000035,
+              "m6v2_k1_trajectory_015": 8.013999999999994,
+              "m6v2_k1_trajectory_016": -0.9359999999999999,
+              "m6v2_k1_trajectory_017": 0.08000000000000007,
+              "m6v2_k1_trajectory_018": 3.0200000000000014,
+              "m6v2_k1_trajectory_019": 4.040000000000003
+            },
+            "6523": {
+              "m6v2_k1_trajectory_000": 1.2680000000000007,
+              "m6v2_k1_trajectory_001": 0.19000000000000128,
+              "m6v2_k1_trajectory_002": 3.0839999999999996,
+              "m6v2_k1_trajectory_003": 1.202,
+              "m6v2_k1_trajectory_004": 0.19000000000000128,
+              "m6v2_k1_trajectory_005": 0.1999999999999993,
+              "m6v2_k1_trajectory_006": 1.2739999999999991,
+              "m6v2_k1_trajectory_007": 1.2660000000000018,
+              "m6v2_k1_trajectory_008": 2.25,
+              "m6v2_k1_trajectory_009": 4.167999999999999,
+              "m6v2_k1_trajectory_010": 0.23999999999999844,
+              "m6v2_k1_trajectory_011": 1.2460000000000004,
+              "m6v2_k1_trajectory_012": 4.191999999999997,
+              "m6v2_k1_trajectory_013": 2.2739999999999974,
+              "m6v2_k1_trajectory_014": 0.11999999999999922,
+              "m6v2_k1_trajectory_015": 0.20999999999999908,
+              "m6v2_k1_trajectory_016": 0.2760000000000016,
+              "m6v2_k1_trajectory_017": 1.1679999999999993,
+              "m6v2_k1_trajectory_018": 0.10999999999999766,
+              "m6v2_k1_trajectory_019": 0.16000000000000014
+            },
+            "6524": {
+              "m6v2_k1_trajectory_000": 1.1000000000000014,
+              "m6v2_k1_trajectory_001": 0.08000000000000185,
+              "m6v2_k1_trajectory_002": 3.953999999999997,
+              "m6v2_k1_trajectory_003": 1.1419999999999995,
+              "m6v2_k1_trajectory_004": 0.08999999999999986,
+              "m6v2_k1_trajectory_005": 8.021999999999998,
+              "m6v2_k1_trajectory_006": 1.0599999999999987,
+              "m6v2_k1_trajectory_007": 1.2060000000000013,
+              "m6v2_k1_trajectory_008": 12.974,
+              "m6v2_k1_trajectory_009": 1.0639999999999983,
+              "m6v2_k1_trajectory_010": 1.9480000000000004,
+              "m6v2_k1_trajectory_011": 1.1559999999999988,
+              "m6v2_k1_trajectory_012": 7.951999999999995,
+              "m6v2_k1_trajectory_013": 0.00999999999999801,
+              "m6v2_k1_trajectory_014": 0.08999999999999808,
+              "m6v2_k1_trajectory_015": 6.953999999999995,
+              "m6v2_k1_trajectory_016": 1.1500000000000004,
+              "m6v2_k1_trajectory_017": 0.10999999999999943,
+              "m6v2_k1_trajectory_018": 15.946,
+              "m6v2_k1_trajectory_019": 8.023999999999997
+            },
+            "6525": {
+              "m6v2_k1_trajectory_000": 2.110000000000003,
+              "m6v2_k1_trajectory_001": 7.981999999999999,
+              "m6v2_k1_trajectory_002": 0.03999999999999915,
+              "m6v2_k1_trajectory_003": 0.05000000000000071,
+              "m6v2_k1_trajectory_004": 0.10000000000000142,
+              "m6v2_k1_trajectory_005": 4.069999999999997,
+              "m6v2_k1_trajectory_006": 1.081999999999999,
+              "m6v2_k1_trajectory_007": 0.10800000000000054,
+              "m6v2_k1_trajectory_008": 1.0619999999999994,
+              "m6v2_k1_trajectory_009": -0.009999999999999787,
+              "m6v2_k1_trajectory_010": 0.129999999999999,
+              "m6v2_k1_trajectory_011": 5.085999999999997,
+              "m6v2_k1_trajectory_012": 4.113999999999997,
+              "m6v2_k1_trajectory_013": 1.0919999999999987,
+              "m6v2_k1_trajectory_014": 0.049999999999998934,
+              "m6v2_k1_trajectory_015": 6.996,
+              "m6v2_k1_trajectory_016": -0.895999999999999,
+              "m6v2_k1_trajectory_017": 1.1079999999999988,
+              "m6v2_k1_trajectory_018": 4.052000000000001,
+              "m6v2_k1_trajectory_019": 0.009999999999999787
+            }
+          },
+          "scenario_mean_direction_counts": {
+            "negative": 1,
+            "positive": 19,
+            "zero": 0
+          },
+          "scenario_variation_sd_of_scenario_means": 1.9768905654561335,
+          "seed_direction_counts": {
+            "negative": 0,
+            "positive": 5,
+            "zero": 0
+          },
+          "seed_means": {
+            "6521": 3.1093,
+            "6522": 2.8442,
+            "6523": 1.2544,
+            "6524": 3.701599999999999,
+            "6525": 1.9167999999999992
+          },
+          "seed_variation_sd_of_seed_means": 0.9751807463234697
+        },
+        "wasted_life_cost": {
+          "mean_difference": 0.07526000000000002,
+          "scenario_mean_direction_counts": {
+            "negative": 0,
+            "positive": 20,
+            "zero": 0
+          },
+          "seed_means": {
+            "6521": 0.009300000000000006,
+            "6522": 0.0442,
+            "6523": 0.20440000000000008,
+            "6524": 0.05160000000000002,
+            "6525": 0.06680000000000001
+          }
+        }
+      },
+      "m5_vs_h2_behavior": {
+        "capacity_saturated_step_count": {
+          "difference_definition": "M5 capacity_saturated_step_count minus H2 capacity_saturated_step_count",
+          "mean_difference": -0.51,
+          "scenario_mean_direction_counts": {
+            "negative": 13,
+            "positive": 7,
+            "zero": 0
+          },
+          "seed_means": {
+            "6521": -1.15,
+            "6522": -0.7,
+            "6523": 0.3,
+            "6524": -0.85,
+            "6525": -0.15
+          }
+        },
+        "empty_action_count": {
+          "difference_definition": "M5 empty_action_count minus H2 empty_action_count",
+          "mean_difference": 0.51,
+          "scenario_mean_direction_counts": {
+            "negative": 7,
+            "positive": 13,
+            "zero": 0
+          },
+          "seed_means": {
+            "6521": 1.15,
+            "6522": 0.7,
+            "6523": -0.3,
+            "6524": 0.85,
+            "6525": 0.15
+          }
+        },
+        "failure_count": {
+          "difference_definition": "M5 failure_count minus H2 failure_count",
+          "mean_difference": 0.6,
+          "scenario_mean_direction_counts": {
+            "negative": 0,
+            "positive": 15,
+            "zero": 5
+          },
+          "seed_means": {
+            "6521": 0.85,
+            "6522": 0.7,
+            "6523": 0.15,
+            "6524": 0.9,
+            "6525": 0.4
+          }
+        },
+        "preventive_count": {
+          "difference_definition": "M5 preventive_count minus H2 preventive_count",
+          "mean_difference": -0.51,
+          "scenario_mean_direction_counts": {
+            "negative": 13,
+            "positive": 7,
+            "zero": 0
+          },
+          "seed_means": {
+            "6521": -1.15,
+            "6522": -0.7,
+            "6523": 0.3,
+            "6524": -0.85,
+            "6525": -0.15
+          }
+        }
+      },
+      "scenario_count": 20
+    },
+    {
+      "K": 2,
+      "cost_regime": "failure-heavy-no-waste",
+      "descriptive_means": {
+        "h2": {
+          "capacity_saturated_step_count": 0.35,
+          "empty_action_count": 88.3,
+          "failure_cost": 0.0,
+          "failure_count": 0.0,
+          "preventive_cost": 12.05,
+          "preventive_count": 12.05,
+          "total_cost": 12.05,
+          "wasted_life_cost": 0.0
+        },
+        "m3": {
+          "capacity_saturated_step_count": 6.65,
+          "empty_action_count": 93.35,
+          "failure_cost": 0.0,
+          "failure_count": 0.0,
+          "preventive_cost": 13.3,
+          "preventive_count": 13.3,
+          "total_cost": 13.3,
+          "wasted_life_cost": 0.0
+        },
+        "m4": {
+          "capacity_saturated_step_count": 0.45,
+          "empty_action_count": 88.75,
+          "failure_cost": 0.0,
+          "failure_count": 0.0,
+          "preventive_cost": 11.7,
+          "preventive_count": 11.7,
+          "total_cost": 11.7,
+          "wasted_life_cost": 0.0
+        },
+        "m5_seed_means": {
+          "6521": {
+            "capacity_saturated_step_count": 2.35,
+            "empty_action_count": 90.25,
+            "failure_cost": 4.0,
+            "failure_count": 0.4,
+            "preventive_cost": 12.1,
+            "preventive_count": 12.1,
+            "total_cost": 16.1,
+            "wasted_life_cost": 0.0
+          },
+          "6522": {
+            "capacity_saturated_step_count": 1.1,
+            "empty_action_count": 88.85,
+            "failure_cost": 3.0,
+            "failure_count": 0.3,
+            "preventive_cost": 12.25,
+            "preventive_count": 12.25,
+            "total_cost": 15.25,
+            "wasted_life_cost": 0.0
+          },
+          "6523": {
+            "capacity_saturated_step_count": 0.65,
+            "empty_action_count": 87.1,
+            "failure_cost": 0.0,
+            "failure_count": 0.0,
+            "preventive_cost": 13.55,
+            "preventive_count": 13.55,
+            "total_cost": 13.55,
+            "wasted_life_cost": 0.0
+          },
+          "6524": {
+            "capacity_saturated_step_count": 1.0,
+            "empty_action_count": 89.45,
+            "failure_cost": 8.0,
+            "failure_count": 0.8,
+            "preventive_cost": 11.55,
+            "preventive_count": 11.55,
+            "total_cost": 19.55,
+            "wasted_life_cost": 0.0
+          },
+          "6525": {
+            "capacity_saturated_step_count": 0.65,
+            "empty_action_count": 89.15,
+            "failure_cost": 6.5,
+            "failure_count": 0.65,
+            "preventive_cost": 11.5,
+            "preventive_count": 11.5,
+            "total_cost": 18.0,
+            "wasted_life_cost": 0.0
+          }
+        }
+      },
+      "h2_vs_m4": {
+        "failure_cost": {
+          "ci95_percentile": [
+            0.0,
+            0.0
+          ],
+          "difference_definition": "H2 failure_cost minus M4 failure_cost",
+          "direction_counts": {
+            "negative": 0,
+            "positive": 0,
+            "zero": 20
+          },
+          "mean_difference": 0.0,
+          "paired_cohens_d": 0.0
+        },
+        "preventive_cost": {
+          "ci95_percentile": [
+            0.05,
+            0.65
+          ],
+          "difference_definition": "H2 preventive_cost minus M4 preventive_cost",
+          "direction_counts": {
+            "negative": 1,
+            "positive": 6,
+            "zero": 13
+          },
+          "mean_difference": 0.35,
+          "paired_cohens_d": 0.4696978962525548
+        },
+        "total_cost": {
+          "ci95_percentile": [
+            0.05,
+            0.7
+          ],
+          "difference_definition": "H2 total_cost minus M4 total_cost",
+          "direction_counts": {
+            "negative": 1,
+            "positive": 6,
+            "zero": 13
+          },
+          "mean_difference": 0.35,
+          "paired_cohens_d": 0.4696978962525548
+        },
+        "wasted_life_cost": {
+          "ci95_percentile": [
+            0.0,
+            0.0
+          ],
+          "difference_definition": "H2 wasted_life_cost minus M4 wasted_life_cost",
+          "direction_counts": {
+            "negative": 0,
+            "positive": 0,
+            "zero": 20
+          },
+          "mean_difference": 0.0,
+          "paired_cohens_d": 0.0
+        }
+      },
+      "h2_vs_m4_behavior": {
+        "capacity_saturated_step_count": {
+          "difference_definition": "H2 capacity_saturated_step_count minus M4 capacity_saturated_step_count",
+          "direction_counts": {
+            "negative": 4,
+            "positive": 2,
+            "zero": 14
+          },
+          "mean_difference": -0.1
+        },
+        "empty_action_count": {
+          "difference_definition": "H2 empty_action_count minus M4 empty_action_count",
+          "direction_counts": {
+            "negative": 8,
+            "positive": 2,
+            "zero": 10
+          },
+          "mean_difference": -0.45
+        },
+        "failure_count": {
+          "difference_definition": "H2 failure_count minus M4 failure_count",
+          "direction_counts": {
+            "negative": 0,
+            "positive": 0,
+            "zero": 20
+          },
+          "mean_difference": 0.0
+        },
+        "preventive_count": {
+          "difference_definition": "H2 preventive_count minus M4 preventive_count",
+          "direction_counts": {
+            "negative": 1,
+            "positive": 6,
+            "zero": 13
+          },
+          "mean_difference": 0.35
+        }
+      },
+      "m5_training_seed_count": 5,
+      "m5_vs_h2": {
+        "failure_cost": {
+          "mean_difference": 4.3,
+          "scenario_mean_direction_counts": {
+            "negative": 0,
+            "positive": 18,
+            "zero": 2
+          },
+          "seed_means": {
+            "6521": 4.0,
+            "6522": 3.0,
+            "6523": 0.0,
+            "6524": 8.0,
+            "6525": 6.5
+          }
+        },
+        "preventive_cost": {
+          "mean_difference": 0.14,
+          "scenario_mean_direction_counts": {
+            "negative": 9,
+            "positive": 9,
+            "zero": 2
+          },
+          "seed_means": {
+            "6521": 0.05,
+            "6522": 0.2,
+            "6523": 1.5,
+            "6524": -0.5,
+            "6525": -0.55
+          }
+        },
+        "total_cost": {
+          "bootstrap_resampling": "resample 20 scenarios with replacement; independently resample 5 training seeds within each selected scenario",
+          "difference_definition": "M5 total cost minus H2 total cost",
+          "effect_size_on_scenario_averaged_differences": 1.6054068886771489,
+          "hierarchical_ci95_percentile": [
+            2.92,
+            6.15
+          ],
+          "mean_difference": 4.44,
+          "per_policy_paired_summaries": {
+            "6521": {
+              "bootstrap_seed": 652158,
+              "ci95_percentile": [
+                1.55,
+                6.8
+              ],
+              "direction_counts": {
+                "negative": 2,
+                "positive": 10,
+                "zero": 8
+              },
+              "mean_difference": 4.05,
+              "paired_cohens_d": 0.6476673888952577
+            },
+            "6522": {
+              "bootstrap_seed": 652159,
+              "ci95_percentile": [
+                1.398750000000001,
+                5.15
+              ],
+              "direction_counts": {
+                "negative": 2,
+                "positive": 13,
+                "zero": 5
+              },
+              "mean_difference": 3.2,
+              "paired_cohens_d": 0.7239737088005909
+            },
+            "6523": {
+              "bootstrap_seed": 652160,
+              "ci95_percentile": [
+                1.1,
+                1.95
+              ],
+              "direction_counts": {
+                "negative": 0,
+                "positive": 18,
+                "zero": 2
+              },
+              "mean_difference": 1.5,
+              "paired_cohens_d": 1.585782419612773
+            },
+            "6524": {
+              "bootstrap_seed": 652161,
+              "ci95_percentile": [
+                4.4,
+                11.05
+              ],
+              "direction_counts": {
+                "negative": 0,
+                "positive": 16,
+                "zero": 4
+              },
+              "mean_difference": 7.5,
+              "paired_cohens_d": 0.9669743378594596
+            },
+            "6525": {
+              "bootstrap_seed": 652162,
+              "ci95_percentile": [
+                2.9,
+                9.35
+              ],
+              "direction_counts": {
+                "negative": 0,
+                "positive": 12,
+                "zero": 8
+              },
+              "mean_difference": 5.95,
+              "paired_cohens_d": 0.7881149455294668
+            }
+          },
+          "per_seed_per_scenario_paired_differences": {
+            "6521": {
+              "m6v2_k2_trajectory_000": -1.0,
+              "m6v2_k2_trajectory_001": 0.0,
+              "m6v2_k2_trajectory_002": 19.0,
+              "m6v2_k2_trajectory_003": 10.0,
+              "m6v2_k2_trajectory_004": -1.0,
+              "m6v2_k2_trajectory_005": 10.0,
+              "m6v2_k2_trajectory_006": 2.0,
+              "m6v2_k2_trajectory_007": 0.0,
+              "m6v2_k2_trajectory_008": 2.0,
+              "m6v2_k2_trajectory_009": 0.0,
+              "m6v2_k2_trajectory_010": 0.0,
+              "m6v2_k2_trajectory_011": 0.0,
+              "m6v2_k2_trajectory_012": 16.0,
+              "m6v2_k2_trajectory_013": 1.0,
+              "m6v2_k2_trajectory_014": 11.0,
+              "m6v2_k2_trajectory_015": 11.0,
+              "m6v2_k2_trajectory_016": 0.0,
+              "m6v2_k2_trajectory_017": 0.0,
+              "m6v2_k2_trajectory_018": 1.0,
+              "m6v2_k2_trajectory_019": 0.0
+            },
+            "6522": {
+              "m6v2_k2_trajectory_000": 0.0,
+              "m6v2_k2_trajectory_001": -1.0,
+              "m6v2_k2_trajectory_002": 9.0,
+              "m6v2_k2_trajectory_003": 10.0,
+              "m6v2_k2_trajectory_004": -1.0,
+              "m6v2_k2_trajectory_005": 1.0,
+              "m6v2_k2_trajectory_006": 0.0,
+              "m6v2_k2_trajectory_007": 9.0,
+              "m6v2_k2_trajectory_008": 11.0,
+              "m6v2_k2_trajectory_009": 0.0,
+              "m6v2_k2_trajectory_010": 1.0,
+              "m6v2_k2_trajectory_011": 0.0,
+              "m6v2_k2_trajectory_012": 1.0,
+              "m6v2_k2_trajectory_013": 1.0,
+              "m6v2_k2_trajectory_014": 1.0,
+              "m6v2_k2_trajectory_015": 1.0,
+              "m6v2_k2_trajectory_016": 0.0,
+              "m6v2_k2_trajectory_017": 9.0,
+              "m6v2_k2_trajectory_018": 10.0,
+              "m6v2_k2_trajectory_019": 2.0
+            },
+            "6523": {
+              "m6v2_k2_trajectory_000": 2.0,
+              "m6v2_k2_trajectory_001": 1.0,
+              "m6v2_k2_trajectory_002": 2.0,
+              "m6v2_k2_trajectory_003": 2.0,
+              "m6v2_k2_trajectory_004": 1.0,
+              "m6v2_k2_trajectory_005": 1.0,
+              "m6v2_k2_trajectory_006": 2.0,
+              "m6v2_k2_trajectory_007": 1.0,
+              "m6v2_k2_trajectory_008": 2.0,
+              "m6v2_k2_trajectory_009": 1.0,
+              "m6v2_k2_trajectory_010": 4.0,
+              "m6v2_k2_trajectory_011": 0.0,
+              "m6v2_k2_trajectory_012": 2.0,
+              "m6v2_k2_trajectory_013": 1.0,
+              "m6v2_k2_trajectory_014": 3.0,
+              "m6v2_k2_trajectory_015": 2.0,
+              "m6v2_k2_trajectory_016": 1.0,
+              "m6v2_k2_trajectory_017": 0.0,
+              "m6v2_k2_trajectory_018": 1.0,
+              "m6v2_k2_trajectory_019": 1.0
+            },
+            "6524": {
+              "m6v2_k2_trajectory_000": 7.0,
+              "m6v2_k2_trajectory_001": 1.0,
+              "m6v2_k2_trajectory_002": 18.0,
+              "m6v2_k2_trajectory_003": 2.0,
+              "m6v2_k2_trajectory_004": 9.0,
+              "m6v2_k2_trajectory_005": 8.0,
+              "m6v2_k2_trajectory_006": 0.0,
+              "m6v2_k2_trajectory_007": 0.0,
+              "m6v2_k2_trajectory_008": 1.0,
+              "m6v2_k2_trajectory_009": 18.0,
+              "m6v2_k2_trajectory_010": 9.0,
+              "m6v2_k2_trajectory_011": 0.0,
+              "m6v2_k2_trajectory_012": 18.0,
+              "m6v2_k2_trajectory_013": 10.0,
+              "m6v2_k2_trajectory_014": 9.0,
+              "m6v2_k2_trajectory_015": 10.0,
+              "m6v2_k2_trajectory_016": 1.0,
+              "m6v2_k2_trajectory_017": 0.0,
+              "m6v2_k2_trajectory_018": 2.0,
+              "m6v2_k2_trajectory_019": 27.0
+            },
+            "6525": {
+              "m6v2_k2_trajectory_000": 0.0,
+              "m6v2_k2_trajectory_001": 8.0,
+              "m6v2_k2_trajectory_002": 0.0,
+              "m6v2_k2_trajectory_003": 18.0,
+              "m6v2_k2_trajectory_004": 18.0,
+              "m6v2_k2_trajectory_005": 10.0,
+              "m6v2_k2_trajectory_006": 0.0,
+              "m6v2_k2_trajectory_007": 1.0,
+              "m6v2_k2_trajectory_008": 0.0,
+              "m6v2_k2_trajectory_009": 0.0,
+              "m6v2_k2_trajectory_010": 1.0,
+              "m6v2_k2_trajectory_011": 7.0,
+              "m6v2_k2_trajectory_012": 0.0,
+              "m6v2_k2_trajectory_013": 25.0,
+              "m6v2_k2_trajectory_014": 10.0,
+              "m6v2_k2_trajectory_015": 9.0,
+              "m6v2_k2_trajectory_016": 1.0,
+              "m6v2_k2_trajectory_017": 0.0,
+              "m6v2_k2_trajectory_018": 11.0,
+              "m6v2_k2_trajectory_019": 0.0
+            }
+          },
+          "scenario_mean_direction_counts": {
+            "negative": 0,
+            "positive": 20,
+            "zero": 0
+          },
+          "scenario_variation_sd_of_scenario_means": 2.765654010403897,
+          "seed_direction_counts": {
+            "negative": 0,
+            "positive": 5,
+            "zero": 0
+          },
+          "seed_means": {
+            "6521": 4.05,
+            "6522": 3.2,
+            "6523": 1.5,
+            "6524": 7.5,
+            "6525": 5.95
+          },
+          "seed_variation_sd_of_seed_means": 2.343981655218317
+        },
+        "wasted_life_cost": {
+          "mean_difference": 0.0,
+          "scenario_mean_direction_counts": {
+            "negative": 0,
+            "positive": 0,
+            "zero": 20
+          },
+          "seed_means": {
+            "6521": 0.0,
+            "6522": 0.0,
+            "6523": 0.0,
+            "6524": 0.0,
+            "6525": 0.0
+          }
+        }
+      },
+      "m5_vs_h2_behavior": {
+        "capacity_saturated_step_count": {
+          "difference_definition": "M5 capacity_saturated_step_count minus H2 capacity_saturated_step_count",
+          "mean_difference": 0.8,
+          "scenario_mean_direction_counts": {
+            "negative": 2,
+            "positive": 17,
+            "zero": 1
+          },
+          "seed_means": {
+            "6521": 2.0,
+            "6522": 0.75,
+            "6523": 0.3,
+            "6524": 0.65,
+            "6525": 0.3
+          }
+        },
+        "empty_action_count": {
+          "difference_definition": "M5 empty_action_count minus H2 empty_action_count",
+          "mean_difference": 0.66,
+          "scenario_mean_direction_counts": {
+            "negative": 5,
+            "positive": 14,
+            "zero": 1
+          },
+          "seed_means": {
+            "6521": 1.95,
+            "6522": 0.55,
+            "6523": -1.2,
+            "6524": 1.15,
+            "6525": 0.85
+          }
+        },
+        "failure_count": {
+          "difference_definition": "M5 failure_count minus H2 failure_count",
+          "mean_difference": 0.43,
+          "scenario_mean_direction_counts": {
+            "negative": 0,
+            "positive": 18,
+            "zero": 2
+          },
+          "seed_means": {
+            "6521": 0.4,
+            "6522": 0.3,
+            "6523": 0.0,
+            "6524": 0.8,
+            "6525": 0.65
+          }
+        },
+        "preventive_count": {
+          "difference_definition": "M5 preventive_count minus H2 preventive_count",
+          "mean_difference": 0.14,
+          "scenario_mean_direction_counts": {
+            "negative": 9,
+            "positive": 9,
+            "zero": 2
+          },
+          "seed_means": {
+            "6521": 0.05,
+            "6522": 0.2,
+            "6523": 1.5,
+            "6524": -0.5,
+            "6525": -0.55
+          }
+        }
+      },
+      "scenario_count": 20
+    },
+    {
+      "K": 2,
+      "cost_regime": "failure-heavy-waste-aware",
+      "descriptive_means": {
+        "h2": {
+          "capacity_saturated_step_count": 0.35,
+          "empty_action_count": 88.3,
+          "failure_cost": 0.0,
+          "failure_count": 0.0,
+          "preventive_cost": 12.05,
+          "preventive_count": 12.05,
+          "total_cost": 12.6184,
+          "wasted_life_cost": 0.5684000000000001
+        },
+        "m3": {
+          "capacity_saturated_step_count": 6.65,
+          "empty_action_count": 93.35,
+          "failure_cost": 0.0,
+          "failure_count": 0.0,
+          "preventive_cost": 13.3,
+          "preventive_count": 13.3,
+          "total_cost": 14.2571,
+          "wasted_life_cost": 0.9571
+        },
+        "m4": {
+          "capacity_saturated_step_count": 0.4,
+          "empty_action_count": 88.8,
+          "failure_cost": 0.0,
+          "failure_count": 0.0,
+          "preventive_cost": 11.6,
+          "preventive_count": 11.6,
+          "total_cost": 12.008999999999999,
+          "wasted_life_cost": 0.4090000000000001
+        },
+        "m5_seed_means": {
+          "6521": {
+            "capacity_saturated_step_count": 2.55,
+            "empty_action_count": 90.4,
+            "failure_cost": 3.0,
+            "failure_count": 0.3,
+            "preventive_cost": 12.15,
+            "preventive_count": 12.15,
+            "total_cost": 15.7711,
+            "wasted_life_cost": 0.6211
+          },
+          "6522": {
+            "capacity_saturated_step_count": 0.55,
+            "empty_action_count": 88.7,
+            "failure_cost": 2.0,
+            "failure_count": 0.2,
+            "preventive_cost": 11.85,
+            "preventive_count": 11.85,
+            "total_cost": 14.447700000000003,
+            "wasted_life_cost": 0.5977000000000001
+          },
+          "6523": {
+            "capacity_saturated_step_count": 0.65,
+            "empty_action_count": 88.5,
+            "failure_cost": 1.0,
+            "failure_count": 0.1,
+            "preventive_cost": 12.15,
+            "preventive_count": 12.15,
+            "total_cost": 13.735,
+            "wasted_life_cost": 0.585
+          },
+          "6524": {
+            "capacity_saturated_step_count": 1.4,
+            "empty_action_count": 90.2,
+            "failure_cost": 8.0,
+            "failure_count": 0.8,
+            "preventive_cost": 11.2,
+            "preventive_count": 11.2,
+            "total_cost": 19.758799999999997,
+            "wasted_life_cost": 0.5588000000000001
+          },
+          "6525": {
+            "capacity_saturated_step_count": 0.95,
+            "empty_action_count": 89.15,
+            "failure_cost": 1.0,
+            "failure_count": 0.1,
+            "preventive_cost": 11.8,
+            "preventive_count": 11.8,
+            "total_cost": 13.3642,
+            "wasted_life_cost": 0.5642
+          }
+        }
+      },
+      "h2_vs_m4": {
+        "failure_cost": {
+          "ci95_percentile": [
+            0.0,
+            0.0
+          ],
+          "difference_definition": "H2 failure_cost minus M4 failure_cost",
+          "direction_counts": {
+            "negative": 0,
+            "positive": 0,
+            "zero": 20
+          },
+          "mean_difference": 0.0,
+          "paired_cohens_d": 0.0
+        },
+        "preventive_cost": {
+          "ci95_percentile": [
+            0.15,
+            0.8
+          ],
+          "difference_definition": "H2 preventive_cost minus M4 preventive_cost",
+          "direction_counts": {
+            "negative": 1,
+            "positive": 8,
+            "zero": 11
+          },
+          "mean_difference": 0.45,
+          "paired_cohens_d": 0.5927645932524129
+        },
+        "total_cost": {
+          "ci95_percentile": [
+            0.29359750000000023,
+            0.9700025000000005
+          ],
+          "difference_definition": "H2 total_cost minus M4 total_cost",
+          "direction_counts": {
+            "negative": 1,
+            "positive": 19,
+            "zero": 0
+          },
+          "mean_difference": 0.6094000000000006,
+          "paired_cohens_d": 0.7704040444986576
+        },
+        "wasted_life_cost": {
+          "ci95_percentile": [
+            0.14420000000000005,
+            0.17680000000000004
+          ],
+          "difference_definition": "H2 wasted_life_cost minus M4 wasted_life_cost",
+          "direction_counts": {
+            "negative": 0,
+            "positive": 20,
+            "zero": 0
+          },
+          "mean_difference": 0.15940000000000004,
+          "paired_cohens_d": 4.186444189134507
+        }
+      },
+      "h2_vs_m4_behavior": {
+        "capacity_saturated_step_count": {
+          "difference_definition": "H2 capacity_saturated_step_count minus M4 capacity_saturated_step_count",
+          "direction_counts": {
+            "negative": 4,
+            "positive": 4,
+            "zero": 12
+          },
+          "mean_difference": -0.05
+        },
+        "empty_action_count": {
+          "difference_definition": "H2 empty_action_count minus M4 empty_action_count",
+          "direction_counts": {
+            "negative": 10,
+            "positive": 3,
+            "zero": 7
+          },
+          "mean_difference": -0.5
+        },
+        "failure_count": {
+          "difference_definition": "H2 failure_count minus M4 failure_count",
+          "direction_counts": {
+            "negative": 0,
+            "positive": 0,
+            "zero": 20
+          },
+          "mean_difference": 0.0
+        },
+        "preventive_count": {
+          "difference_definition": "H2 preventive_count minus M4 preventive_count",
+          "direction_counts": {
+            "negative": 1,
+            "positive": 8,
+            "zero": 11
+          },
+          "mean_difference": 0.45
+        }
+      },
+      "m5_training_seed_count": 5,
+      "m5_vs_h2": {
+        "failure_cost": {
+          "mean_difference": 3.0,
+          "scenario_mean_direction_counts": {
+            "negative": 0,
+            "positive": 13,
+            "zero": 7
+          },
+          "seed_means": {
+            "6521": 3.0,
+            "6522": 2.0,
+            "6523": 1.0,
+            "6524": 8.0,
+            "6525": 1.0
+          }
+        },
+        "preventive_cost": {
+          "mean_difference": -0.22,
+          "scenario_mean_direction_counts": {
+            "negative": 10,
+            "positive": 7,
+            "zero": 3
+          },
+          "seed_means": {
+            "6521": 0.1,
+            "6522": -0.2,
+            "6523": 0.1,
+            "6524": -0.85,
+            "6525": -0.25
+          }
+        },
+        "total_cost": {
+          "bootstrap_resampling": "resample 20 scenarios with replacement; independently resample 5 training seeds within each selected scenario",
+          "difference_definition": "M5 total cost minus H2 total cost",
+          "effect_size_on_scenario_averaged_differences": 0.9631333449414782,
+          "hierarchical_ci95_percentile": [
+            1.3365490000000002,
+            4.445282499999999
+          ],
+          "mean_difference": 2.79696,
+          "per_policy_paired_summaries": {
+            "6521": {
+              "bootstrap_seed": 652168,
+              "ci95_percentile": [
+                1.3223975,
+                5.1163325
+              ],
+              "direction_counts": {
+                "negative": 2,
+                "positive": 18,
+                "zero": 0
+              },
+              "mean_difference": 3.1527000000000003,
+              "paired_cohens_d": 0.6972240351352548
+            },
+            "6522": {
+              "bootstrap_seed": 652169,
+              "ci95_percentile": [
+                0.2949775,
+                3.66192
+              ],
+              "direction_counts": {
+                "negative": 7,
+                "positive": 13,
+                "zero": 0
+              },
+              "mean_difference": 1.8292999999999995,
+              "paired_cohens_d": 0.46611338117393025
+            },
+            "6523": {
+              "bootstrap_seed": 652170,
+              "ci95_percentile": [
+                0.014089999999999141,
+                2.6287200000000004
+              ],
+              "direction_counts": {
+                "negative": 7,
+                "positive": 13,
+                "zero": 0
+              },
+              "mean_difference": 1.1166000000000003,
+              "paired_cohens_d": 0.360246893105098
+            },
+            "6524": {
+              "bootstrap_seed": 652171,
+              "ci95_percentile": [
+                3.3206924999999994,
+                11.191852499999996
+              ],
+              "direction_counts": {
+                "negative": 4,
+                "positive": 16,
+                "zero": 0
+              },
+              "mean_difference": 7.1404,
+              "paired_cohens_d": 0.7698124272285153
+            },
+            "6525": {
+              "bootstrap_seed": 652172,
+              "ci95_percentile": [
+                -0.25880000000000003,
+                2.0461324999999997
+              ],
+              "direction_counts": {
+                "negative": 8,
+                "positive": 10,
+                "zero": 2
+              },
+              "mean_difference": 0.7457999999999997,
+              "paired_cohens_d": 0.2714524189111105
+            }
+          },
+          "per_seed_per_scenario_paired_differences": {
+            "6521": {
+              "m6v2_k2_trajectory_000": 7.968,
+              "m6v2_k2_trajectory_001": 0.009999999999999787,
+              "m6v2_k2_trajectory_002": 10.942,
+              "m6v2_k2_trajectory_003": 2.1579999999999977,
+              "m6v2_k2_trajectory_004": 0.14200000000000124,
+              "m6v2_k2_trajectory_005": -0.019999999999999574,
+              "m6v2_k2_trajectory_006": 2.1479999999999997,
+              "m6v2_k2_trajectory_007": 0.08199999999999896,
+              "m6v2_k2_trajectory_008": 1.1400000000000006,
+              "m6v2_k2_trajectory_009": 0.029999999999995808,
+              "m6v2_k2_trajectory_010": 9.036000000000001,
+              "m6v2_k2_trajectory_011": 0.1280000000000001,
+              "m6v2_k2_trajectory_012": 10.059999999999997,
+              "m6v2_k2_trajectory_013": -2.09,
+              "m6v2_k2_trajectory_014": 1.062000000000003,
+              "m6v2_k2_trajectory_015": 8.912,
+              "m6v2_k2_trajectory_016": 0.06999999999999851,
+              "m6v2_k2_trajectory_017": 0.03399999999999892,
+              "m6v2_k2_trajectory_018": 11.210000000000003,
+              "m6v2_k2_trajectory_019": 0.03200000000000003
+            },
+            "6522": {
+              "m6v2_k2_trajectory_000": -1.0279999999999987,
+              "m6v2_k2_trajectory_001": -1.121999999999998,
+              "m6v2_k2_trajectory_002": 8.985999999999997,
+              "m6v2_k2_trajectory_003": 0.21599999999999753,
+              "m6v2_k2_trajectory_004": -0.9800000000000004,
+              "m6v2_k2_trajectory_005": -2.1259999999999994,
+              "m6v2_k2_trajectory_006": 0.0799999999999983,
+              "m6v2_k2_trajectory_007": 0.029999999999997584,
+              "m6v2_k2_trajectory_008": 1.0900000000000016,
+              "m6v2_k2_trajectory_009": 8.993999999999998,
+              "m6v2_k2_trajectory_010": 1.1179999999999986,
+              "m6v2_k2_trajectory_011": -0.04999999999999538,
+              "m6v2_k2_trajectory_012": -1.0320000000000018,
+              "m6v2_k2_trajectory_013": 1.022000000000002,
+              "m6v2_k2_trajectory_014": 1.1819999999999986,
+              "m6v2_k2_trajectory_015": -0.011999999999998678,
+              "m6v2_k2_trajectory_016": 9.023999999999997,
+              "m6v2_k2_trajectory_017": 0.07000000000000028,
+              "m6v2_k2_trajectory_018": 10.08,
+              "m6v2_k2_trajectory_019": 1.0439999999999987
+            },
+            "6523": {
+              "m6v2_k2_trajectory_000": 0.05000000000000071,
+              "m6v2_k2_trajectory_001": -1.0419999999999998,
+              "m6v2_k2_trajectory_002": 1.0839999999999979,
+              "m6v2_k2_trajectory_003": 1.057999999999998,
+              "m6v2_k2_trajectory_004": -1.7763568394002505e-15,
+              "m6v2_k2_trajectory_005": -1.0879999999999992,
+              "m6v2_k2_trajectory_006": 1.056000000000001,
+              "m6v2_k2_trajectory_007": 0.04200000000000159,
+              "m6v2_k2_trajectory_008": 9.992000000000008,
+              "m6v2_k2_trajectory_009": -0.08000000000000362,
+              "m6v2_k2_trajectory_010": 0.05799999999999983,
+              "m6v2_k2_trajectory_011": -0.04999999999999716,
+              "m6v2_k2_trajectory_012": 0.059999999999996945,
+              "m6v2_k2_trajectory_013": 0.022000000000002018,
+              "m6v2_k2_trajectory_014": -0.019999999999999574,
+              "m6v2_k2_trajectory_015": -0.019999999999999574,
+              "m6v2_k2_trajectory_016": 0.05999999999999872,
+              "m6v2_k2_trajectory_017": 0.049999999999998934,
+              "m6v2_k2_trajectory_018": 10.040000000000001,
+              "m6v2_k2_trajectory_019": 1.0599999999999987
+            },
+            "6524": {
+              "m6v2_k2_trajectory_000": -1.0879999999999992,
+              "m6v2_k2_trajectory_001": -1.0219999999999985,
+              "m6v2_k2_trajectory_002": 18.996000000000002,
+              "m6v2_k2_trajectory_003": 1.0779999999999976,
+              "m6v2_k2_trajectory_004": 0.019999999999999574,
+              "m6v2_k2_trajectory_005": 16.901999999999994,
+              "m6v2_k2_trajectory_006": 0.05999999999999872,
+              "m6v2_k2_trajectory_007": 0.062000000000001165,
+              "m6v2_k2_trajectory_008": 17.946,
+              "m6v2_k2_trajectory_009": 17.924,
+              "m6v2_k2_trajectory_010": 0.03999999999999915,
+              "m6v2_k2_trajectory_011": 9.026000000000003,
+              "m6v2_k2_trajectory_012": 19.019999999999996,
+              "m6v2_k2_trajectory_013": -3.1579999999999995,
+              "m6v2_k2_trajectory_014": 8.967999999999998,
+              "m6v2_k2_trajectory_015": 26.924,
+              "m6v2_k2_trajectory_016": 0.045999999999999375,
+              "m6v2_k2_trajectory_017": -0.005999999999998451,
+              "m6v2_k2_trajectory_018": 10.08,
+              "m6v2_k2_trajectory_019": 0.9900000000000002
+            },
+            "6525": {
+              "m6v2_k2_trajectory_000": -1.0079999999999991,
+              "m6v2_k2_trajectory_001": 7.919999999999996,
+              "m6v2_k2_trajectory_002": 1.0839999999999979,
+              "m6v2_k2_trajectory_003": 1.027999999999997,
+              "m6v2_k2_trajectory_004": 0.0,
+              "m6v2_k2_trajectory_005": -1.0379999999999985,
+              "m6v2_k2_trajectory_006": 0.010000000000001563,
+              "m6v2_k2_trajectory_007": 0.10200000000000209,
+              "m6v2_k2_trajectory_008": 0.0,
+              "m6v2_k2_trajectory_009": -1.7763568394002505e-15,
+              "m6v2_k2_trajectory_010": 0.040000000000000924,
+              "m6v2_k2_trajectory_011": 8.982000000000003,
+              "m6v2_k2_trajectory_012": -2.1400000000000023,
+              "m6v2_k2_trajectory_013": -1.0299999999999994,
+              "m6v2_k2_trajectory_014": -0.05999999999999872,
+              "m6v2_k2_trajectory_015": -0.030000000000001137,
+              "m6v2_k2_trajectory_016": 0.009999999999999787,
+              "m6v2_k2_trajectory_017": 1.0760000000000005,
+              "m6v2_k2_trajectory_018": 0.00999999999999801,
+              "m6v2_k2_trajectory_019": -0.040000000000000924
+            }
+          },
+          "scenario_mean_direction_counts": {
+            "negative": 2,
+            "positive": 18,
+            "zero": 0
+          },
+          "scenario_variation_sd_of_scenario_means": 2.9040215611784763,
+          "seed_direction_counts": {
+            "negative": 0,
+            "positive": 5,
+            "zero": 0
+          },
+          "seed_means": {
+            "6521": 3.1527000000000003,
+            "6522": 1.8292999999999995,
+            "6523": 1.1166000000000003,
+            "6524": 7.1404,
+            "6525": 0.7457999999999997
+          },
+          "seed_variation_sd_of_seed_means": 2.596115123217767
+        },
+        "wasted_life_cost": {
+          "mean_difference": 0.01695999999999999,
+          "scenario_mean_direction_counts": {
+            "negative": 7,
+            "positive": 13,
+            "zero": 0
+          },
+          "seed_means": {
+            "6521": 0.05269999999999997,
+            "6522": 0.029299999999999986,
+            "6523": 0.016600000000000024,
+            "6524": -0.009600000000000017,
+            "6525": -0.0042000000000000206
+          }
+        }
+      },
+      "m5_vs_h2_behavior": {
+        "capacity_saturated_step_count": {
+          "difference_definition": "M5 capacity_saturated_step_count minus H2 capacity_saturated_step_count",
+          "mean_difference": 0.87,
+          "scenario_mean_direction_counts": {
+            "negative": 2,
+            "positive": 17,
+            "zero": 1
+          },
+          "seed_means": {
+            "6521": 2.2,
+            "6522": 0.2,
+            "6523": 0.3,
+            "6524": 1.05,
+            "6525": 0.6
+          }
+        },
+        "empty_action_count": {
+          "difference_definition": "M5 empty_action_count minus H2 empty_action_count",
+          "mean_difference": 1.09,
+          "scenario_mean_direction_counts": {
+            "negative": 2,
+            "positive": 18,
+            "zero": 0
+          },
+          "seed_means": {
+            "6521": 2.1,
+            "6522": 0.4,
+            "6523": 0.2,
+            "6524": 1.9,
+            "6525": 0.85
+          }
+        },
+        "failure_count": {
+          "difference_definition": "M5 failure_count minus H2 failure_count",
+          "mean_difference": 0.3,
+          "scenario_mean_direction_counts": {
+            "negative": 0,
+            "positive": 13,
+            "zero": 7
+          },
+          "seed_means": {
+            "6521": 0.3,
+            "6522": 0.2,
+            "6523": 0.1,
+            "6524": 0.8,
+            "6525": 0.1
+          }
+        },
+        "preventive_count": {
+          "difference_definition": "M5 preventive_count minus H2 preventive_count",
+          "mean_difference": -0.22,
+          "scenario_mean_direction_counts": {
+            "negative": 10,
+            "positive": 7,
+            "zero": 3
+          },
+          "seed_means": {
+            "6521": 0.1,
+            "6522": -0.2,
+            "6523": 0.1,
+            "6524": -0.85,
+            "6525": -0.25
+          }
+        }
+      },
+      "scenario_count": 20
+    },
+    {
+      "K": 2,
+      "cost_regime": "failure-light-no-waste",
+      "descriptive_means": {
+        "h2": {
+          "capacity_saturated_step_count": 0.55,
+          "empty_action_count": 88.75,
+          "failure_cost": 0.0,
+          "failure_count": 0.0,
+          "preventive_cost": 11.8,
+          "preventive_count": 11.8,
+          "total_cost": 11.8,
+          "wasted_life_cost": 0.0
+        },
+        "m3": {
+          "capacity_saturated_step_count": 6.65,
+          "empty_action_count": 93.35,
+          "failure_cost": 0.0,
+          "failure_count": 0.0,
+          "preventive_cost": 13.3,
+          "preventive_count": 13.3,
+          "total_cost": 13.3,
+          "wasted_life_cost": 0.0
+        },
+        "m4": {
+          "capacity_saturated_step_count": 0.35,
+          "empty_action_count": 89.1,
+          "failure_cost": 0.0,
+          "failure_count": 0.0,
+          "preventive_cost": 11.25,
+          "preventive_count": 11.25,
+          "total_cost": 11.25,
+          "wasted_life_cost": 0.0
+        },
+        "m5_seed_means": {
+          "6521": {
+            "capacity_saturated_step_count": 2.35,
+            "empty_action_count": 90.25,
+            "failure_cost": 2.0,
+            "failure_count": 0.4,
+            "preventive_cost": 12.1,
+            "preventive_count": 12.1,
+            "total_cost": 14.1,
+            "wasted_life_cost": 0.0
+          },
+          "6522": {
+            "capacity_saturated_step_count": 1.1,
+            "empty_action_count": 88.85,
+            "failure_cost": 1.5,
+            "failure_count": 0.3,
+            "preventive_cost": 12.25,
+            "preventive_count": 12.25,
+            "total_cost": 13.75,
+            "wasted_life_cost": 0.0
+          },
+          "6523": {
+            "capacity_saturated_step_count": 0.65,
+            "empty_action_count": 87.1,
+            "failure_cost": 0.0,
+            "failure_count": 0.0,
+            "preventive_cost": 13.55,
+            "preventive_count": 13.55,
+            "total_cost": 13.55,
+            "wasted_life_cost": 0.0
+          },
+          "6524": {
+            "capacity_saturated_step_count": 1.0,
+            "empty_action_count": 89.45,
+            "failure_cost": 4.0,
+            "failure_count": 0.8,
+            "preventive_cost": 11.55,
+            "preventive_count": 11.55,
+            "total_cost": 15.55,
+            "wasted_life_cost": 0.0
+          },
+          "6525": {
+            "capacity_saturated_step_count": 0.65,
+            "empty_action_count": 89.15,
+            "failure_cost": 3.25,
+            "failure_count": 0.65,
+            "preventive_cost": 11.5,
+            "preventive_count": 11.5,
+            "total_cost": 14.75,
+            "wasted_life_cost": 0.0
+          }
+        }
+      },
+      "h2_vs_m4": {
+        "failure_cost": {
+          "ci95_percentile": [
+            0.0,
+            0.0
+          ],
+          "difference_definition": "H2 failure_cost minus M4 failure_cost",
+          "direction_counts": {
+            "negative": 0,
+            "positive": 0,
+            "zero": 20
+          },
+          "mean_difference": 0.0,
+          "paired_cohens_d": 0.0
+        },
+        "preventive_cost": {
+          "ci95_percentile": [
+            0.25,
+            0.9
+          ],
+          "difference_definition": "H2 preventive_cost minus M4 preventive_cost",
+          "direction_counts": {
+            "negative": 0,
+            "positive": 9,
+            "zero": 11
+          },
+          "mean_difference": 0.55,
+          "paired_cohens_d": 0.724490058419616
+        },
+        "total_cost": {
+          "ci95_percentile": [
+            0.25,
+            0.9
+          ],
+          "difference_definition": "H2 total_cost minus M4 total_cost",
+          "direction_counts": {
+            "negative": 0,
+            "positive": 9,
+            "zero": 11
+          },
+          "mean_difference": 0.55,
+          "paired_cohens_d": 0.724490058419616
+        },
+        "wasted_life_cost": {
+          "ci95_percentile": [
+            0.0,
+            0.0
+          ],
+          "difference_definition": "H2 wasted_life_cost minus M4 wasted_life_cost",
+          "direction_counts": {
+            "negative": 0,
+            "positive": 0,
+            "zero": 20
+          },
+          "mean_difference": 0.0,
+          "paired_cohens_d": 0.0
+        }
+      },
+      "h2_vs_m4_behavior": {
+        "capacity_saturated_step_count": {
+          "difference_definition": "H2 capacity_saturated_step_count minus M4 capacity_saturated_step_count",
+          "direction_counts": {
+            "negative": 2,
+            "positive": 6,
+            "zero": 12
+          },
+          "mean_difference": 0.2
+        },
+        "empty_action_count": {
+          "difference_definition": "H2 empty_action_count minus M4 empty_action_count",
+          "direction_counts": {
+            "negative": 9,
+            "positive": 4,
+            "zero": 7
+          },
+          "mean_difference": -0.35
+        },
+        "failure_count": {
+          "difference_definition": "H2 failure_count minus M4 failure_count",
+          "direction_counts": {
+            "negative": 0,
+            "positive": 0,
+            "zero": 20
+          },
+          "mean_difference": 0.0
+        },
+        "preventive_count": {
+          "difference_definition": "H2 preventive_count minus M4 preventive_count",
+          "direction_counts": {
+            "negative": 0,
+            "positive": 9,
+            "zero": 11
+          },
+          "mean_difference": 0.55
+        }
+      },
+      "m5_training_seed_count": 5,
+      "m5_vs_h2": {
+        "failure_cost": {
+          "mean_difference": 2.15,
+          "scenario_mean_direction_counts": {
+            "negative": 0,
+            "positive": 18,
+            "zero": 2
+          },
+          "seed_means": {
+            "6521": 2.0,
+            "6522": 1.5,
+            "6523": 0.0,
+            "6524": 4.0,
+            "6525": 3.25
+          }
+        },
+        "preventive_cost": {
+          "mean_difference": 0.39,
+          "scenario_mean_direction_counts": {
+            "negative": 7,
+            "positive": 13,
+            "zero": 0
+          },
+          "seed_means": {
+            "6521": 0.3,
+            "6522": 0.45,
+            "6523": 1.75,
+            "6524": -0.25,
+            "6525": -0.3
+          }
+        },
+        "total_cost": {
+          "bootstrap_resampling": "resample 20 scenarios with replacement; independently resample 5 training seeds within each selected scenario",
+          "difference_definition": "M5 total cost minus H2 total cost",
+          "effect_size_on_scenario_averaged_differences": 1.7213859531466444,
+          "hierarchical_ci95_percentile": [
+            1.77,
+            3.35
+          ],
+          "mean_difference": 2.54,
+          "per_policy_paired_summaries": {
+            "6521": {
+              "bootstrap_seed": 652178,
+              "ci95_percentile": [
+                1.0,
+                3.7
+              ],
+              "direction_counts": {
+                "negative": 2,
+                "positive": 11,
+                "zero": 7
+              },
+              "mean_difference": 2.3,
+              "paired_cohens_d": 0.734708049749931
+            },
+            "6522": {
+              "bootstrap_seed": 652179,
+              "ci95_percentile": [
+                1.0,
+                2.95
+              ],
+              "direction_counts": {
+                "negative": 1,
+                "positive": 14,
+                "zero": 5
+              },
+              "mean_difference": 1.95,
+              "paired_cohens_d": 0.8632518249353747
+            },
+            "6523": {
+              "bootstrap_seed": 652180,
+              "ci95_percentile": [
+                1.25,
+                2.25
+              ],
+              "direction_counts": {
+                "negative": 0,
+                "positive": 17,
+                "zero": 3
+              },
+              "mean_difference": 1.75,
+              "paired_cohens_d": 1.503232762370511
+            },
+            "6524": {
+              "bootstrap_seed": 652181,
+              "ci95_percentile": [
+                2.45,
+                5.15
+              ],
+              "direction_counts": {
+                "negative": 0,
+                "positive": 16,
+                "zero": 4
+              },
+              "mean_difference": 3.75,
+              "paired_cohens_d": 1.174322041888219
+            },
+            "6525": {
+              "bootstrap_seed": 652182,
+              "ci95_percentile": [
+                1.6,
+                4.45
+              ],
+              "direction_counts": {
+                "negative": 1,
+                "positive": 15,
+                "zero": 4
+              },
+              "mean_difference": 2.95,
+              "paired_cohens_d": 0.8853378907787367
+            }
+          },
+          "per_seed_per_scenario_paired_differences": {
+            "6521": {
+              "m6v2_k2_trajectory_000": 0.0,
+              "m6v2_k2_trajectory_001": 1.0,
+              "m6v2_k2_trajectory_002": 9.0,
+              "m6v2_k2_trajectory_003": 6.0,
+              "m6v2_k2_trajectory_004": -1.0,
+              "m6v2_k2_trajectory_005": 6.0,
+              "m6v2_k2_trajectory_006": 2.0,
+              "m6v2_k2_trajectory_007": 0.0,
+              "m6v2_k2_trajectory_008": 3.0,
+              "m6v2_k2_trajectory_009": 0.0,
+              "m6v2_k2_trajectory_010": 0.0,
+              "m6v2_k2_trajectory_011": 0.0,
+              "m6v2_k2_trajectory_012": 7.0,
+              "m6v2_k2_trajectory_013": 1.0,
+              "m6v2_k2_trajectory_014": 6.0,
+              "m6v2_k2_trajectory_015": 6.0,
+              "m6v2_k2_trajectory_016": 0.0,
+              "m6v2_k2_trajectory_017": 0.0,
+              "m6v2_k2_trajectory_018": 1.0,
+              "m6v2_k2_trajectory_019": -1.0
+            },
+            "6522": {
+              "m6v2_k2_trajectory_000": 1.0,
+              "m6v2_k2_trajectory_001": 0.0,
+              "m6v2_k2_trajectory_002": 4.0,
+              "m6v2_k2_trajectory_003": 6.0,
+              "m6v2_k2_trajectory_004": -1.0,
+              "m6v2_k2_trajectory_005": 2.0,
+              "m6v2_k2_trajectory_006": 0.0,
+              "m6v2_k2_trajectory_007": 4.0,
+              "m6v2_k2_trajectory_008": 7.0,
+              "m6v2_k2_trajectory_009": 0.0,
+              "m6v2_k2_trajectory_010": 1.0,
+              "m6v2_k2_trajectory_011": 0.0,
+              "m6v2_k2_trajectory_012": 2.0,
+              "m6v2_k2_trajectory_013": 1.0,
+              "m6v2_k2_trajectory_014": 1.0,
+              "m6v2_k2_trajectory_015": 1.0,
+              "m6v2_k2_trajectory_016": 0.0,
+              "m6v2_k2_trajectory_017": 4.0,
+              "m6v2_k2_trajectory_018": 5.0,
+              "m6v2_k2_trajectory_019": 1.0
+            },
+            "6523": {
+              "m6v2_k2_trajectory_000": 3.0,
+              "m6v2_k2_trajectory_001": 2.0,
+              "m6v2_k2_trajectory_002": 2.0,
+              "m6v2_k2_trajectory_003": 3.0,
+              "m6v2_k2_trajectory_004": 1.0,
+              "m6v2_k2_trajectory_005": 2.0,
+              "m6v2_k2_trajectory_006": 2.0,
+              "m6v2_k2_trajectory_007": 1.0,
+              "m6v2_k2_trajectory_008": 3.0,
+              "m6v2_k2_trajectory_009": 1.0,
+              "m6v2_k2_trajectory_010": 4.0,
+              "m6v2_k2_trajectory_011": 0.0,
+              "m6v2_k2_trajectory_012": 3.0,
+              "m6v2_k2_trajectory_013": 1.0,
+              "m6v2_k2_trajectory_014": 3.0,
+              "m6v2_k2_trajectory_015": 2.0,
+              "m6v2_k2_trajectory_016": 1.0,
+              "m6v2_k2_trajectory_017": 0.0,
+              "m6v2_k2_trajectory_018": 1.0,
+              "m6v2_k2_trajectory_019": 0.0
+            },
+            "6524": {
+              "m6v2_k2_trajectory_000": 3.0,
+              "m6v2_k2_trajectory_001": 2.0,
+              "m6v2_k2_trajectory_002": 8.0,
+              "m6v2_k2_trajectory_003": 3.0,
+              "m6v2_k2_trajectory_004": 4.0,
+              "m6v2_k2_trajectory_005": 4.0,
+              "m6v2_k2_trajectory_006": 0.0,
+              "m6v2_k2_trajectory_007": 0.0,
+              "m6v2_k2_trajectory_008": 2.0,
+              "m6v2_k2_trajectory_009": 8.0,
+              "m6v2_k2_trajectory_010": 4.0,
+              "m6v2_k2_trajectory_011": 0.0,
+              "m6v2_k2_trajectory_012": 9.0,
+              "m6v2_k2_trajectory_013": 5.0,
+              "m6v2_k2_trajectory_014": 4.0,
+              "m6v2_k2_trajectory_015": 5.0,
+              "m6v2_k2_trajectory_016": 1.0,
+              "m6v2_k2_trajectory_017": 0.0,
+              "m6v2_k2_trajectory_018": 2.0,
+              "m6v2_k2_trajectory_019": 11.0
+            },
+            "6525": {
+              "m6v2_k2_trajectory_000": 1.0,
+              "m6v2_k2_trajectory_001": 4.0,
+              "m6v2_k2_trajectory_002": 0.0,
+              "m6v2_k2_trajectory_003": 9.0,
+              "m6v2_k2_trajectory_004": 8.0,
+              "m6v2_k2_trajectory_005": 6.0,
+              "m6v2_k2_trajectory_006": 0.0,
+              "m6v2_k2_trajectory_007": 1.0,
+              "m6v2_k2_trajectory_008": 1.0,
+              "m6v2_k2_trajectory_009": 0.0,
+              "m6v2_k2_trajectory_010": 1.0,
+              "m6v2_k2_trajectory_011": 2.0,
+              "m6v2_k2_trajectory_012": 1.0,
+              "m6v2_k2_trajectory_013": 10.0,
+              "m6v2_k2_trajectory_014": 5.0,
+              "m6v2_k2_trajectory_015": 4.0,
+              "m6v2_k2_trajectory_016": 1.0,
+              "m6v2_k2_trajectory_017": 0.0,
+              "m6v2_k2_trajectory_018": 6.0,
+              "m6v2_k2_trajectory_019": -1.0
+            }
+          },
+          "scenario_mean_direction_counts": {
+            "negative": 0,
+            "positive": 20,
+            "zero": 0
+          },
+          "scenario_variation_sd_of_scenario_means": 1.4755552032691752,
+          "seed_direction_counts": {
+            "negative": 0,
+            "positive": 5,
+            "zero": 0
+          },
+          "seed_means": {
+            "6521": 2.3,
+            "6522": 1.95,
+            "6523": 1.75,
+            "6524": 3.75,
+            "6525": 2.95
+          },
+          "seed_variation_sd_of_seed_means": 0.8157818335805229
+        },
+        "wasted_life_cost": {
+          "mean_difference": 0.0,
+          "scenario_mean_direction_counts": {
+            "negative": 0,
+            "positive": 0,
+            "zero": 20
+          },
+          "seed_means": {
+            "6521": 0.0,
+            "6522": 0.0,
+            "6523": 0.0,
+            "6524": 0.0,
+            "6525": 0.0
+          }
+        }
+      },
+      "m5_vs_h2_behavior": {
+        "capacity_saturated_step_count": {
+          "difference_definition": "M5 capacity_saturated_step_count minus H2 capacity_saturated_step_count",
+          "mean_difference": 0.6,
+          "scenario_mean_direction_counts": {
+            "negative": 3,
+            "positive": 14,
+            "zero": 3
+          },
+          "seed_means": {
+            "6521": 1.8,
+            "6522": 0.55,
+            "6523": 0.1,
+            "6524": 0.45,
+            "6525": 0.1
+          }
+        },
+        "empty_action_count": {
+          "difference_definition": "M5 empty_action_count minus H2 empty_action_count",
+          "mean_difference": 0.21,
+          "scenario_mean_direction_counts": {
+            "negative": 7,
+            "positive": 12,
+            "zero": 1
+          },
+          "seed_means": {
+            "6521": 1.5,
+            "6522": 0.1,
+            "6523": -1.65,
+            "6524": 0.7,
+            "6525": 0.4
+          }
+        },
+        "failure_count": {
+          "difference_definition": "M5 failure_count minus H2 failure_count",
+          "mean_difference": 0.43,
+          "scenario_mean_direction_counts": {
+            "negative": 0,
+            "positive": 18,
+            "zero": 2
+          },
+          "seed_means": {
+            "6521": 0.4,
+            "6522": 0.3,
+            "6523": 0.0,
+            "6524": 0.8,
+            "6525": 0.65
+          }
+        },
+        "preventive_count": {
+          "difference_definition": "M5 preventive_count minus H2 preventive_count",
+          "mean_difference": 0.39,
+          "scenario_mean_direction_counts": {
+            "negative": 7,
+            "positive": 13,
+            "zero": 0
+          },
+          "seed_means": {
+            "6521": 0.3,
+            "6522": 0.45,
+            "6523": 1.75,
+            "6524": -0.25,
+            "6525": -0.3
+          }
+        }
+      },
+      "scenario_count": 20
+    },
+    {
+      "K": 2,
+      "cost_regime": "failure-light-waste-aware",
+      "descriptive_means": {
+        "h2": {
+          "capacity_saturated_step_count": 0.8,
+          "empty_action_count": 89.1,
+          "failure_cost": 0.0,
+          "failure_count": 0.0,
+          "preventive_cost": 11.7,
+          "preventive_count": 11.7,
+          "total_cost": 12.1652,
+          "wasted_life_cost": 0.4652
+        },
+        "m3": {
+          "capacity_saturated_step_count": 6.65,
+          "empty_action_count": 93.35,
+          "failure_cost": 0.0,
+          "failure_count": 0.0,
+          "preventive_cost": 13.3,
+          "preventive_count": 13.3,
+          "total_cost": 14.2571,
+          "wasted_life_cost": 0.9571
+        },
+        "m4": {
+          "capacity_saturated_step_count": 0.35,
+          "empty_action_count": 89.1,
+          "failure_cost": 0.0,
+          "failure_count": 0.0,
+          "preventive_cost": 11.25,
+          "preventive_count": 11.25,
+          "total_cost": 11.588199999999999,
+          "wasted_life_cost": 0.33819999999999995
+        },
+        "m5_seed_means": {
+          "6521": {
+            "capacity_saturated_step_count": 2.55,
+            "empty_action_count": 90.4,
+            "failure_cost": 1.5,
+            "failure_count": 0.3,
+            "preventive_cost": 12.15,
+            "preventive_count": 12.15,
+            "total_cost": 14.2711,
+            "wasted_life_cost": 0.6211
+          },
+          "6522": {
+            "capacity_saturated_step_count": 0.55,
+            "empty_action_count": 88.7,
+            "failure_cost": 1.0,
+            "failure_count": 0.2,
+            "preventive_cost": 11.85,
+            "preventive_count": 11.85,
+            "total_cost": 13.447700000000003,
+            "wasted_life_cost": 0.5977000000000001
+          },
+          "6523": {
+            "capacity_saturated_step_count": 0.65,
+            "empty_action_count": 88.5,
+            "failure_cost": 0.5,
+            "failure_count": 0.1,
+            "preventive_cost": 12.15,
+            "preventive_count": 12.15,
+            "total_cost": 13.235,
+            "wasted_life_cost": 0.585
+          },
+          "6524": {
+            "capacity_saturated_step_count": 1.4,
+            "empty_action_count": 90.2,
+            "failure_cost": 4.0,
+            "failure_count": 0.8,
+            "preventive_cost": 11.2,
+            "preventive_count": 11.2,
+            "total_cost": 15.758799999999999,
+            "wasted_life_cost": 0.5588000000000001
+          },
+          "6525": {
+            "capacity_saturated_step_count": 0.95,
+            "empty_action_count": 89.15,
+            "failure_cost": 0.5,
+            "failure_count": 0.1,
+            "preventive_cost": 11.8,
+            "preventive_count": 11.8,
+            "total_cost": 12.8642,
+            "wasted_life_cost": 0.5642
+          }
+        }
+      },
+      "h2_vs_m4": {
+        "failure_cost": {
+          "ci95_percentile": [
+            0.0,
+            0.0
+          ],
+          "difference_definition": "H2 failure_cost minus M4 failure_cost",
+          "direction_counts": {
+            "negative": 0,
+            "positive": 0,
+            "zero": 20
+          },
+          "mean_difference": 0.0,
+          "paired_cohens_d": 0.0
+        },
+        "preventive_cost": {
+          "ci95_percentile": [
+            0.15,
+            0.8
+          ],
+          "difference_definition": "H2 preventive_cost minus M4 preventive_cost",
+          "direction_counts": {
+            "negative": 0,
+            "positive": 7,
+            "zero": 13
+          },
+          "mean_difference": 0.45,
+          "paired_cohens_d": 0.592764593252413
+        },
+        "total_cost": {
+          "ci95_percentile": [
+            0.27089999999999953,
+            0.9402999999999995
+          ],
+          "difference_definition": "H2 total_cost minus M4 total_cost",
+          "direction_counts": {
+            "negative": 0,
+            "positive": 20,
+            "zero": 0
+          },
+          "mean_difference": 0.5769999999999997,
+          "paired_cohens_d": 0.7368933502009475
+        },
+        "wasted_life_cost": {
+          "ci95_percentile": [
+            0.11469999999999998,
+            0.14020249999999998
+          ],
+          "difference_definition": "H2 wasted_life_cost minus M4 wasted_life_cost",
+          "direction_counts": {
+            "negative": 0,
+            "positive": 20,
+            "zero": 0
+          },
+          "mean_difference": 0.12699999999999997,
+          "paired_cohens_d": 4.221500093321779
+        }
+      },
+      "h2_vs_m4_behavior": {
+        "capacity_saturated_step_count": {
+          "difference_definition": "H2 capacity_saturated_step_count minus M4 capacity_saturated_step_count",
+          "direction_counts": {
+            "negative": 2,
+            "positive": 7,
+            "zero": 11
+          },
+          "mean_difference": 0.45
+        },
+        "empty_action_count": {
+          "difference_definition": "H2 empty_action_count minus M4 empty_action_count",
+          "direction_counts": {
+            "negative": 8,
+            "positive": 5,
+            "zero": 7
+          },
+          "mean_difference": 0.0
+        },
+        "failure_count": {
+          "difference_definition": "H2 failure_count minus M4 failure_count",
+          "direction_counts": {
+            "negative": 0,
+            "positive": 0,
+            "zero": 20
+          },
+          "mean_difference": 0.0
+        },
+        "preventive_count": {
+          "difference_definition": "H2 preventive_count minus M4 preventive_count",
+          "direction_counts": {
+            "negative": 0,
+            "positive": 7,
+            "zero": 13
+          },
+          "mean_difference": 0.45
+        }
+      },
+      "m5_training_seed_count": 5,
+      "m5_vs_h2": {
+        "failure_cost": {
+          "mean_difference": 1.5,
+          "scenario_mean_direction_counts": {
+            "negative": 0,
+            "positive": 13,
+            "zero": 7
+          },
+          "seed_means": {
+            "6521": 1.5,
+            "6522": 1.0,
+            "6523": 0.5,
+            "6524": 4.0,
+            "6525": 0.5
+          }
+        },
+        "preventive_cost": {
+          "mean_difference": 0.13,
+          "scenario_mean_direction_counts": {
+            "negative": 8,
+            "positive": 9,
+            "zero": 3
+          },
+          "seed_means": {
+            "6521": 0.45,
+            "6522": 0.15,
+            "6523": 0.45,
+            "6524": -0.5,
+            "6525": 0.1
+          }
+        },
+        "total_cost": {
+          "bootstrap_resampling": "resample 20 scenarios with replacement; independently resample 5 training seeds within each selected scenario",
+          "difference_definition": "M5 total cost minus H2 total cost",
+          "effect_size_on_scenario_averaged_differences": 1.0639749404089904,
+          "hierarchical_ci95_percentile": [
+            0.9484810000000006,
+            2.600502000000001
+          ],
+          "mean_difference": 1.7501600000000004,
+          "per_policy_paired_summaries": {
+            "6521": {
+              "bootstrap_seed": 652188,
+              "ci95_percentile": [
+                1.0101949999999993,
+                3.2360474999999993
+              ],
+              "direction_counts": {
+                "negative": 2,
+                "positive": 18,
+                "zero": 0
+              },
+              "mean_difference": 2.1059000000000005,
+              "paired_cohens_d": 0.8078196314038354
+            },
+            "6522": {
+              "bootstrap_seed": 652189,
+              "ci95_percentile": [
+                0.552260000000001,
+                2.073605000000001
+              ],
+              "direction_counts": {
+                "negative": 3,
+                "positive": 17,
+                "zero": 0
+              },
+              "mean_difference": 1.2825000000000002,
+              "paired_cohens_d": 0.7261345890385792
+            },
+            "6523": {
+              "bootstrap_seed": 652190,
+              "ci95_percentile": [
+                0.40739250000000027,
+                1.9044125
+              ],
+              "direction_counts": {
+                "negative": 0,
+                "positive": 20,
+                "zero": 0
+              },
+              "mean_difference": 1.0698000000000003,
+              "paired_cohens_d": 0.612511080772925
+            },
+            "6524": {
+              "bootstrap_seed": 652191,
+              "ci95_percentile": [
+                1.7730975000000009,
+                5.590300000000001
+              ],
+              "direction_counts": {
+                "negative": 1,
+                "positive": 19,
+                "zero": 0
+              },
+              "mean_difference": 3.593600000000001,
+              "paired_cohens_d": 0.8022025139506385
+            },
+            "6525": {
+              "bootstrap_seed": 652192,
+              "ci95_percentile": [
+                0.18919750000000005,
+                1.3315474999999994
+              ],
+              "direction_counts": {
+                "negative": 2,
+                "positive": 18,
+                "zero": 0
+              },
+              "mean_difference": 0.6990000000000003,
+              "paired_cohens_d": 0.5165094919812919
+            }
+          },
+          "per_seed_per_scenario_paired_differences": {
+            "6521": {
+              "m6v2_k2_trajectory_000": 5.151999999999999,
+              "m6v2_k2_trajectory_001": 1.1219999999999999,
+              "m6v2_k2_trajectory_002": 6.026000000000003,
+              "m6v2_k2_trajectory_003": 3.315999999999999,
+              "m6v2_k2_trajectory_004": 0.20200000000000173,
+              "m6v2_k2_trajectory_005": 1.1480000000000015,
+              "m6v2_k2_trajectory_006": 2.2079999999999984,
+              "m6v2_k2_trajectory_007": 0.14199999999999946,
+              "m6v2_k2_trajectory_008": 2.2219999999999995,
+              "m6v2_k2_trajectory_009": 0.129999999999999,
+              "m6v2_k2_trajectory_010": 4.115999999999998,
+              "m6v2_k2_trajectory_011": 0.19799999999999862,
+              "m6v2_k2_trajectory_012": 7.279999999999999,
+              "m6v2_k2_trajectory_013": -1.9800000000000022,
+              "m6v2_k2_trajectory_014": 1.1620000000000008,
+              "m6v2_k2_trajectory_015": 4.002000000000004,
+              "m6v2_k2_trajectory_016": 0.1399999999999988,
+              "m6v2_k2_trajectory_017": 0.12400000000000055,
+              "m6v2_k2_trajectory_018": 6.280000000000005,
+              "m6v2_k2_trajectory_019": -0.8719999999999999
+            },
+            "6522": {
+              "m6v2_k2_trajectory_000": 1.1560000000000006,
+              "m6v2_k2_trajectory_001": -0.00999999999999801,
+              "m6v2_k2_trajectory_002": 4.070000000000004,
+              "m6v2_k2_trajectory_003": 1.3739999999999988,
+              "m6v2_k2_trajectory_004": -0.9199999999999999,
+              "m6v2_k2_trajectory_005": -0.9579999999999984,
+              "m6v2_k2_trajectory_006": 0.13999999999999702,
+              "m6v2_k2_trajectory_007": 0.08999999999999808,
+              "m6v2_k2_trajectory_008": 2.1720000000000006,
+              "m6v2_k2_trajectory_009": 4.094000000000001,
+              "m6v2_k2_trajectory_010": 1.1979999999999986,
+              "m6v2_k2_trajectory_011": 0.020000000000003126,
+              "m6v2_k2_trajectory_012": 1.1880000000000006,
+              "m6v2_k2_trajectory_013": 1.1319999999999997,
+              "m6v2_k2_trajectory_014": 1.2819999999999965,
+              "m6v2_k2_trajectory_015": 0.07800000000000118,
+              "m6v2_k2_trajectory_016": 4.093999999999999,
+              "m6v2_k2_trajectory_017": 0.16000000000000192,
+              "m6v2_k2_trajectory_018": 5.150000000000002,
+              "m6v2_k2_trajectory_019": 0.1399999999999988
+            },
+            "6523": {
+              "m6v2_k2_trajectory_000": 2.234,
+              "m6v2_k2_trajectory_001": 0.07000000000000028,
+              "m6v2_k2_trajectory_002": 1.168000000000001,
+              "m6v2_k2_trajectory_003": 2.2159999999999993,
+              "m6v2_k2_trajectory_004": 0.05999999999999872,
+              "m6v2_k2_trajectory_005": 0.08000000000000185,
+              "m6v2_k2_trajectory_006": 1.1159999999999997,
+              "m6v2_k2_trajectory_007": 0.10200000000000209,
+              "m6v2_k2_trajectory_008": 6.074,
+              "m6v2_k2_trajectory_009": 0.019999999999999574,
+              "m6v2_k2_trajectory_010": 0.1379999999999999,
+              "m6v2_k2_trajectory_011": 0.02000000000000135,
+              "m6v2_k2_trajectory_012": 2.2799999999999994,
+              "m6v2_k2_trajectory_013": 0.13199999999999967,
+              "m6v2_k2_trajectory_014": 0.0799999999999983,
+              "m6v2_k2_trajectory_015": 0.07000000000000028,
+              "m6v2_k2_trajectory_016": 0.129999999999999,
+              "m6v2_k2_trajectory_017": 0.14000000000000057,
+              "m6v2_k2_trajectory_018": 5.110000000000003,
+              "m6v2_k2_trajectory_019": 0.1559999999999988
+            },
+            "6524": {
+              "m6v2_k2_trajectory_000": 1.096,
+              "m6v2_k2_trajectory_001": 0.09000000000000163,
+              "m6v2_k2_trajectory_002": 9.080000000000005,
+              "m6v2_k2_trajectory_003": 2.235999999999999,
+              "m6v2_k2_trajectory_004": 0.08000000000000007,
+              "m6v2_k2_trajectory_005": 8.070000000000002,
+              "m6v2_k2_trajectory_006": 0.11999999999999744,
+              "m6v2_k2_trajectory_007": 0.12200000000000166,
+              "m6v2_k2_trajectory_008": 9.028000000000004,
+              "m6v2_k2_trajectory_009": 8.024000000000001,
+              "m6v2_k2_trajectory_010": 0.11999999999999922,
+              "m6v2_k2_trajectory_011": 4.096000000000002,
+              "m6v2_k2_trajectory_012": 11.24,
+              "m6v2_k2_trajectory_013": -3.048000000000002,
+              "m6v2_k2_trajectory_014": 4.067999999999996,
+              "m6v2_k2_trajectory_015": 12.014000000000005,
+              "m6v2_k2_trajectory_016": 0.11599999999999966,
+              "m6v2_k2_trajectory_017": 0.08400000000000318,
+              "m6v2_k2_trajectory_018": 5.150000000000002,
+              "m6v2_k2_trajectory_019": 0.0860000000000003
+            },
+            "6525": {
+              "m6v2_k2_trajectory_000": 1.1760000000000002,
+              "m6v2_k2_trajectory_001": 4.032,
+              "m6v2_k2_trajectory_002": 1.168000000000001,
+              "m6v2_k2_trajectory_003": 2.185999999999998,
+              "m6v2_k2_trajectory_004": 0.0600000000000005,
+              "m6v2_k2_trajectory_005": 0.13000000000000256,
+              "m6v2_k2_trajectory_006": 0.07000000000000028,
+              "m6v2_k2_trajectory_007": 0.1620000000000026,
+              "m6v2_k2_trajectory_008": 1.081999999999999,
+              "m6v2_k2_trajectory_009": 0.10000000000000142,
+              "m6v2_k2_trajectory_010": 0.120000000000001,
+              "m6v2_k2_trajectory_011": 4.052000000000001,
+              "m6v2_k2_trajectory_012": 0.08000000000000007,
+              "m6v2_k2_trajectory_013": -0.9200000000000017,
+              "m6v2_k2_trajectory_014": 0.03999999999999915,
+              "m6v2_k2_trajectory_015": 0.05999999999999872,
+              "m6v2_k2_trajectory_016": 0.08000000000000007,
+              "m6v2_k2_trajectory_017": 1.1660000000000021,
+              "m6v2_k2_trajectory_018": 0.08000000000000007,
+              "m6v2_k2_trajectory_019": -0.9440000000000008
+            }
+          },
+          "scenario_mean_direction_counts": {
+            "negative": 3,
+            "positive": 17,
+            "zero": 0
+          },
+          "scenario_variation_sd_of_scenario_means": 1.6449259597479255,
+          "seed_direction_counts": {
+            "negative": 0,
+            "positive": 5,
+            "zero": 0
+          },
+          "seed_means": {
+            "6521": 2.1059000000000005,
+            "6522": 1.2825000000000002,
+            "6523": 1.0698000000000003,
+            "6524": 3.593600000000001,
+            "6525": 0.6990000000000003
+          },
+          "seed_variation_sd_of_seed_means": 1.1523188504055641
+        },
+        "wasted_life_cost": {
+          "mean_difference": 0.12016000000000006,
+          "scenario_mean_direction_counts": {
+            "negative": 0,
+            "positive": 20,
+            "zero": 0
+          },
+          "seed_means": {
+            "6521": 0.15590000000000007,
+            "6522": 0.13250000000000003,
+            "6523": 0.1198000000000001,
+            "6524": 0.09360000000000006,
+            "6525": 0.09900000000000005
+          }
+        }
+      },
+      "m5_vs_h2_behavior": {
+        "capacity_saturated_step_count": {
+          "difference_definition": "M5 capacity_saturated_step_count minus H2 capacity_saturated_step_count",
+          "mean_difference": 0.42,
+          "scenario_mean_direction_counts": {
+            "negative": 6,
+            "positive": 12,
+            "zero": 2
+          },
+          "seed_means": {
+            "6521": 1.75,
+            "6522": -0.25,
+            "6523": -0.15,
+            "6524": 0.6,
+            "6525": 0.15
+          }
+        },
+        "empty_action_count": {
+          "difference_definition": "M5 empty_action_count minus H2 empty_action_count",
+          "mean_difference": 0.29,
+          "scenario_mean_direction_counts": {
+            "negative": 8,
+            "positive": 12,
+            "zero": 0
+          },
+          "seed_means": {
+            "6521": 1.3,
+            "6522": -0.4,
+            "6523": -0.6,
+            "6524": 1.1,
+            "6525": 0.05
+          }
+        },
+        "failure_count": {
+          "difference_definition": "M5 failure_count minus H2 failure_count",
+          "mean_difference": 0.3,
+          "scenario_mean_direction_counts": {
+            "negative": 0,
+            "positive": 13,
+            "zero": 7
+          },
+          "seed_means": {
+            "6521": 0.3,
+            "6522": 0.2,
+            "6523": 0.1,
+            "6524": 0.8,
+            "6525": 0.1
+          }
+        },
+        "preventive_count": {
+          "difference_definition": "M5 preventive_count minus H2 preventive_count",
+          "mean_difference": 0.13,
+          "scenario_mean_direction_counts": {
+            "negative": 8,
+            "positive": 9,
+            "zero": 3
+          },
+          "seed_means": {
+            "6521": 0.45,
+            "6522": 0.15,
+            "6523": 0.45,
+            "6524": -0.5,
+            "6525": 0.1
+          }
+        }
+      },
+      "scenario_count": 20
+    }
+  ],
+  "claim_rules": "docs/milestone6/M6_CLAIM_RULES.md",
+  "matrix_sha256": "64b1bf41e9b476a253b51ee9f246c9e9c31c70aeaffd6aefa946688a7e21a710",
+  "multiple_comparison_policy": "per-cell characterization; no correction",
+  "raw_cost_pooling_across_regimes": false,
+  "schema_version": "m6_statistical_analysis_v2",
+  "seed_scenario_flattening": false
+}

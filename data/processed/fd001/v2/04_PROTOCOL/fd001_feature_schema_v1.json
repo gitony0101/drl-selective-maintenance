@@ -1,0 +1,90 @@
+{
+  "identifier_columns": [
+    "unit_id",
+    "cycle"
+  ],
+  "operating_setting_columns": [
+    "op_setting_1",
+    "op_setting_2",
+    "op_setting_3"
+  ],
+  "sensor_columns": [
+    "sensor_1",
+    "sensor_2",
+    "sensor_3",
+    "sensor_4",
+    "sensor_5",
+    "sensor_6",
+    "sensor_7",
+    "sensor_8",
+    "sensor_9",
+    "sensor_10",
+    "sensor_11",
+    "sensor_12",
+    "sensor_13",
+    "sensor_14",
+    "sensor_15",
+    "sensor_16",
+    "sensor_17",
+    "sensor_18",
+    "sensor_19",
+    "sensor_20",
+    "sensor_21"
+  ],
+  "input_feature_order": [
+    "op_setting_1",
+    "op_setting_2",
+    "op_setting_3",
+    "sensor_1",
+    "sensor_2",
+    "sensor_3",
+    "sensor_4",
+    "sensor_5",
+    "sensor_6",
+    "sensor_7",
+    "sensor_8",
+    "sensor_9",
+    "sensor_10",
+    "sensor_11",
+    "sensor_12",
+    "sensor_13",
+    "sensor_14",
+    "sensor_15",
+    "sensor_16",
+    "sensor_17",
+    "sensor_18",
+    "sensor_19",
+    "sensor_20",
+    "sensor_21"
+  ],
+  "input_feature_count": 24,
+  "target_columns": [
+    "true_rul_raw",
+    "true_rul_capped"
+  ],
+  "sequence_length": 50,
+  "window_stride": 1,
+  "early_cycle_policy": "left_pad_with_first_observed_feature_row",
+  "rul_cap": 125,
+  "protocol_version": "fd001_data_v1",
+  "source_paths": [
+    "01_RAW_DATA/FD001/train_FD001.txt",
+    "01_RAW_DATA/FD001/test_FD001.txt",
+    "01_RAW_DATA/FD001/RUL_FD001.txt"
+  ],
+  "source_hashes": {
+    "train_FD001.txt": "963b5e22825b34d8b21c69e1aeb4af3e647050eb672ee8834ba4b5d91d2de0f8",
+    "test_FD001.txt": "3cda7109ce17bafb5443f2ac926cfcf88154b941b8c4cf95eb55d1ddd6f52851",
+    "RUL_FD001.txt": "a19c8ec94931949d0485bdc35118206e9c81c4547b422efb9cf86f4ceddbceca"
+  },
+  "constant_columns": [
+    "op_setting_3",
+    "sensor_1",
+    "sensor_5",
+    "sensor_10",
+    "sensor_16",
+    "sensor_18",
+    "sensor_19"
+  ],
+  "schema_hash": "549b47aa0d5f"
+}

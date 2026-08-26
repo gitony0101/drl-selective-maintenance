@@ -1,0 +1,121 @@
+{
+  "bank_id": "rl_validation_K1_failure-light-waste-aware_bank",
+  "scenarios": [
+    {
+      "cost_regime_id": "failure-light-waste-aware",
+      "environment_seed": 6521,
+      "episode_horizon": 100,
+      "initial_cycles": [
+        191,
+        254,
+        169,
+        214,
+        270
+      ],
+      "initial_unit_ids": [
+        33,
+        46,
+        12,
+        49,
+        56
+      ],
+      "maintenance_capacity": 1,
+      "replacement_seed": 6521,
+      "scenario_id": "rl_validation_K1_failure-light-waste-aware_000",
+      "split": "rl_validation"
+    },
+    {
+      "cost_regime_id": "failure-light-waste-aware",
+      "environment_seed": 6522,
+      "episode_horizon": 100,
+      "initial_cycles": [
+        197,
+        255,
+        167,
+        212,
+        264
+      ],
+      "initial_unit_ids": [
+        33,
+        46,
+        12,
+        49,
+        56
+      ],
+      "maintenance_capacity": 1,
+      "replacement_seed": 6522,
+      "scenario_id": "rl_validation_K1_failure-light-waste-aware_001",
+      "split": "rl_validation"
+    },
+    {
+      "cost_regime_id": "failure-light-waste-aware",
+      "environment_seed": 6523,
+      "episode_horizon": 100,
+      "initial_cycles": [
+        193,
+        249,
+        168,
+        211,
+        274
+      ],
+      "initial_unit_ids": [
+        33,
+        46,
+        12,
+        49,
+        56
+      ],
+      "maintenance_capacity": 1,
+      "replacement_seed": 6523,
+      "scenario_id": "rl_validation_K1_failure-light-waste-aware_002",
+      "split": "rl_validation"
+    },
+    {
+      "cost_regime_id": "failure-light-waste-aware",
+      "environment_seed": 6524,
+      "episode_horizon": 100,
+      "initial_cycles": [
+        198,
+        248,
+        160,
+        210,
+        263
+      ],
+      "initial_unit_ids": [
+        33,
+        46,
+        12,
+        49,
+        56
+      ],
+      "maintenance_capacity": 1,
+      "replacement_seed": 6524,
+      "scenario_id": "rl_validation_K1_failure-light-waste-aware_003",
+      "split": "rl_validation"
+    },
+    {
+      "cost_regime_id": "failure-light-waste-aware",
+      "environment_seed": 6525,
+      "episode_horizon": 100,
+      "initial_cycles": [
+        192,
+        252,
+        165,
+        202,
+        273
+      ],
+      "initial_unit_ids": [
+        33,
+        46,
+        12,
+        49,
+        56
+      ],
+      "maintenance_capacity": 1,
+      "replacement_seed": 6525,
+      "scenario_id": "rl_validation_K1_failure-light-waste-aware_004",
+      "split": "rl_validation"
+    }
+  ],
+  "split": "rl_validation"
+}

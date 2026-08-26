@@ -1,0 +1,14 @@
+{
+  "artifact": "M9_POINT_ESTIMATE_CONTRACT",
+  "m8_frozen_predictor_checkpoints_mse_control": {
+    "selected_family": "mse_control",
+    "per_seed_size_bytes": 2271313,
+    "seeds_and_sha256": {
+      "6521": "039793c6320f036ef277b306d3307305b37a3f22f5deab31c82b39ee5e801a59",
+      "6522": "f35803c5e76779a06659381b75b3724d25e8ceb4b45e3d22420fa3a8cfe72d83",
+      "6523": "53869b6b8bb5ecdb2e96a9ddb7e3cb954fe1802ecf6f928b711e98eea58c46d1",
+      "6524": "43158b44f4e9f07bc5cfb5cecccc78f752a1097585643a6824cb2906848d635e",
+      "6525": "d661cf5094af3c018db4bdc8a365d6bcb91a27b393e5ec5fbb719090f56db353"
+    }
+  }
+}
