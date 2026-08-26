@@ -1,6 +1,37 @@
 # Capacity-Constrained Selective Maintenance with Deep Reinforcement Learning
 
-Comparing model-free value learning, structured planning, and learned-model control in a synthetic continuing fleet-maintenance benchmark built from NASA C-MAPSS FD001 degradation trajectories.
+Deep reinforcement learning for capacity-constrained selective maintenance on NASA C-MAPSS, comparing DDQN, short-horizon planning, and learned-model MPC.
+
+## At a Glance
+
+- **Benchmark**: synthetic continuing fleet of `N = 5` degrading slots built from 100 NASA C-MAPSS FD001 run-to-failure trajectories; at most `K ∈ {1, 2}` preventive replacements per window.
+- **Research question**: when rare failure events dominate long-term cost, can model-free value learning match short-horizon planning — and what do ablations reveal about why or why not?
+- **Primary result (negative)**: the tested Point-DDQN configuration incurred consistently higher total cost than a privileged analytic-model H=2 planner — in **all eight** capacity–cost cells, on both the validation matrix and a one-time sealed held-out split, every 95% hierarchical bootstrap CI excluding zero.
+- **Mechanism-level insight**: prediction accuracy alone is insufficient for control. A learned dynamics model that predicted common transitions accurately chose no-maintenance at *every* decision once deployed.
+- **Evidence discipline**: five training seeds per cell ({6521–6525}), paired evaluation on shared scenario banks, 10,000-resample hierarchical bootstrap, one-time held-out evaluation with no test-informed tuning.
+
+## Primary Held-Out Result
+
+In the one-time held-out evaluation on the sealed `rl_test` split, Point-DDQN minus H=2 mean episodic cost was positive in **all eight capacity–cost cells**, and every cellwise hierarchical bootstrap 95% CI excluded zero:
+
+| K | Regime | DDQN | H=2 | Δ (DDQN−H=2) | 95% CI |
+|---|---|---|---|---|---|
+| 1 | failure-heavy / no-waste | 19.58 | 11.65 | +7.93 | [5.40, 10.80] |
+| 1 | failure-heavy / waste-aware | 18.19 | 12.13 | +6.05 | [4.59, 7.61] |
+| 1 | failure-light / no-waste | 15.68 | 11.55 | +4.13 | [2.95, 5.47] |
+| 1 | failure-light / waste-aware | 15.04 | 11.96 | +3.08 | [2.33, 3.84] |
+| 2 | failure-heavy / no-waste | 19.54 | 12.75 | +6.79 | [4.61, 9.01] |
+| 2 | failure-heavy / waste-aware | 17.91 | 13.28 | +4.63 | [2.90, 6.59] |
+| 2 | failure-light / no-waste | 15.94 | 12.50 | +3.44 | [2.46, 4.48] |
+| 2 | failure-light / waste-aware | 15.31 | 12.96 | +2.35 | [1.57, 3.20] |
+
+![Held-out DDQN vs H=2 comparison](report/figures/ddqn_vs_h2_heldout.png)
+
+The same ordering held in all eight validation cells before the held-out replication, and the ordering reproduced on the sealed test split, reducing concern that the observed gap was specific to the validation scenarios. Cost decomposition localizes the excess primarily in **realized failures**: Point-DDQN incurred roughly 0.30–0.67 additional failures per episode than H=2 on validation.
+
+*(Source of record: `evidence/heldout/RL_TEST_FINAL_RESULTS.json`, `evidence/heldout/final_test_evaluation/`.)*
+
+The H=2 planner's privilege is explicit: it is given the benchmark's analytic transition and failure structure rather than learning it from experience. It does not see true RUL, identities, or realized future outcomes — it enumerates possible failure branches probabilistically. Because model knowledge and planning procedure differ simultaneously from DDQN's setting, this comparison does not isolate the value of planning itself; it asks whether the tested value learner matches a structurally advantaged short-horizon controller.
 
 ## Overview
 
@@ -9,12 +40,6 @@ A fleet of degrading assets must keep operating over a long horizon. At each mai
 This is fundamentally a sequential decision problem. Today's replacement choice changes each asset's future degradation state and shifts future failures into different windows under a shared capacity constraint, so greedy per-window reasoning is not obviously sufficient. Reinforcement learning is a natural fit: a value-based policy can, in principle, account for how present actions shape future failure risk and future maintenance opportunities.
 
 This repository implements that study end to end: data preparation from NASA C-MAPSS FD001 run-to-failure trajectories, a continuing fleet simulator with capacity-constrained preventive replacement, rule-based and optimization baselines, a Double DQN (DDQN) policy, a privileged short-horizon planner, learned-model MPC diagnostics, targeted ablations, and a frozen statistical evaluation with a one-time held-out replication.
-
-## Research Question
-
-> When rare failure events dominate long-term cost, can model-free value learning match short-horizon planning for capacity-constrained selective maintenance — and what do targeted ablations reveal about why or why not?
-
-The question is deliberately benchmark-specific. The primary result is negative: **the tested Point-DDQN configuration incurred consistently higher total cost than a privileged analytic-model H=2 planner, on both the validation matrix and a sealed held-out split**, with the excess localized around realized failures.
 
 ## Problem Formulation
 
@@ -39,44 +64,26 @@ The environment is a synthetic continuing fleet of `N = 5` slots constructed fro
 | n-step DDQN variants | Ablation | Return horizon n∈{1,3} crossed with standard vs planner-seeded replay |
 | Learned-model MPC | Diagnostic | Ensemble dynamics model + exhaustive two-step MPC under different training-data compositions |
 
-The H=2 planner's privilege is explicit: it is given the benchmark's analytic transition and failure structure rather than learning it from experience. It does not see true RUL, identities, or realized future outcomes — it enumerates possible failure branches probabilistically. Because model knowledge and planning procedure differ simultaneously from DDQN's setting, this comparison does not isolate the value of planning itself; it asks whether the tested value learner matches a structurally advantaged short-horizon controller.
+## Validation-Only Ablations and Diagnostics
+
+The following studies are **validation-only** (not held out):
+
+- **n-step returns did not close the gap.** Switching from one-step to the tested n=3 return *increased* validation cost (+3.68 under standard replay, 95% CI [1.81, 5.55]; +3.00 under seeded replay, [0.56, 5.44]).
+- **Planner-seeded replay was inconclusive**: −0.76 (95% CI [−1.55, 0.03], interval includes zero).
+- **Learned MPC: prediction accuracy ≠ control quality.** With a failure-free training mixture, the ensemble achieved low next-observation RMSE (~0.02 vs ~0.095 persistence) yet selected the no-maintenance action at *every* decision, accumulating 54 failures across five evaluation episodes (mean cost 54.0).
+- **Failure coverage partially recovered planning.** Enriching the mixture with failure transitions reduced mean cost to 34.6 (E5−E4 = −19.40, 95% CI [−28.28, −10.52]) and restored preventive behavior — but this intervention changes visitation, behavior-policy composition, and reward support simultaneously, so it does not isolate failure coverage as the sole cause.
+
+No tested structured variant improved on the Point-DDQN policy either; the n-step numbers are cost increases relative to Point-DDQN.
+
+![Learned-model MPC failure coverage diagnostic](report/figures/learned_mpc_failure_coverage.png)
 
 ## Experimental Design
 
 - **Dataset**: NASA C-MAPSS FD001 (single operating condition, single fault mode), 100 run-to-failure engine trajectories.
 - **Engine-level partitioning** (frozen and disjoint): `predictor_train` = 60, `predictor_validation` = 15, `rl_validation` = 10, sealed `rl_test` = 15 engines. Sliding windows are never split randomly; scalers are fitted on predictor-training statistics only.
 - **Leakage prevention**: true RUL never enters observations; test engines never contribute to predictor training; development and ablation decisions use `rl_validation` exclusively.
-- **Held-out discipline**: after models, checkpoints, scenario banks, and primary statistics were frozen, the primary comparison alone was evaluated exactly once on the sealed `rl_test` split, with no test-informed tuning or selection. The n-step, risk-feature, and learned-MPC studies remain validation-only by design.
+- **Held-out discipline**: after models, checkpoints, scenario banks, and primary statistics were frozen, the primary comparison alone was evaluated exactly once on the sealed `rl_test` split, with no test-informed tuning or selection. The n-step and learned-MPC studies remain validation-only by design.
 - **Statistical protocol**: five training seeds per cell ({6521–6525}), paired evaluation across cells, preregistered hierarchical (scenario-by-seed) bootstrap with 10,000 resamples and cellwise prespecified 95% intervals (no familywise-adjustment claims).
-
-## Key Findings
-
-**Primary held-out result.** In the one-time held-out evaluation, Point-DDQN minus H=2 mean episodic cost was positive in **all eight capacity–cost cells**, and every cellwise hierarchical bootstrap 95% CI excluded zero:
-
-| K | Regime | DDQN | H=2 | Δ (DDQN−H=2) | 95% CI |
-|---|---|---|---|---|---|
-| 1 | failure-heavy / no-waste | 19.58 | 11.65 | +7.93 | [5.40, 10.80] |
-| 1 | failure-heavy / waste-aware | 18.19 | 12.13 | +6.05 | [4.59, 7.61] |
-| 1 | failure-light / no-waste | 15.68 | 11.55 | +4.13 | [2.95, 5.47] |
-| 1 | failure-light / waste-aware | 15.04 | 11.96 | +3.08 | [2.33, 3.84] |
-| 2 | failure-heavy / no-waste | 19.54 | 12.75 | +6.79 | [4.61, 9.01] |
-| 2 | failure-heavy / waste-aware | 17.91 | 13.28 | +4.63 | [2.90, 6.59] |
-| 2 | failure-light / no-waste | 15.94 | 12.50 | +3.44 | [2.46, 4.48] |
-| 2 | failure-light / waste-aware | 15.31 | 12.96 | +2.35 | [1.57, 3.20] |
-
-The same ordering held in all eight validation cells before the held-out replication, and the ordering reproduced on the sealed test split, reducing concern that the observed gap was specific to the validation scenarios. Cost decomposition localizes the excess primarily in **realized failures**: Point-DDQN incurred roughly 0.30–0.67 additional failures per episode than H=2 on validation.
-
-*(Source of record: `evidence/heldout/RL_TEST_FINAL_RESULTS.json`, `evidence/heldout/final_test_evaluation/`.)*
-
-**Validation-only ablations and diagnostics** (not held out):
-
-- **n-step returns did not close the gap.** Switching from one-step to the tested n=3 return *increased* validation cost (+3.68 under standard replay, 95% CI [1.81, 5.55]; +3.00 under seeded replay, [0.56, 5.44]).
-- **Planner-seeded replay was inconclusive**: −0.76 (95% CI [−1.55, 0.03], interval includes zero).
-
-- **Learned MPC: prediction accuracy ≠ control quality.** With a failure-free training mixture, the ensemble achieved low next-observation RMSE (~0.02 vs ~0.095 persistence) yet selected the no-maintenance action at *every* decision, accumulating 54 failures across five evaluation episodes (mean cost 54.0).
-- **Failure coverage partially recovered planning.** Enriching the mixture with failure transitions reduced mean cost to 34.6 (E5−E4 = −19.40, 95% CI [−28.28, −10.52]) and restored preventive behavior — but this intervention changes visitation, behavior-policy composition, and reward support simultaneously, so it does not isolate failure coverage as the sole cause.
-
-No tested structured variant improved on the Point-DDQN policy either; the n-step numbers are cost increases relative to Point-DDQN.
 
 ## Why This Project Matters
 
@@ -87,6 +94,15 @@ The central mechanism-level insight is that **prediction accuracy alone is insuf
 - the gap between upstream predictive metrics and downstream decision quality.
 
 These observations are consistent with known concerns about distribution shift in learned-model planning; they are demonstrated here within one controlled benchmark, not claimed as general laws.
+
+## Limitations
+
+- **Synthetic benchmark**: the fleet is constructed from C-MAPSS FD001 trajectories with synthetic replacement semantics; nothing here validates real aviation or industrial maintenance practice.
+- **Privileged comparator**: the H=2 planner encodes analytic transition/failure structure. Model knowledge and planning are not separately identified, so the DDQN-vs-H=2 result does not generalize to "model-free vs planning".
+- **Small scale**: N=5 slots, ≤16 actions, one dataset subset, 2 capacity levels × 4 cost regimes = 8 primary cells, five training seeds — seed-level estimates for ablations have limited precision.
+- **Failure rarity dependence**: conclusions about failure-localized gaps and data-support effects are tied to this benchmark's failure frequency and reward magnitudes.
+- **Bundled intervention**: the failure-coverage study improves control but changes several data-composition factors simultaneously.
+- **Scope of held-out evidence**: only the primary comparison was evaluated on the sealed test split; all ablations remain validation-only.
 
 ## Repository Structure
 
@@ -115,16 +131,14 @@ These observations are consistent with known concerns about distribution shift i
 
 See [`docs/REPRODUCIBILITY.md`](docs/REPRODUCIBILITY.md) for data acquisition, environment setup, configuration layout, and evaluation protocol, and [`docs/RESULTS.md`](docs/RESULTS.md) for a guide to the retained result artifacts. Large runtime assets (raw C-MAPSS downloads, processed prediction caches, per-seed checkpoints and rollouts) are intentionally not committed; their location is resolved through the `DRL_EXTERNAL_ROOT` environment variable (see `src/runtime_paths.py`).
 
-Some portions of the test suite skip or error unless those external runtime assets are provisioned locally; heavy tests additionally require an explicit opt-in flag (`M9_HEAVY=1`). The committed evidence, statistics, and figures are self-contained.
+The public core of the test suite — everything that does not require those external assets — runs on a fresh clone:
 
-## Limitations
+```bash
+pytest \
+  -m "not legacy_v1 and not requires_v2_cache and not requires_external_assets"
+```
 
-- **Synthetic benchmark**: the fleet is constructed from C-MAPSS FD001 trajectories with synthetic replacement semantics; nothing here validates real aviation or industrial maintenance practice.
-- **Privileged comparator**: the H=2 planner encodes analytic transition/failure structure. Model knowledge and planning are not separately identified, so the DDQN-vs-H=2 result does not generalize to "model-free vs planning".
-- **Small scale**: N=5 slots, ≤16 actions, one dataset subset, 2 capacity levels × 4 cost regimes = 8 primary cells, five training seeds — seed-level estimates for ablations have limited precision.
-- **Failure rarity dependence**: conclusions about failure-localized gaps and data-support effects are tied to this benchmark's failure frequency and reward magnitudes.
-- **Bundled intervention**: the failure-coverage study improves control but changes several data-composition factors simultaneously.
-- **Scope of held-out evidence**: only the primary comparison was evaluated on the sealed test split; all ablations remain validation-only.
+Heavy tests additionally require an explicit opt-in flag (`M9_HEAVY=1`). The committed evidence, statistics, and figures are self-contained.
 
 ## Technical Stack
 
